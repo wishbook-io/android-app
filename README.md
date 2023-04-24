@@ -43,5 +43,31 @@ TrueCallerPartnerStagingKey = ""
 
 Note: Please replace the empty string values with actual values for these properties.
 
+## Files to change
+Following are some files to change to make it work on another domain (there maybe other issues - the build has not been tried on a different domain):
+1. ./app/src/main/java/com/wishbook/catalog/Application_Singleton.java (please ignore the typos hard-coding here)
+```
+       public static String getAPIURL() {
+        String APP_URL = "https://app.wishbook.io";
+        // String APP_URL ="https://app.wishbook.io:9001";
+
+        //String APP_URL ="http://b2b.wishbook.io";
+        if (BuildConfig.FLAVOR.equals("stagging")) {
+            APP_URL = "http://b2b.wishbook.io";
+        }
+```
+2. ./app/src/main/java/com/wishbook/catalog/Constants.java - various constants, such as:
+```
+    public static final String SENDER_NUM = "WISHBK";
+    public static String WB_CART_CASHBACK_HEADER = "WB_CART_CASHBACK_HEADER";
+    public static String SELLER_INVOICE_DOWNLOAD_PATH = "Wishbook/Seller-Invoice/";
+    public static String WISHBOOK_SUPPORT_NUMBER_FROM_CONFIG = "02616718985";
+```
+3. app/src/main/java/com/wishbook/catalog/home/catalog/details/Fragment_CatalogsGallery.java:            ```String link = "https://app.wishbook.io/?type=product&id=" + response_catalog.getId();```
+4. app/src/main/java/com/wishbook/catalog/home/catalog/ResellerCatalogShareBottomSheet.java:        ```String link = "https://app.wishbook.io/?type=product&id=" + response_catalog.getId();```
+5. app/src/main/java/com/wishbook/catalog/URLConstants.java:    ```public static final String BARCODE_APP_URL = "https://app.wishbook.io";```
+6. app/src/main/java/com/wishbook/catalog/commonadapters/dropdownadapters/CategoriesAdapter.java:                    ```String url = "https://app.wishbook.io/?type=catalog&ctype=public&view_type=public&category="+mDataset[holder.getAdapterPosition()].getId();```
+7. app/src/main/AndroidManifest.xml
+
 ## Build Instructions
 The app can be built using a standard build system for Android apps.
