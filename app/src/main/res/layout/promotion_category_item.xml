@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <com.wishbook.catalog.Utils.widget.WrapContentDraweeView
+        android:id="@+id/promotional_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:placeholderImage="@drawable/uploadempty"
+        card_view:actualImageScaleType="fitXY" />
+
+</LinearLayout>

@@ -1,0 +1,398 @@
+buildscript {
+
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+//
+apply plugin: 'io.fabric'
+//apply plugin: 'realm-android'
+
+//apply plugin: 'android-apt'
+android {
+
+
+    lintOptions {
+        //checkReleaseBuilds true
+        checkReleaseBuilds false //if lint error
+        abortOnError true
+        //  abortOnError false
+    }
+    dexOptions {
+        preDexLibraries = false
+        //javaMaxHeapSize "4g"
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/DEPENDENCIES'
+//        exclude 'META-INF/NOTICE'
+//        exclude 'META-INF/LICENSE'
+//        exclude 'META-INF/LICENSE.txt'
+//        exclude 'META-INF/NOTICE.txt'
+//        exclude 'META-INF/ECLIPSE_.SF'
+//        exclude 'META-INF/ECLIPSE_.RSA'
+//    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude "META-INF/MANIFEST.MF"
+        exclude "META-INF/LICENSE.txt"
+        exclude "META-INF/NOTICE.txt"
+
+        //remove unused files
+        exclude '/**/tielanti.ttf' //packaged with lib.kingja.switchbutton
+        exclude '/**/DeVinneTxtBT.ttf' //packaged with lib.kingja.switchbutton
+
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
+    //useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        //applicationId "com.wishbook.catalog.sales"
+        applicationId "com.wishbook.catalog"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 204410
+        versionName "2.4.41"
+        flavorDimensions "default"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+
+
+        }
+
+    }
+
+    def keystorePropertiesFile = rootProject.file("keystore.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'FRESH_DESK_API_KEY', keystoreProperties['FreshDeskApiKey']
+        it.buildConfigField 'String', 'FRESH_DESK_APP_ID', keystoreProperties['FreshDeskAppId']
+        it.buildConfigField 'String', 'MOBI_MERCHANT_ID', keystoreProperties['MobiMerchantID']
+        it.buildConfigField 'String', 'MOBI_SEC_KEY', keystoreProperties['MobiSecKey']
+        it.buildConfigField 'String', 'PAYTM_MERCHANT_KEY', keystoreProperties['PayTmMerchantKey']
+        it.buildConfigField 'String', 'PAYTM_MERCHANT_ID', keystoreProperties['PayTmMerchantID']
+        it.buildConfigField 'String', 'ZAAKPAY_MERCHANT_ID', keystoreProperties['ZaakPayMerchantID']
+        it.buildConfigField 'String', 'ZAAKPAY_SEC_KEY', keystoreProperties['ZaakPaySecretKey']
+        it.buildConfigField 'String', 'FRESHCHAT_ID', keystoreProperties['FreshChatID']
+        it.buildConfigField 'String', 'FRESHCHAT_KEY', keystoreProperties['FreshChatKey']
+        if (it.isDebuggable()) {
+            it.buildConfigField 'String', 'CASHFREE_APPID', keystoreProperties['CashFreeDebugAPPID']
+            it.buildConfigField 'String', 'CASHFREE_SEC_KEY', keystoreProperties['CashFreeDebugSecrectKey']
+        } else {
+            it.buildConfigField 'String', 'CASHFREE_APPID', keystoreProperties['CashFreeAPPID']
+            it.buildConfigField 'String', 'CASHFREE_SEC_KEY', keystoreProperties['CashFreeSecretKey']
+        }
+        /* it.buildConfigField 'String', 'CASHFREE_APPID', keystoreProperties['CashFreeAPPID']
+         it.buildConfigField 'String', 'CASHFREE_SEC_KEY', keystoreProperties['CashFreeSecretKey']*/
+    }
+    buildTypes {
+
+
+        release {
+            shrinkResources true
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+            manifestPlaceholders.clevertTapAccountID = keystoreProperties["CleverTAPLiveAccountID"]
+            manifestPlaceholders.clevertTapToken = keystoreProperties["CleverTAPLiveToken"]
+            manifestPlaceholders.trueCallerPartnerKey = keystoreProperties["TrueCallerPartnerLiveKey"]
+        }
+
+        debug {
+          /*  shrinkResources true
+            minifyEnabled true
+            zipAlignEnabled true*/
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            buildConfigField 'String', 'ZAAKPAY_MERCHANT_ID', '"b19e8f103bce406cbd3476431b6b7973"'
+            buildConfigField 'String', 'ZAAKPAY_SEC_KEY', '"0678056d96914a8583fb518caf42828a"'
+
+            manifestPlaceholders.clevertTapAccountID = keystoreProperties["CleverTAPTestingAccountID"]
+            manifestPlaceholders.clevertTapToken = keystoreProperties["CleverTAPTestingToken"]
+            manifestPlaceholders.trueCallerPartnerKey = keystoreProperties["TrueCallerPartnerStagingKey"]
+        }
+    }
+
+    productFlavors {
+
+        production {
+            dimension "default"
+        }
+
+        stagging {
+            dimension "default"
+            versionNameSuffix "-stagging"
+
+        }
+
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/libs']
+            jni.srcDirs = []
+        }
+    }
+//    //comment for sales release
+//    splits {
+//        abi {
+//            //enable !gradle.startParameter.taskNames.contains(":app:assembleSalesmanRelease")
+//            enable true
+//            reset()
+//            include 'x86_64', 'armeabi-v7a', 'arm64-v8a', 'x86'
+////            include 'x86_64', 'armeabi-v7a', 'arm64-v8a', 'x86'
+//        }
+//    }
+}    
+// map for the version code that gives each ABI a value. make sure to list all ABIs mentioned in splits block, an keep the order.
+//ext.versionCodes = ['armeabi': 3, 'armeabi-v7a': 4, 'arm64-v8a': 5, 'x86': 7]
+ext.versionCodes = [ 'x86_64':2, 'armeabi-v7a': 4, 'arm64-v8a': 5, 'x86': 7]
+import com.android.build.OutputFile
+
+// For each APK output variant, override versionCode with a combination of
+// ABI APK value  + defaultConfig.versionCode
+//comment for sales release
+
+
+//android.applicationVariants.all { variant ->
+//    // assign different version code for each output
+//    variant.outputs.each { output ->
+//        output.versionCodeOverride =
+//                project.ext.versionCodes.get(output.getFilter(OutputFile.ABI)) + android.defaultConfig.versionCode
+//    }
+//}
+
+
+repositories {
+    maven {
+        url "http://dl.bintray.com/jlmd/maven"
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+dependencies {
+
+    /*configurations {
+                    all*.exclude group: 'com.android.support', module: 'support-v13'
+                }*/
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.edmodo:cropper:1.0.1'
+
+    /* debugimplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+                     releaseimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+                     testimplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'*/
+
+    //noinspection GradleCompatible
+    implementation "androidx.appcompat:appcompat:$rootProject.androidXAppCompact"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.androidXVersion"
+    implementation "androidx.cardview:cardview:$rootProject.androidXVersion"
+    implementation "androidx.gridlayout:gridlayout:$rootProject.androidXVersion"
+    implementation "androidx.legacy:legacy-support-v13:$rootProject.androidXVersion"
+    implementation "com.google.android.material:material:$rootProject.materialComponentVersion"
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.androidXVersion"
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:16.0.0'
+
+    //to resolve duplicate zip error after com.applozic 5.8.2
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.6@aar') {
+        transitive = true;
+    }
+
+    // Facebook Android SDK
+    implementation 'com.facebook.android:facebook-android-sdk:4.35.0'
+
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "com.google.android.gms:play-services-location:$rootProject.gmsVersion"
+    // implementation "com.google.android.gms:play-services-gcm:$rootProject.gmsVersion"
+    implementation "com.google.android.gms:play-services-maps:$rootProject.gmsVersion"
+    implementation "com.google.android.gms:play-services-analytics:$rootProject.gmsVersion"
+    implementation "com.google.android.gms:play-services-auth:$rootProject.gmsVersion"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebaseVersion"
+
+    implementation "com.google.firebase:firebase-core:$rootProject.gmsVersion"
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.androidXConstraintlayout"
+
+    //appsee
+    // implementation 'com.appsee:appsee-android:+'
+
+    //recently removed
+
+    //implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    //implementation 'com.roughike:bottom-bar:2.3.1'
+
+    //implementation files('libs/android-viewbadger.jar')
+
+    //implementation files('libs/universal-image-loader-1.9.5.jar')
+
+    //implementation 'com.abdeveloper:multi-select-dialog:1.0'
+
+    //implementation 'com.github.jlmd:AnimatedCircleLoadingView:1.1.5@aar'
+
+    //implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+
+    //bottombar
+    implementation 'com.roughike:bottom-bar:2.3.1'
+
+    // Switch Button
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.7'
+
+    //share btn fab
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.3'
+
+    //used in contacts
+    implementation 'com.futuremind.recyclerfastscroll:fastscroll:0.2.5'
+
+    //notification
+    implementation 'io.reactivex:rxandroid:1.2.1'
+
+    //fresco
+    implementation 'com.facebook.fresco:fresco:2.0.0'
+    //gif support
+    implementation 'com.facebook.fresco:animated-gif:2.0.0'
+
+    //deprecated
+    implementation 'com.bignerdranch.android:expandablerecyclerview:2.1.1'
+
+    //used in expandable recyclerview
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.7'
+
+    implementation project(':mobicomkitui')
+
+    //hotline - freshchat
+
+    //implementation 'com.github.freshdesk:hotline-android:1.2.6'
+    implementation 'com.github.freshdesk:freshchat-android:2.7.1'
+
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //barcode/qr code scanner/generator
+    implementation 'me.dm7.barcodescanner:zxing:1.9.3'
+
+    //pagination
+    implementation 'com.github.markomilos:paginate:0.5.1'
+
+    //paytm
+    //implementation files('libs/PGSDK_V2.1.jar')
+
+    //location animation
+    implementation 'com.airbnb.android:lottie:2.8.0'
+
+    //Badge and SUB-DEPENDENCIES
+    implementation 'com.mikepenz:actionitembadge:3.3.1@aar'
+
+    //Android-Iconics - used to provide an easy API for icons
+    implementation 'com.mikepenz:iconics-core:2.8.1@aar'
+
+    //tooltip and intro
+    implementation 'it.sephiroth.android.library.targettooltip:target-tooltip-library:1.3.15'
+    implementation 'com.github.apl-devs:appintro:v4.2.2'
+
+    //Zaakpay
+    //implementation 'commons-codec:commons-codec:1.10'
+
+    //Material Chip View
+    //implementation 'com.github.fiskurgit:ChipCloud:3.0.5'
+    implementation 'com.google.android:flexbox:0.3.1'
+
+    //OTP View
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+
+    //for buyer rating vertical viewpager
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.7'
+
+    //stories progress view
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:v1.3'
+
+    // Retrofit and OKHttp
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    //switch button - tab switch
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.6'
+    testImplementation 'junit:junit:4.12'
+
+    //testimplementation group: 'io.appium', name:'java-client', version:'5.0.4'
+    testImplementation 'io.appium:java-client:6.0.0-BETA4'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //moneysmart
+    implementation(name: 'common-release-15', ext: 'aar')
+    implementation(name: 'commondb-release-15', ext: 'aar')
+    implementation(name: 'latlng-release-15', ext: 'aar')
+    implementation(name: 'permissions-release-15', ext: 'aar')
+    implementation(name: 'sms-release-15', ext: 'aar')
+    implementation(name: 'cashfreeSDK_version2', ext: 'aar')
+    implementation(name: 'ChipCloud-3.0.5', ext: 'aar')
+    implementation(name: 'truesdk-0.7-release', ext: 'aar')
+
+    //for moneysmart api calls
+    implementation 'com.android.volley:volley:1.1.0'
+
+    //for moneysmart api call
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    //implementation project(':applogic_custom'
+
+    // required
+    implementation 'io.branch.sdk.android:library:3.+'
+
+    // Start ClevarTap dependecies
+    implementation 'com.clevertap.android:clevertap-android-sdk:3.5.1'
+    implementation "com.google.android.gms:play-services-base:$rootProject.gmsVersion"
+
+    implementation 'me.relex:circleindicator:1.2.2'
+
+    // Date Range Picker
+    implementation 'com.leavjenn.smoothdaterangepicker:library:0.2.0'
+
+    // Groupie
+    implementation "com.xwray:groupie:2.5.1"
+    implementation "com.xwray:groupie-databinding:2.5.1"
+
+
+
+
+}
+apply plugin: 'com.google.gms.google-services'

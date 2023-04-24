@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_margin="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:textSize="@dimen/font_size_subheading"
+    android:id="@+id/title"/>
+    <LinearLayout
+
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:textSize="@dimen/font_size_emphasized"
+            android:id="@+id/call_button"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_edge"
+            android:text="Call"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:textSize="@dimen/font_size_emphasized"
+            android:id="@+id/chat_button"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_edge"
+            android:text="Chat"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_height="45dp"
+            android:layout_margin="5dp"
+        android:textSize="@dimen/font_size_emphasized"
+        android:id="@+id/notify_supplier"
+        android:textColor="@color/color_primary"
+        android:background="@drawable/button_edge"
+        android:text="Notify Supplier"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+           android:layout_margin="5dp"
+            android:textSize="@dimen/font_size_emphasized"
+            android:id="@+id/cancel_button"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_edge"
+            android:text="Cancel"/>
+    </LinearLayout>
+</LinearLayout>

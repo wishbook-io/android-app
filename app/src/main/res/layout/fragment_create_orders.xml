@@ -1,0 +1,367 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <include layout="@layout/toolbar_app" />
+<androidx.core.widget.NestedScrollView
+
+    android:layout_below="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7">
+        <LinearLayout
+            android:id="@+id/supplier_container_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_supplier_spinner"
+                style="@style/Spinner_Label"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/spinner_supplier"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="visible"/>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="selected buter"
+                    android:id="@+id/others_supplier_text"/>
+            </FrameLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/others_button"
+                android:layout_weight="0.2"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:textColor="@color/color_primary"
+                android:layout_height="wrap_content"
+                android:text="@string/others"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_buyer_notype"
+            style="@style/Spinner_Label"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            >
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                    android:id="@+id/buyer_select"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+
+                <ProgressBar
+                    android:visibility="invisible"
+                    android:id="@+id/progress_bar"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_container"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_broker_spinner"
+                style="@style/Spinner_Label"
+                />
+            <Spinner
+                android:id="@+id/spinner_brokers"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp" android:orientation="horizontal">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent" android:orientation="vertical"
+        android:layout_height="match_parent" android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_action_catalogs"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibn_catalogs"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected"
+            android:id="@+id/selected_catalog"
+            android:visibility="visible"
+            />
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent" android:orientation="vertical" android:gravity="center"
+        android:layout_height="match_parent" android:layout_weight="1">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_action_starfill"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibtn_selections"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected"
+            android:id="@+id/selected_selections"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/catalogSpinner">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_catalog"
+                style="@style/Spinner_Label"
+                />
+            <Spinner
+                android:id="@+id/spinner_catalogs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:id="@+id/selectionSpinner">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_selection"
+                style="@style/Spinner_Label"
+                />
+            <Spinner
+                android:id="@+id/spinner_productselections"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                style="@style/common_input_edittext_order_number"
+                app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                android:id="@+id/input_ordernum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the order number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/full_catalog_quantity"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter quantity"
+                style="@style/Spinner_Label"
+                />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                android:id="@+id/input_total_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="1"
+                android:digits="@string/digits"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="10dp"
+            android:id="@+id/order_summary"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_heading"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Order summary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_subheading"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Total products: 0"
+                android:id="@+id/tex_quantity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_normal"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Total value: \u20B9 0"
+                android:id="@+id/tex_totalvalue" />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Screenshot"
+
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:id="@+id/screenshot" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Order"
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:id="@+id/orderBut" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:text="Cancel"
+                android:layout_height="match_parent"
+                android:id="@+id/cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

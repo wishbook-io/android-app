@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- The search menu item. Honeycomb and above uses an ActionView or specifically a SearchView
+         which expands within the Action Bar directly. Note the initial collapsed state set using
+         collapseActionView in the showAsAction attribute. -->
+<!-- 0-->
+    <item
+        android:id="@+id/menu_add"
+        android:title="Add Product"
+        android:icon="@drawable/addproduct"
+        android:visible="false"/>
+
+    <!-- 1-->
+    <item
+        android:id="@+id/menu_cart_purchase"
+        android:title="Create Purchase order"
+        android:visible="false"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+       />
+
+    <!-- 2-->
+    <item
+        android:id="@+id/menu_share"
+        android:title="share"
+        android:visible="false"
+        android:icon="@drawable/ic_share_catalog_white"
+        app:showAsAction="always"/>
+
+    <!-- 3-->
+    <item
+        android:id="@+id/menu_cart_sales"
+        android:title="Create Sales order"
+        android:visible="false"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        />
+
+    <!-- 4-->
+    <item
+        android:id="@+id/menu_enable_catalog"
+        android:title="Enable Catalog"
+        android:visible="false"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        />
+    <!-- 5-->
+    <item
+        android:id="@+id/menu_disable_catalog"
+        android:title="@string/disable_catalog"
+        android:visible="false"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        />
+    <!-- 6-->
+    <item
+        android:id="@+id/barcode"
+        android:title="Generate Barcode"
+        />
+    <!-- 7-->
+    <item
+        android:id="@+id/chat_with_supplier"
+        android:title="Chat with Supplier"
+        android:visible="false"
+        />
+    <item
+        android:id="@+id/cart"
+        app:showAsAction="always"
+        android:title="My Cart"
+        android:icon="@drawable/ic_shopping_cart_24dpbl"
+        android:visible="true" />
+</menu>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    tools:context="com.wishbook.catalog.home.more.Fragment_AboutUs">
+
+    <include layout="@layout/toolbar_app" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_margin="10dp"
+        android:background="@drawable/layer_card_background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Wishbook"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/Text_Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:text="@string/about_us_text" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

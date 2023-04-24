@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coupon_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="1dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:tint="@color/green"
+                app:srcCompat="@drawable/ic_cart_coupon" />-->
+
+            <TextView
+                android:id="@+id/txt_off"
+                android:layout_width="43dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="10%\nOff"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_size_default"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_coupon_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Use Code ABC"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_default" />
+
+                <TextView
+                    android:id="@+id/txt_expire_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expire on"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_purchase"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_purchase_orange"
+            android:gravity="center"
+            android:padding="5dp"
+            android:clickable="false"
+            android:text="GO TO CART"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

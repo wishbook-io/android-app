@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/check_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtEditAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="EDIT"
+            android:textColor="@color/color_primary" />
+
+        <TextView
+            android:id="@+id/txtDeleteAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="right"
+            android:padding="3dp"
+            android:text="DELETE"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_light_gray"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_edit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit address"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/color_primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:hint="Enter Name"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:gravity="top|left"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:hint="Enter Mobile number"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_addline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Address"
+            android:textColorHint="@color/purchase_medium_gray">
+
+            <EditText
+                android:id="@+id/edit_addline1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="noExcludeDescendants"
+                android:minLines="3"
+                android:maxLines="3"
+                android:lines="3"
+                android:gravity="top|left"
+                android:scrollbars="vertical"
+                android:textSize="@dimen/font_size_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_addline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:hint="Enter Address line 2"
+            android:textColorHint="@color/purchase_medium_gray">
+
+            <EditText
+                android:id="@+id/edit_addline2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:importantForAutofill="noExcludeDescendants"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_state" />
+
+                <Spinner
+                    android:id="@+id/spinner_state"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_city" />
+
+                <Spinner
+                    android:id="@+id/spinner_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Delivery Pincode"
+            android:textColorHint="@color/purchase_medium_gray">
+
+            <EditText
+                android:id="@+id/edit_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="6"
+                android:importantForAutofill="noExcludeDescendants"
+                android:textColorHint="@color/purchase_light_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save_address"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_purchase_blue"
+                android:elevation="0dp"
+                android:padding="5dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_discard_address"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_red_edge"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:padding="5dp"
+                android:text="Discard"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

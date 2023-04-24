@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wishbook.catalog.home.contacts.Fragment_BuyersApproved"
+    tools:showIn="@layout/fragment_buyers_approved">
+
+    <include layout="@layout/toolbar_app" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/group_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Contacts"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relative_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:entries="@array/enquiry_spinner" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:tint="@color/color_primary"
+                    app:srcCompat="@drawable/ic_search_white_24dp" />
+
+
+                <ImageView
+                    android:id="@+id/ic_filter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    app:srcCompat="@drawable/ic_filter" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:focusableInTouchMode="true"
+                android:visibility="visible"
+                app:closeIcon="@null"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search by name"
+                app:searchIcon="@null" />
+
+
+            <ImageView
+                android:id="@+id/img_searchclose"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="8dp"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filter">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <view
+                android:id="@+id/recycler_view"
+                class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/list_empty1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/empty_text_network"
+                android:textSize="@dimen/font_size_default" />
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabaddbuyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabs"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="55dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_add_24dp" />
+
+    <include layout="@layout/guest_user_layout" />
+</RelativeLayout>

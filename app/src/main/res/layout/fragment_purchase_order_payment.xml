@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        android:elevation="@dimen/toolbar_elevation"
+        android:transitionName="actionBar"
+        app:contentInsetStart="@dimen/toolbar_contentInset"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/MyActionBarTheme"
+        tools:ignore="UnusedAttribute" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:elevation="@dimen/toolbar_elevation"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/white"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        android:visibility="gone"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/card_detailing" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</LinearLayout>

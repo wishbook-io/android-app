@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_primary"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Rate and review"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_subheading" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_toolbar"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_rate_order_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Order item"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/font_size_default" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:numStars="5"
+            android:progressDrawable="@drawable/custom_rating_big_selector"
+            android:stepSize="1" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/font_size_default" />
+
+
+        <EditText
+            android:id="@+id/edit_review"
+            style="@style/input_edit_text_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_edge_grey_rectengle"
+            android:gravity="left|top"
+            android:hint="Please enter review"
+            android:importantForAutofill="noExcludeDescendants"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLines="4"
+            android:padding="5dp"
+            android:textColorHint="@color/purchase_light_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            app:alignContent="space_around"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:showDivider="middle">
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableAppCompactButton
+                android:id="@+id/btn_add_photos"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_edge_border_blue"
+                android:elevation="0dp"
+                android:padding="5dp"
+                android:stateListAnimator="@null"
+                android:text="@string/add_photos"
+                android:textAllCaps="false"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/color_primary"
+                app:drawableLeftButtonCompat="@drawable/ic_photo_camera_black_24dp"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete_review"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_red_edge"
+                android:elevation="0dp"
+                android:padding="5dp"
+                android:stateListAnimator="@null"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit_review"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_purchase_blue"
+                android:elevation="4dp"
+                android:padding="5dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_reward_note"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_default" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+

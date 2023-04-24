@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_buying_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/button_edge_green"
+            android:text="Call Broker"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size_emphasized" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chat_user"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:background="@drawable/button_edge_less_padding_blue"
+            android:text="Chat with Broker"
+            android:elevation="0dp"
+            android:textColor="@color/color_primary"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

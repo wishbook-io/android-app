@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/button_edge_light_grey"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Date" />
+
+
+    <RelativeLayout
+        android:id="@+id/realative_target"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/txt_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/txt_target_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/realative_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/txt_achived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achieved"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/txt_achieved_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/realative_incentived_earned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/txt_incentive_earned_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incentive earned"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/txt_incentive_earned_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/actionBarItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="48dp"
+    android:minWidth="48dp">
+
+    <ImageView
+        android:id="@+id/menu_badge_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="center"
+        android:tint="@android:color/white" />
+
+    <com.wishbook.catalog.Utils.widget.MaterialBadgeTextView
+        android:id="@+id/menu_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:background="#EF4738"
+        android:ellipsize="none"
+        android:shadowColor="@color/transparent"
+        android:gravity="center"
+        android:padding="0dp"
+        android:shadowDy="0"
+        android:shadowDx="0"
+        android:shadowRadius="0"
+        app:mbtv_border_color="@color/transparent"
+        app:mbtv_border_width="0dp"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:singleLine="true" />
+</FrameLayout>

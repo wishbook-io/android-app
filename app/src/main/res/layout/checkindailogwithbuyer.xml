@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="14dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Check In (Add Visit)"
+        android:id="@+id/textView10"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:backgroundTint="@color/color_primary"
+                android:textColor="#ffffff" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_gotomeet"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:backgroundTint="@color/color_primary"
+                android:text="Go to Meeting"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:id="@+id/mapcontainerq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout7">
+
+    </LinearLayout>
+</RelativeLayout>

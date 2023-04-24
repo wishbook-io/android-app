@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/product_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/layer_card_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/prod_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/uploadempty"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/prod_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#3c3c3c"
+                    android:textSize="@dimen/font_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/prod_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#3c3c3c"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="x"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#3c3c3c"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/prod_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#3c3c3c"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

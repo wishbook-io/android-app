@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wishbook.catalog">
+
+    <uses-sdk tools:overrideLibrary="com.davidecirillo.multichoicerecyclerview" />
+
+    <uses-permission android:name="com.wishbook.catalog.permission.MAPS_RECEIVE" />
+
+    <permission
+        android:name="com.wishbook.catalog.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.READ_SMS"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.SEND_SMS"
+        tools:node="remove" />
+
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_CONTACTS"
+        android:required="false" />
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+   <!-- <uses-sdk tools:overrideLibrary="com.truecaller.android.sdk"/>-->
+
+
+    <application
+        android:name=".Application_Singleton"
+        android:allowBackup="false"
+        android:animateLayoutChanges="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <service
+            android:name=".services.LocalService"
+            android:enabled="true" />
+
+      <!--  <receiver android:name=".Utils.smscodereader.receivers.OtpReader">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>-->
+
+        <receiver android:name=".Utils.smscodereader.receivers.MySMSBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="com.wishbook.catalog.Utils.MyFcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_cahnnel_id" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_primary" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_white_launcher" />
+
+        <!-- [END gcm_listener] -->
+
+        <!-- [END instanceId_listener] -->
+        <service
+            android:name=".Utils.gcm.RegistrationIntentService"
+            android:exported="false" />
+        <!--   //For 24 or higher use this to prevent FileUriExposedException -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Utils.multipleimageselect.activities.AlbumSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Utils.multipleimageselect.activities.ImageSelectActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app.wishbooks.io"
+                    android:scheme="http" />
+                <data
+                    android:host="app.wishbooks.io"
+                    android:scheme="https" />
+                <data
+                    android:host="m.wishbooks.io"
+                    android:scheme="http" />
+
+                <data
+                    android:host="app.wishbook.io"
+                    android:scheme="http" />
+                <data
+                    android:host="app.wishbook.io"
+                    android:scheme="https" />
+                <data
+                    android:host="m.wishbook.io"
+                    android:scheme="http" />
+
+
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Branch URI scheme -->
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="https" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+
+            <!-- Branch URI scheme -->
+            <intent-filter android:autoVerify="true">
+                <data
+                    android:host="open"
+                    android:scheme="wishbk" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+
+            <!-- Branch App Links (optional) -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+
+                <!--  <data
+                      android:host="wbk.app.link"
+                      android:scheme="http" />
+                  <data
+                      android:host="wbk.app.link"
+                      android:scheme="https" />
+
+                  <data
+                      android:host="wbk-alternate.app.link"
+                      android:scheme="http" />
+                  <data
+                      android:host="wbk-alternate.app.link"
+                      android:scheme="https" />-->
+
+                <!--<data-->
+                <!--android:host="wishbk.in"-->
+                <!--android:scheme="http" />-->
+                <!--<data-->
+                <!--android:host="wishbk.in"-->
+                <!--android:scheme="https" />-->
+                <data
+                    android:host="app.wishbooks.io"
+                    android:scheme="http" />
+                <data
+                    android:host="app.wishbooks.io"
+                    android:scheme="https" />
+                <data
+                    android:host="m.wishbooks.io"
+                    android:scheme="http" />
+
+                <data
+                    android:host="app.wishbook.io"
+                    android:scheme="http" />
+                <data
+                    android:host="app.wishbook.io"
+                    android:scheme="https" />
+                <data
+                    android:host="m.wishbook.io"
+                    android:scheme="http" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name=".home.AppIntroActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".home.more.creditRating.CreditRatingIntroActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".home.Activity_Home"
+            android:configChanges="fontScale"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+
+
+        </activity>
+        <activity
+            android:name=".home.more.Activity_AboutUs_WebView"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.Activity_Login"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".login.Activity_Register"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".login.Activity_Register_Version2"
+            android:configChanges="fontScale"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".home.more.Activity_ShareApp"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Utils.imagecropper.PhotoCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Utils.imagecropper.PhotoTaker"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyANpzke1AV6zK0P_O2d6N7X05o3SaG250I" />
+
+        <activity
+            android:name=".home.more.showcase.Activity_BrowseCatalogs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.more.showcase.Activity_ManagingSelections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.more.showcase.Activity_AddingVisits"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.more.showcase.Activity_PlacingOrders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.more.invoice.InvoiceDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.orders.details.Activity_OrderDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utils.gps.CallbackLocationFetchingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.orderNew.details.Activity_OrderDetailsNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.orderNew.details.Activity_PaymentOrder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".home.cart.Activity_PaymentOrder_2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.orderNew.details.Activity_BuyerSearch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.contacts.details.Activity_ConnectionList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.catalog.add.ActivityFabricSelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.catalog.details.Activity_ComapnyCatalogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.catalog.details.ActivityMultipleSeller"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.contacts.details.ActivityBuyerGroupList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.more.brandDiscount.ActivityBuyerGroupSelect"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.more.ActivityLanguage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".home.catalog.add.ActivityFilter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.catalog.share.CatalogShareHolder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OpenContainer"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".home.catalog.details.Activity_ProductsInCatalog"
+            android:label="" />
+        <activity
+            android:name=".home.catalog.details.Activity_ProductPhotos"
+            android:label="" />
+        <activity
+            android:name=".Activity_DisplayProduct"
+            android:label="" />
+        <activity
+            android:name=".home.inventory.barcode.SimpleScannerActivity"
+            android:label="" />
+        <activity
+            android:name=".login.ReferralScanActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.more.brandDiscount.ActivityBrandwiseDiscountList"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Utils.gps.CallbackLocationFetchingCheckInActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utils.gps.CallbackLocationFetchingCheckOutActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <!--
+            <activity
+            android:name=".Utils.IntroActivity"
+            android:label="@string/app_intro" />
+        -->
+        //MOBIKWIK
+        <activity
+            android:name=".home.payment.MobiKwikMerchantActivity"
+            android:label="@string/app_name" />
+        //ZaakPay
+        <activity
+            android:name=".home.payment.ZaakPayMerchantActivity"
+            android:label="@string/app_name" />
+        //PAYTM
+        <activity
+            android:name=".home.payment.MerchantActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".home.payment.MerchantActivity2"
+            android:label="@string/app_name" />
+        <!--<activity-->
+        <!--android:name="com.paytm.pgsdk.PaytmPGActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|keyboard"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".home.orders.ActivityOrderHolder"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.orders.ActivityEnquiryHolder"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".home.catalog.add.Activity_Become_Seller"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".home.cart.Activity_ResaleAmt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        //WEB PRINTING ACTIVITY
+        <activity
+            android:name=".WebPrintActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+
+
+        <!--
+          Optionally, register AnalyticsReceiver and AnalyticsService to support background
+          dispatching on non-Google Play devices
+        -->
+       <!-- <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>-->
+
+     <!--   <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />-->
+
+        <!--
+             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting
+        -->
+        <!--<receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+       <!-- <service
+            android:name="com.google.android.gms.analytics.CampaignTrackingService"
+            android:enabled="true"
+            android:exported="false" />-->
+
+
+        <!--
+             <meta-data android:name="com.applozic.mobicomkit.notification.smallIcon"
+             android:resource="YOUR_LAUNCHER_SMALL_ICON" />
+        -->
+
+
+        <!--
+            meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDKfWHzu9X7Z2hByeW4RRFJrD9SizOzZt4" /
+        -->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f323c228a2feb2c7ad6706fc2b0a900e6379d670" />
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="f323c228a2feb2c7ad6706fc2b0a900e6379d670" />
+
+        // applozic
+        <meta-data
+            android:name="com.applozic.application.key"
+            android:value="1a79888ef6d0fa76c522ea56a251b4fb9" />
+        <meta-data
+            android:name="main_folder_name"
+            android:value="@string/default_media_location_folder" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_test_app_id" />
+
+
+        <!--     <meta-data
+                 android:name="moneysmart_api_key"
+                 android:value="@string/money_smart_api_key_live" />-->
+
+
+        <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_moVllxuK3ax6yG2UN2EqjlhoCznXJACX" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_jiJifsvI8gsWrQ4LN7APxmmjqwj4SxNo" />
+
+        <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />
+        <!-- Branch install referrer tracking -->
+
+
+        <!-- CleverTap init -->
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="@string/clevertap_test_account_id" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="@string/clevertap_test_token" />
+
+
+        <meta-data
+            android:name="activity.open.on.notification"
+            android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        <meta-data
+            android:name="com.package.name"
+            android:value="${applicationId}" />
+
+        <!--
+        <receiver android:name="com.applozic.mobicomkit.uiwidgets.notification.MTNotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="${applicationId}.send.notification" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".SplashScreen"
+            android:theme="@style/ApplozicTheme">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wishbook.catalog.SplashScreen" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.people.activity.MobiComKitPeopleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/activity_contacts_list"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme"
+            android:windowSoftInputMode="adjustResize">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_contacts" />
+        </activity>
+
+        <!--
+         <activity android:name="com.wishbook.catalog.ChatAllContacts"
+             android:configChanges="keyboardHidden|orientation|screenSize"
+             android:label="@string/activity_contacts_list"
+             android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+             android:theme="@style/ApplozicTheme"
+             android:windowSoftInputMode="adjustResize">
+             &lt;!&ndash; Parent activity meta-data to support API level 7+ &ndash;&gt;
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+             <intent-filter>
+                 <action android:name="android.intent.action.SEARCH" />
+             </intent-filter>
+             <meta-data
+                 android:name="android.app.searchable"
+                 android:resource="@xml/searchable_contacts" />
+         </activity>
+        -->
+
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.FullScreenImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Image"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/Applozic_FullScreen_Theme">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ContactSelectionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelCreateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelNameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme" />
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ChannelInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.MobiComAttachmentSelectorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity" />
+        </activity>
+        <activity
+            android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.MobicomLocationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+            android:theme="@style/ApplozicTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.applozic.mobicomkit.api.notification.NotificationIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service
+            android:name="com.applozic.mobicomkit.api.conversation.MessageIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.applozic.mobicomkit.api.conversation.ApplozicIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.applozic.mobicomkit.api.conversation.ApplozicMqttIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.applozic.mobicomkit.api.people.UserIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.applozic.mobicomkit.api.conversation.ConversationIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!--
+            <service
+            android:name="com.applozic.mobicomkit.api.conversation.ConversationReadService"
+            android:exported="false" />
+        -->
+
+        <service
+            android:name="com.applozic.mobicomkit.uiwidgets.notification.PushNotificationJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.applozic.mobicomkit.broadcast.TimeChangeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.applozic.mobicomkit.broadcast.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <provider
+        http://stackoverflow.com/questions/38200282/android-os-fileuriexposedexception-file-storage-emulated-0-test-txt-exposed
+             android:name="android.support.v4.content.FileProvider"
+             android:authorities="${applicationId}.provider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+             <meta-data
+                 android:name="android.support.FILE_PROVIDER_PATHS"
+                 android:resource="@xml/provider_paths"/>
+         </provider>
+        -->
+        <activity
+            android:name=".stories.StoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.ApplogicContextBasedActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MESSAGE_SYNC_ACK_FROM_SERVER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.more.myviewers_2.Activity_MyViewersDetail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".home.orderNew.details.Activity_MultipleSeller" />
+        <activity
+            android:name=".home.cart.CartProductView"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".Activity_AddCatalog"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".home.more.Activity_Wb_Money"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".home.catalog.Activity_QualityCatalog"
+            android:screenOrientation="portrait" />
+
+
+        <!-- Branch install referrer tracking (optional) -->
+        <receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- IMPORTANT: To force use Google AD ID to uniquely identify  users, use the following meta tag. GDPR mandates that if you are using this tag, there is prominent disclousure to your end customer in their application. Read more about GDPR here - https://clevertap.com/blog/in-preparation-of-gdpr-compliance/ -->
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
+
+        <meta-data
+            android:name="FCM_SENDER_ID"
+            android:value="479030482746"/>
+
+        <!-- Small Notification Icon -->
+        <meta-data
+            android:name="CLEVERTAP_NOTIFICATION_ICON"
+            android:value="ic_white_launcher" />
+
+        <activity
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:configChanges" />
+
+        <meta-data
+            android:name="CLEVERTAP_INAPP_EXCLUDE"
+            android:value="SplashScreen" />
+
+        <receiver
+            android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.clevertap.android.sdk.CTPushNotificationReceiver"
+            android:enabled="true"
+            android:exported="false"></receiver>
+
+        <service
+            android:name=".services.CTNotificationIntentService"
+            android:exported="false">
+            <intent-filter>`
+                <action android:name="com.clevertap.PUSH_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="CLEVERTAP_BACKGROUND_SYNC"
+            android:value="1" />
+
+        <!--use CTBackgroundIntentService to target users below Android 21 (Lollipop)-->
+        <service
+            android:name="com.clevertap.android.sdk.CTBackgroundIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.BG_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--use CTBackgroundJobService to target users on and above Android 21 (Lollipop)-->
+        <service
+            android:name="com.clevertap.android.sdk.CTBackgroundJobService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="false" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1326035920856844"
+            android:exported="true" />
+
+
+        <!-- True Call SDK -->
+        <meta-data android:name="com.truecaller.android.sdk.PartnerKey" android:value="@string/staging_true_sdk_partnerKey"/>
+
+    </application>
+
+</manifest>

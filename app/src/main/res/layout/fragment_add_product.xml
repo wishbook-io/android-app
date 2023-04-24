@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_detailing"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_continue"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <CheckBox
+                    android:id="@+id/productsWS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Products With Design No." />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/limit_product_selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter total numbers of design"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_add_catalog_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uploadcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/limit"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="+ Add product images"
+                                    android:textColor="@color/purchase_dark_gray"
+                                    android:textSize="24sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_subtxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/add_design_subtext"
+                                    android:textColor="@color/green"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Note: Select multiple images(size >1 MB)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_normal"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_single_pc_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:text="Upload"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+</RelativeLayout>

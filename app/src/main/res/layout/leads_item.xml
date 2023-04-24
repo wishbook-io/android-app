@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_marginBottom="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/textInt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:scaleType="fitCenter" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_buyer_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:singleLine="true"
+            android:text="Buyer Company Name"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default" />
+
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:text="Location name"
+            android:lines="1"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_default" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="99 enquiries"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_default" />
+
+    </LinearLayout>
+
+</LinearLayout>

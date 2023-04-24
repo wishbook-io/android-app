@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total number of designs"
+                android:textColor="@color/purchase_dark_gray" />
+
+            <EditText
+                android:id="@+id/edit_product_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_edge_grey_rectengle"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="No. of designs"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/purchase_dark_gray"
+                android:textColorHint="@color/purchase_light_gray"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/catalog_minimum_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purchase_medium_gray"
+            android:text="Minimum 3 designs required"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="5dp">
+
+        <CheckBox
+            android:id="@+id/check_same_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Same price for all designs"
+            android:textColor="@color/purchase_dark_gray" />
+
+        <LinearLayout
+            android:id="@+id/linear_catalog_select_size_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose sizes you sell" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flex_catalog_select_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="8dp"
+                app:flexWrap="wrap">
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_same_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_common_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Margin"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:text="@string/margin_note"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/txt_common_margin_note1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:text="@string/max_margin_note_1"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_common_margin_note2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:text="@string/max_margin_note_2"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Set margin"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_common_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_common_per"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   Enter margin (%)"
+                        android:textColor="@color/purchase_dark_gray" />
+
+                    <RadioButton
+                        android:id="@+id/radio_common_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   Enter margin (Rs.)"
+                        android:textColor="@color/purchase_dark_gray" />
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/btn_edge_grey_rectengle"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_common_add_margin"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center"
+                        android:text="0"
+                        android:hint="Enter margin"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_common_single_pc_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="Price for single Pc.: "
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+

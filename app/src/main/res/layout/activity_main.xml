@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_main"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/frame_bottom"
+        android:background="#ffffff"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/content_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/contacts_home_grey">
+
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/relative_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible">
+
+
+                    <ProgressBar
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/location_animation"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location_animation"
+                        android:gravity="center"
+                        android:text="Loading..."
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_default" />
+                </RelativeLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:fitsSystemWindows="true" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:id="@+id/relative_bottom"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <com.roughike.bottombar.BottomBar
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:bb_tabXmlResource="@xml/bottombar_tabs" />
+
+            <include layout="@layout/include_offline"  />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/badge_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frame_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/support_chat_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:scaleType="center"
+                android:padding="0dp"
+                android:theme="@style/FABWhite"
+                app:borderWidth="0dp"
+                app:srcCompat="@drawable/ic_support_home"
+                app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/freshbot_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="center"
+                android:padding="0dp"
+                android:theme="@style/FABWhite"
+                app:borderWidth="0dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_spy_bot"
+                app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_layout"
+            android:background="@drawable/badge_item"
+            android:text="0"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>
+

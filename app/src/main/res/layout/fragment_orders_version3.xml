@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contacts_home_grey"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear_purchase_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/subheading_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase Order" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_sales_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+            style="@style/subheading_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sales Order" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_brokerage_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/subheading_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brokerage Order" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

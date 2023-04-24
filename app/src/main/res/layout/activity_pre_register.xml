@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@string/font_medium"
+            android:gravity="center_vertical"
+            android:text="Select Language &amp; User Type"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_default" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_save"
+        android:layout_below="@+id/linear_header"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linear_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_edge_light_grey"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select your language" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerviewLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_edge_light_grey"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_type_note1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/onlineretailer_reseller"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Home-based reseller"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:theme="@style/AppTheme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="34dp"
+                                android:layout_marginTop="-5dp"
+                                android:text="@string/reseller_sub_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/retailer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Retailer"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:theme="@style/AppTheme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="34dp"
+                                android:layout_marginTop="-5dp"
+                                android:text="@string/retailer_sub_text"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/wholesaler_distributor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Manufacturer/ Wholesaler/ Broker"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:theme="@style/AppTheme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="34dp"
+                                android:layout_marginTop="-5dp"
+                                android:text="@string/manufaturer_sub_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <CheckBox
+                                android:id="@+id/manufacturer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Manufacturer"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:theme="@style/AppTheme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="34dp"
+                                android:text="You manufacture the goods"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <CheckBox
+                                android:id="@+id/broker"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:text="Broker/Agent"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:theme="@style/AppTheme" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="34dp"
+                                android:text="You connect the trading parties"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/activity_common_progress" />
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:text="Start using Wishbook"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal" />
+</RelativeLayout>

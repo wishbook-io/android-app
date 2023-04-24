@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="Start/Stop Selling "
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_subheading" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purchase_medium_gray" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_bar"
+        android:layout_above="@+id/frame_submit"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/linear_size_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_note_for_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"
+                android:text="@string/start_stop_dialog_with_size_note"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/frame_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:fontFamily="@string/font_medium"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</RelativeLayout>
+
+
+

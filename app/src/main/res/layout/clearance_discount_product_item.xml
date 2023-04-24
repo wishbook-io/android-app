@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_img"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.7"
+        android:background="@color/contacts_home_grey"
+        app:actualImageScaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Design: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_design_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product ID: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_product_code_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_single_billing_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Single Billing Price: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_single_billing_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Full Billing Price: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_full_billing_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

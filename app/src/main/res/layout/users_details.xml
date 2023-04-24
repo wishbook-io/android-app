@@ -1,0 +1,116 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/layer_card_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="100dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Company Name :"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1"
+           >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Opens :"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:visibility="visible"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:id="@+id/downstream1"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Automatically share received catalogs :"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="100dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:textSize="14sp"
+                android:id="@+id/company_name" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:id="@+id/broker"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:id="@+id/opens" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:id="@+id/downstream2"
+            android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/push_downstream"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

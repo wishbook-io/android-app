@@ -1,0 +1,840 @@
+<resources>
+    <!--CONFIG (NO NEED TO ADD IN LANGUAGES)-->
+    <string name="freshchat_file_provider_authority">com.wishbook.catalog.provider</string>
+    <string name="digits">0123456789</string>
+    <string name="digits_with_minus">-0123456789</string>
+    <string name="digits_with_minus_dot">-0123456789.</string>
+
+    <string name="app_name">Wishbook</string>
+    <!--<string name="app_name">WishSales</string>-->
+
+    <string name="album_view">Select photo album</string>
+    <string name="image_view">Tap to select images</string>
+
+    <string name="facebook_app_id">1326035920856844</string>
+
+    <string name="selected">selected</string>
+    <string name="limit_exceeded">Can select a maximum of %d images</string>
+
+    <string name="permission_denied_albums">Allow access to photos, media and files on your device to view albums</string>
+    <string name="permission_denied_images">Allow access to photos, media and files on your device to view images</string>
+    <string name="grant_permission">Grant Permission</string>
+
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+    <string name="typeprompt">Company Type</string>
+    <string name="title_activity_login">com.wishbook.catalog.Logic.Login.Login</string>
+    <string-array name="requesttype">
+        <item>Buyer</item>
+        <item>Supplier</item>
+    </string-array>
+    <string-array name="requesttype_supplier">
+        <item>Supplier</item>
+        <item>Buyer</item>
+    </string-array>
+    <string-array name="user_type">
+        <item>Administrator</item>
+        <item>Salesperson</item>
+
+    </string-array>
+    <string-array name="buyertype">
+        <item>Agents</item>
+        <item>distributor</item>
+        <item>online-retailer</item>
+        <item>other</item>
+        <item>Resellers</item>
+        <item>Retailer</item>
+        <item>Semi-wholesaler</item>
+        <item>wholesaler</item>
+
+    </string-array>
+    <string-array name="usertype">
+        <item>Manufacturer</item>
+        <item>Not Manufacturer</item>
+    </string-array>
+
+
+    <string-array name="paymentchoice">
+        <item>NetBanking/Credit/Debit Card</item>
+        <item>Paytm</item>
+        <item>Mobikwik</item>
+        <item>NEFT</item>
+        <item>Cheque</item>
+        <item>Other</item>
+        <item>credit payment</item>
+    </string-array>
+    <string-array name="order_spinner">
+        <item>All</item>
+        <item>Placed</item>
+        <item>Dispatched</item>
+        <item>Cancelled</item>
+    </string-array>
+
+    <string-array name="my_catalog_spinner">
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+    <string-array name="paymentchoice_option2">
+        <item>NetBanking/Credit/Debit Card</item>
+        <item>NEFT</item>
+        <item>Cheque</item>
+        <item>Other</item>
+        <item>credit payment</item>
+    </string-array>
+
+
+
+    <string name="about_us_text">Wishbook\'s vision is to digitize the apparel/fashion production &amp; sales information.
+        This digitized information, starting with their product catalogs for Fashion &amp; Apparel companies, will allow easy sharing of
+        new catalog / product launches down the entire B2B distribution chain, offer an open B2B marketplace, and take it to the existing marketplaces.
+        Combined with the production Dashboard &amp; SaaS ERP, the reverse integration promises to bring in an unprecedented level of efficiency into the eco-system.
+        Our learnings coming from years of technology / product development &amp; running traditional textile manufacturing &amp; e-Commerce companies have been factor into
+        technology products meant for the Fashion / Apparel companies, many of them SMEs market in our new venture, Wishbook Infoservices.
+        Wishbook Infoservices started off as Triveni Labs.</string>
+
+    <string name="contact_us_heading_label">Wishbook Info Services Pvt Ltd</string>
+    <string name="about_us_policies_heading">Wishbook infoservices</string>
+
+    <string name="contact_us_text">If you have any questions or just want to know more information, please contact us on:</string>
+    <string name="website_link">www.wishbook.io</string>
+    <string name="location_text">1077-78 Anupam Textile Market
+Ring Road, Surat, Gujarat 395002</string>
+    <string name="email_address">support@wishbook.io</string>
+    <string name="contact_mobile">+91 8469218980</string>
+    <string name="contact_landline">+91 261 6718989</string>
+    <string name="help_heading_label">Welcome to Wishbook</string>
+    <string name="help_text">B2B App digitizes fashion catalog distribution &amp; sales process</string>
+    <string name="help_btn_1">Browsing Catalogs</string>
+    <string name="help_btn_2">Managing Selections</string>
+    <string name="help_btn_3">Adding visits</string>
+    <string name="help_btn_4">Placing Orders</string>
+
+    <string name="browse_catalogs_label">Browse Catalogs</string>
+    <string name="manage_selections_label">Manage Selections</string>
+    <string name="add_visits_label">Adding Visits</string>
+    <string name="place_orders_label">Placing Orders</string>
+
+    <string name="pswds_nt_matched">Passwords doesn\'t match</string>
+    <string name="current_pswd_not_matched">Please enter correct password</string>
+    <string name="field_empty">Field cannot be empty</string>
+    <string name="invalid_mobile">mobile number invalid</string>
+    <string name="emptymobileuser">both username and mobile cannot be empty</string>
+    <string name="passwordempty">password cannot be empty</string>
+    <string name="passwordshort">password too short</string>
+    <string name="defaultCode">+91</string>
+    <string name="select_state">Select state</string>
+    <string name="select_city">Select city</string>
+    <!--//<string name="select_buyertype">Select State</string>-->
+    <string name="select_brands">Choose a brand</string>
+    <string name="select_single_category">Choose a category</string>
+    <string name="select_category">Select categories</string>
+    <string name="select_requesttype"> Invite the selected contacts as</string>
+    <string name="select_grouptype">Select the group type</string>
+    <string name="select_supplier">Please select your supplier</string>
+    <string name="select_buyer">Select the type of buyer</string>
+    <string name="select_buyer_notype">Select buyer</string>
+    <string name="select_catalog">Select the catalog to order</string>
+    <string name="select_broker">Broker name</string>
+    <string name="select_broker_spinner">Select broker</string>
+    <string name="select_selection">Choose a selection</string>
+    <string name="select_usertype">Select user type</string>
+    <string name="select_buyersgroup">Select buyers group</string>
+    <string name="no_item_found">No Items to display</string>
+    <string name="choose_catalog_price">Private price</string>
+    <string name="choose_catalog_public_price">Public price</string>
+    <string name="choose_catalog_type">Choose the type of catalog</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_supplier_mobile_number">Enter supplier mobile number</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="relationship_supplier">Select the type of buyer you are</string>
+    <string name="select_warehouse">Select warehouse</string>
+    <string name="new_purchase_order">New purchase order</string>
+    <string name="new_sales_order">New sales order</string>
+    <string name="new_order">New Order</string>
+    <string name="paymentoption">Select payment option</string>
+
+
+    //Applogic
+    <string name="default_media_location_folder">WISHBOOK</string>
+
+
+    //PAYTM
+    <string name="merchant_id">WishBO64708594725163</string>
+    <string name="website">WishBOWAP</string>
+    <string name="merchant_key">wvYwVXA4xMy#0OR%</string>
+    <string name="industry_type_id">Retail109</string>
+    <string name="channel_id">WAP</string>
+
+
+    //ABoutUs and Policies
+    <string name="about_us">About Us</string>
+    <string name="product_services">Products &amp; Services</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="user_manual">User Manual</string>
+
+
+    //Changing invite to Add
+    <string name="add">ADD</string>
+    <string name="settings_profile">Profile</string>
+    <string name="settings_change_password">Change Password</string>
+    <string name="settings_sync">Sync</string>
+    <string name="settings_my_brands">Brands</string>
+    <string name="settings_my_buyer_groups">Buyer Groups</string>
+    <string name="settings_register_new_user">Register New User</string>
+    <string name="setting_help">Help</string>
+    <string name="location_error">Error in fetching your location</string>
+    <string name="change_type_price">Change Type of Catalog</string>
+    <string name="yes">Ok</string>
+    <string name="ok">Ok</string>
+    <string name="no">No</string>
+    <string name="change_type_dialog_title">Change catalog privacy type</string>
+    <string name="private_type">Private</string>
+    <string name="public_type">Public</string>
+    <string name="add_public_price">Enter public price</string>
+    <string name="pushdownstream">Automatically share received catalogs</string>
+    <string name="otp_dialog">OTP Received</string>
+    <string name="submit_text">Submit</string>
+    <string name="resent_text">Resend</string>
+    <string name="settings_company_profile">Company Profile</string>
+    <string name="select_supplier_spinner">Select Supplier</string>
+    <string name="others">Others</string>
+
+
+    <string name="setting_faq">FAQ</string>
+    <string name="setting_rejected_user">Rejected Users</string>
+    <string name="setting_support_chat">Support Chat</string>
+    <string name="input_work">Enter Work</string>
+    <string name="input_fabric">Enter Fabric</string>
+    <string name="select_all_contact">Select all Contacts</string>
+    <string name="company_already_registered">Company already registered?</string>
+    <string name="sell_full_catalog">Sell full catalog only</string>
+    <string name="hint_share_message">अपने catalog की information<br />के साथ एक अच्छा सा message लिखें <br />जिससे व्यापारी इसे देखने के लिए मजबूर हो जाये।</string>
+    <string name="write_message">Write Message</string>
+
+    <string name="enquiry_tutorial_text"><![CDATA[Catalog पसंद आया? <br />Supplier को Enquiry भेजिए। Supplier, Wishbook Chat के ज़रिये, आपकी Enquiry का जवाब दे सकते हैं।]]></string>
+    <string name="add_catalog_tutorial_text"><![CDATA[Add Catalog <br />यहाँ से अपना catalog add कर सकते हैं।]]></string>
+    <string name="share_tutorial_text"><![CDATA[एक साथ अपने सारे buyers से इस catalog को share करें।]]></string>
+    <string name="social_share_tutorial_text"><![CDATA[आप catalog को WhatsApp या Facebook के माध्यम से भी share कर सकते हैं।]]></string>
+    <string name="mycontacts_tab_tutorial_text"><![CDATA[अपने buyers को Wishbook पे invite करें और सारे Orders यहीं पर पाए या दें।]]></string>
+    <string name="onwishbook_tab_tutorial_text"><![CDATA[आपके Contacts में से निम्न सभी Wishbook का इस्तेमाल कर रहे हैं। ]]></string>
+
+    //Users Tutorial text
+    <!--<string name="enquiry_received_approve_button_tutorial"><![CDATA[Approve करने पर ही Buyer आपके catalog खरीद पायेगा]]></string>
+    <string name="buyer_mynetwork_share_button_tutorial"><![CDATA[अपना catalog या कोई Supplier द्वारा share किया गया catalog (Received Catalog) अपनी कीमतों पर, इस Buyer से share करें]]></string>
+    <string name="buyer_all_add_network_tutorial"><![CDATA[Buyers को अपने network में add करने पर ही आप catalog share कर पायेंगे और buyers उन्हें खरीद पाएंगे]]></string>
+    <string name="supplier_all_add_network_tutorial"><![CDATA[Suppliers को अपने network में add करने पर ही आप उनसे सामान खरीद पायेंगे ]]></string>
+    <string name="buyer_invite_tutorial"><![CDATA[इन Buyers/Suppliers को Wishbook पर जोड़े और आसानी से आपने Catalog share करें और बेचें, या Suppliers के Catalog देखें और खरीदें]]></string>
+    <string name="supplier_invite_tutorial"><![CDATA[इन Buyers/Suppliers को Wishbook पर जोड़े और आसानी से आपने Catalog share करें और बेचें, या Suppliers के Catalog देखें और खरीदें]]></string>-->
+
+
+    //Add_Catalog
+    <string name="hint_brands">अगर नॉन-ब्रांडेड products add करना चाहते हैं तो NO BRAND सेलेक्ट करें। ब्रांडेड products add करना चाहते हैं तो पहले Wishbook पे अपना ब्रांड रजिस्टर करें।</string>
+    <string name="hint_brands_1">अगर आपका Brand, Wishbook पे registered नहीं है तो पहले अपना Brand add करें</string>
+    <string name="hint_select_brands">अपने brand का नाम select करें</string>
+    <string name="hint_public_catalog_text">आपका catalog Wishbook पे सभी registered wholesalers और retailer देख सकते है</string>
+    <string name="hint_private_catalog_text">केवल आपके Wishbook पर मौजूद buyers ही देख सकते हैं</string>
+    <!-- <string name="hint_product_no_price_text">बिना Price के products दिखाना चाहते हैं तो इसे सेलेक्ट कीजिये</string>-->
+    <string name="hint_single_price">इस catalog के सभी products एक ही कीमत के है</string>
+    <string name="hint_individual_price">इस catalog के सभी products की अलग-अलग कीमतें हैं</string>
+    <string name="hint_sell_full_catalog">पूरा catalog एक साथ ही बेचना है?</string>
+    <!-- <string name="hint_product_no_sku">बिना SKU code के products add करें</string> -->
+    <string name="hint_fabric_work">Products के Fabric और Work की जानकारी दें</string>
+
+
+    <string name="selected_products">Selected Items</string>
+    <string name="enquiry_approved">Approved</string>
+    <string name="enquiry_pending">Pending</string>
+    <string name="enquiry_pending_reference">Pending References</string>
+    <string name="enquiry_references_filled">References Filled</string>
+    <string name="filter">Filter</string>
+    <string name="filter_apply">Apply</string>
+    <string name="clear_all_filter">Clear all</string>
+    <string name="reset">Reset</string>
+    <string name="filter_contacts">Filter Contact</string>
+    <string name="discard">Discard</string>
+    <string name="buyer_group_type">Buyer Grouping Type</string>
+    <string name="sent_invite">Send Invite</string>
+    <string name="banner">Banner</string>
+    <string name="banner_click">Click</string>
+    <string name="test">TEST</string>
+    <string name="sms_event_category">SMS</string>
+    <string name="sms_event_click">Click</string>
+    <string name="qr_event_category">QR</string>
+    <string name="qr_event_scan">Scan</string>
+    <string name="intro_home_1_title">नमस्ते! Wishbook पे आपका स्वागत है</string>
+    <string name="intro_home_1_desc">आपके business की growth हमारा लक्ष्य है!</string>
+    <string name="intro_home_2_title">ये ‘Home’ tab है</string>
+    <string name="intro_home_2_desc">यहाँ आपको सभी activities की summary मिलेगी।</string>
+    <string name="app_intro">App Introduction</string>
+    <string name="intro_catalog_title">ये ‘Catalog’ tab है</string>
+    <string name="intro_catalog_desc">आप यहाँ अपने catalogs upload और share कर सकते हैं। या दुसरे brands के catalog buy/share कर सकते हैं।</string>
+    <string name="intro_public_catalog_title">ये ‘Public Catalog’ section है</string>
+    <string name="intro_public_catalog_desc">यहाँ आपको देशभर के suppliers के catalog मिलेंगे जिनके लिए आप Enquiry भेज सकते हैं।</string>
+    <string name="intro_network_title">ये Networks tab है</string>
+    <string name="intro_network_desc">आप यहाँ से अपने buyers और suppliers को जोड़ सकते हैं, और नए buyers की Enquiry का response दे सकते हैं।</string>
+    <string name="intro_orders_title">ये Orders tab है</string>
+    <string name="intro_orders_desc">आप यहाँ से अपने sales और purchase orders का status update कर सकते हैं, और payment भी कर सकते हैं।</string>
+    <string name="gst">GST</string>
+    <string name="sort">Sort</string>
+
+    <!-- catlogshare.xml -->
+    <string name="send_enquiry">Send Enquiry</string>
+    <string name="create_purchase_order">ADD TO CART</string>
+    <string name="create_sales_order">Create Sales Order</string>
+    <string name="create_order">ADD TO CART</string>
+    <string name="create_brokerage_order">Create Brokerage Order</string>
+    <string name="chat_with_supplier">Chat with Supplier</string>
+    <string name="chat_with_buyer">Chat with Buyer</string>
+
+    <!-- Fragment_AddProduct -->
+    <string name="error_empty_price">Price Cannot be empty</string>
+    <string name="error_min_price_public">Minimum public price must be greater than 100</string>
+    <string name="error_min_price_private">Minimum private price must be greater than 100</string>
+    <string name="error_min_price">Minimum price must be greater than 100</string>
+    <string name="error_max_price_percentage">Percentage greater than 100 is not allowed</string>
+
+
+
+    <!-- Fragement_Summary.java -->
+    <string name="from_brands_you_follow">Followed by Me</string>
+    <string name="from_trusted_seller">Trusted Sellers</string>
+    <string name="follow_tutorial_text"><![CDATA[Brand के नए public catalogs की अपडेट पाने के लिए Follow करें।]]></string>
+
+    <!-- fragment_catalogs.xml -->
+    <string name="trusted_seller">Trusted Seller</string>
+
+    <!-- fragment_new_purchase_order -->
+    <string name="order_details">Order Details</string>
+    <string name="supplier_name">Supplier name</string>
+    <string name="broker_name">Broker name</string>
+    <string name="enter_order_number">Enter the order number</string>
+    <string name="catalog_details">Catalog Details</string>
+    <string name="enter_quantity">Enter quantity</string>
+    <string name="add_more_catalog">+ Add More Catalog</string>
+    <string name="single_designs_are_not_available_from_this_catalog">Full catalog for sale, not single pieces</string>
+    <string name="catalog_name">Catalog name:</string>
+    <string name="discount_cashback"><![CDATA[Discount & Cashbacks]]></string>
+    <string name="on_cash">On Cash</string>
+    <string name="on_credit">On Credit</string>
+    <string name="from_supplier">From supplier</string>
+    <string name="from_wishbook">From wishbook</string>
+
+    <!-- fragment_order_reciept -->
+    <string name="invoice_details">Invoice Details</string>
+    <string name="shipping_details">Shipping Details</string>
+    <string name="order_no">Order No</string>
+    <string name="order_date">Order Date</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="cgst">CGST</string>
+    <string name="sgst">SGST</string>
+    <string name="wholesaler_discount">Discount</string>
+    <string name="payable_amount">Payable Amount</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_value_summary">Order Value Summary</string>
+    <string name="amount"><font size="16"><b>Amount</b></font>\n(Excluding GST)</string>
+    <string name="exclude_gst">(Excluding GST)</string>
+    <string name="attachments">Attachments</string>
+    <string name="save_order_reciept_as_pdf">Save Order reciept as PDF</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="buy_on_credit">Buy on Credit</string>
+    <string name="shipment_medium">Shipment Medium</string>
+
+    <!-- fragment_cash_payment.xml -->
+    <string name="select_payment_mode">Select Payment Mode</string>
+    <string name="proceed_for_payment">Proceed for Payment</string>
+    <string name="done">Done</string>
+    <string name="order">Order</string>
+
+    <!-- Fragment_CreatePurchaseOrderNew.java -->
+    <string name="empty_field">cannot be empty !</string>
+    <string name="btn_continue">Continue</string>
+
+    <!-- setting_layout.xml -->
+    <string name="discount_setting">Discount Settings</string>
+
+    <!--fragemnt_discount_setting.xml -->
+    <string name="cash_discount">Cash Discount(%)</string>
+    <string name="credit_discount">Credit Discount(%)</string>
+    <string name="days_credit">Days of credit</string>
+    <string name="for_wholeseller">For Wholeseller</string>
+    <string name="for_retailer">For Retailer</string>
+    <string name="for_broker">For Broker</string>
+    <string name="for_public">For Public </string>
+    <string name="for_public_hint">(for all other users)</string>
+
+    <!-- Buyer Type -->
+    <string name="buyer_public">Public</string>
+    <string name="buyer_broker">Broker</string>
+    <string name="buyer_retailer">Retailer</string>
+    <string name="buyer_wholesaler">Wholesaler</string>
+
+    <!-- TAB -->
+    <string name="tab_home">Home</string>
+    <string name="tab_catalogs">Catalogs</string>
+    <string name="tab_contacts">Contacts</string>
+    <string name="tab_orders">Orders</string>
+    <string name="tab_profile">Profile</string>
+    <string name="tab_more">More</string>
+
+    <string name="wb_credit_discount">wb_credit_discount</string>
+    <string name="wb_cash_discount">wb_cash_discount</string>
+
+    <string name="invoice_cashback_note">Wishbook Cashback* आपको ऑर्डर की डिलीवरी के 3 कार्य दिवस के अंदर कर दी जाएगी। अधिक जानकारी के लिए T&amp;C देखिये।</string>
+    <string name="payment_method_cashback_note">Cash Discount पाने के लिए, नीचे दिए Online या Offline तरीको का इस्तेमाल कीजिये।</string>
+    <string name="boxed_package">Boxed Packing</string>
+    <string name="naked">No packing</string>
+    <string name="select_packaging_type">Select Packaging Type</string>
+
+    <!-- package type -->
+    <string name="package_type_box">Box</string>
+    <string name="package_type_naked">Naked</string>
+
+    <string name="txt_dispatch">Dispatch</string>
+    <string name="txt_accept">Accept</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_close">Close</string>
+    <string name="txt_transfer">Transfer</string>
+
+
+    <string-array name="transporter">
+        <item>FedEx</item>
+    </string-array>
+
+    <string name="wb_provided">WB Provided</string>
+    <string name="buyer_suggested">Buyer Suggested</string>
+
+    <string name="minimum_quantity">Enter minimum quantity 1</string>
+    <string name="error_text_pincode">हम इस पिनकोड पर डिलीवरी नहीं करते। अगर आप Wishbook Shipping चाहते हैं तो address बदलिए। </string>
+    <string name="other_transport_sub_text">इस आर्डर की डिलीवरी Supplier के ट्रांसपोर्टर से होगी। डिलीवरी होने पर Delivery charges आपको देने होंगे।</string>
+    <string name="price_publishing_sub_text"><![CDATA[इस supplier के कैटलॉग में अपना margin add कीजिये। जब भी आप इस सप्लायर का कैटलॉग अपने buyers से शेयर करेंगे, आपका margin automatically add हो जायेगा।]]></string>
+    <string name="discount_setting_sub_text"><![CDATA[यहाँ से आप सारे Buyers के लिए discount set कर सकते हैं।
+    \nWishbook App में कोई भी buyer दुसरे buyer को मिलने वाला discount नहीं देख सकता। ]]></string>
+
+
+    <!-- fragment_add_calatlog.xml -->
+    <string name="types_of_catalog">Catalog Visibility</string>
+    <string name="price_details">Price Details</string>
+
+    <string name="offline_note">If you transport via Wishbook shipping partner, charges will be deducted from your cashback.</string>
+    <string name="shipment_details">Shipment Address</string>
+    <string name="shipping_provider">Shipping Provider</string>
+    <string name="shipping_address">Shipping Address</string>
+
+    <string name="connect_buyer_with_broker">Connect Buyer with you as a Broker</string>
+    <string name="connect_supplier_with_broker">Connect a Supplier</string>
+    <string name="add_brokererage">Add Brokerage</string>
+
+    <!-- sales_order_item.xml -->
+    <string name="seller">Supplier</string>
+    <string name="order_value">Order Value</string>
+    <string name="payment_status">Payment status</string>
+    <string name="buyer">Buyer</string>
+    <string name="broker">Broker</string>
+
+
+    <!-- activity_profile_new.xml -->
+    <string name="my_company">My Company</string>
+    <string name="my_brands">My Brands</string>
+    <string name="buyer_group">Buyer Groups</string>
+
+    <string name="support_chat">Support Chat</string>
+    <string name="faq">FAQ</string>
+
+    <string name="change_password">Change Password</string>
+    <string name="set_password">Set Password</string>
+    <string name="change_language">Change Language</string>
+    <string name="logout">Logout</string>
+    <string name="show_hints">Show hints</string>
+    <string name="set_brokerage">Set Brokerage</string>
+    <string name="place_order">Place Order</string>
+
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+    <string name="no_buyer_title">No Buyers</string>
+    <string name="no_buyer_coonected_error">None of your buyers are connected with this supplier. Connect buyers?</string>
+    <string name="connect_buyers">Connect Buyers</string>
+    <string name="my_followers">My Followers</string>
+    <string name="my_catalogs">My Catalogs</string>
+    <string name="enter_your_brand_name">Enter your brand name</string>
+
+    <string name="add_your_brand_title">Add your brand</string>
+    <string name="catalog_enable_duration">Catalog Enable Duration</string>
+    <string name="enter_duration">Keep the product live for</string>
+
+    <!-- Deep Link Para -->
+    <string name="catalog_type">ctype</string>
+    <string name="deep_fabric">fabric</string>
+    <string name="deep_work">work</string>
+    <string name="deep_category">category</string>
+    <string name="deep_trusted_seller">istrusted</string>
+    <string name="deep_supplier_approved">issupplerapprove</string>
+    <string name="deep_from_price">from_price</string>
+    <string name="deep_to_price">to_price</string>
+    <string name="deep_brand">brand</string>
+
+    <string name="sub_text_disable"><![CDATA[आपका कैटलॉग नीचे दिए समय के बाद अपने आप disable हो जायेगा]]></string>
+    <string name="buyer_address">Buyer Address</string>
+    <string name="broker_address">Broker Address</string>
+
+    <string name="buy_on_suppliers_credit">Buy on Supplier\'s Credit</string>
+    <string name="_1_month">1 Month</string>
+    <string name="_3_month">3 Month</string>
+    <string name="_1_year">1 Year</string>
+    <string name="pending">Pending</string>
+    <string name="broker_dashboard">Broker Dashboard</string>
+
+    <!-- activity_filter_new.xml -->
+    <string name="filter_title">Filter</string>
+    <string name="category">Category</string>
+    <string name="brand">Brand</string>
+    <string name="fabric">Fabric</string>
+    <string name="work">Work</string>
+    <string name="price">Price</string>
+    <string name="style">Style</string>
+    <string name="state">State</string>
+    <string name="filter_catalog_type">Products</string>
+    <string name="from_my_network">From my network</string>
+    <string name="trusted_sellers">Trusted Sellers Only</string>
+    <string name="share_after_adding_margin">Share after adding (+) / subtracting (-) margin</string>
+
+    <!-- Rating Questions -->
+    <!-- Sales Question -->
+    <string name="delivered_products_were_not_as_described">Delivered product were not as described</string>
+    <string name="delivery_took_more_time_then_mentioned">Delivery took more time then mentioned</string>
+    <string name="technical_software_issues">Technical/Software issues</string>
+    <string name="other">Other</string>
+
+    <!-- Purchase Question -->
+    <string name="buyer_did_not_receive_the_goods">Buyer declined to receive the goods</string>
+    <string name="buyer_did_not_pay_in_promised_period">Buyer did not pay in promised period</string>
+    <string name="issues_with_wishbook_application">Technical/Software issues</string>
+
+    <string name="thank_you">Thank you!</string>
+
+
+    <!-- Language -->
+    <string name="language_title">Select Language</string>
+    <string name="user_details">Personal Details</string>
+    <string name="enter_username">Enter Username/Mobile number</string>
+    <string name="enter_username_register_new">Enter Username</string>
+    <string name="enter_name_register">Enter Name</string>
+    <string name="security_details">Security Details</string>
+    <string name="credit_details">Add Credit Details</string>
+    <string name="days">Days</string>
+    <string name="set_discount">Set Discount</string>
+    <string name="discount_on_credit_payment_mode">Discount on credit payment mode</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="connected_supplier">Connected Supplier</string>
+
+
+    <!-- Wishbook Contacts Details -->
+    <string name="wishbook_contacts_display_name">Wishbook Support</string>
+    <string name="wishbook_contacts_number">+918469218980</string>
+    <string name="broker_details">Broker Details</string>
+    <string name="enter_password">Enter Password (minimum 6 character)</string>
+    <string name="other_details">Other Details</string>
+    <string name="save">Save</string>
+    <string name="confirm_password">Confirm Password (minimum 6 character)</string>
+    <string name="price_margin_details">Price Margin Details</string>
+    <string name="share_title">Share</string>
+    <string name="individualshare">Individual Share</string>
+    <string name="groupshare">Group Share</string>
+    <string name="set_margin">Set Margin</string>
+    <string name="order_received">Order Received</string>
+    <string name="confirm_order_delivery_title">CONFIRM ORDER DELIVERY</string>
+    <string name="confirm_delivery_content">You confirm that you order %s has been delivered to you?</string>
+    <string name="design_amp_sizes"><![CDATA[Design & Sizes]]></string>
+    <string name="stiching_details">Stiching Details</string>
+    <string name="add_note">Add Note</string>
+    <string name="note">Note:</string>
+
+    <!-- fragemnt_login_version_2 -->
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="register">Register</string>
+    <string name="login">com.wishbook.catalog.Logic.Login.Login</string>
+
+    <!-- fragment_catalog_detail_version_2 -->
+    <string name="material_details">Material Details</string>
+    <string name="size">Size :</string>
+    <string name="style_colon">Style :</string>
+    <string name="designs">Designs :</string>
+    <string name="work_colon">Work :</string>
+    <string name="fabric_colon">Fabric :</string>
+    <string name="price_colon">Price :</string>
+    <string name="other_colon">Other :</string>
+    <string name="full_catalog_colon">Full Catalog :</string>
+    <string name="single_pc_colon">Single Pcs. :</string>
+    <string name="soldby_colon">Sold by :</string>
+    <string name="only_full_catalog_sale">Only full catalog</string>
+    <string name="single_catalog_sale">Single Designs available</string>
+    <string name="near_me">Sellers near me</string>
+    <string name="near_me_filter">Sellers near me only</string>
+    <string name="strich">Strich</string>
+    <string name="stitching_details">Stitching :</string>
+    <string name="qr_code_scan_sub_text">Enter supplier number or Scan QR code from the pamphlet/poster (optional)\nPamphlet/poster से supplier का number या QR code scan कीजिये (optional)</string>
+
+    <string-array name="language_array">
+        <item name="english">English</item>
+        <item name="hindi">हिंदी</item>
+    </string-array>
+
+    <string name="content_ask_right">यह ब्रांड आपकी ब्रांड लिस्ट में नहीं है। क्या आप इस ब्रांड को Add कर के इसके कैटलॉग्स बेचना चाहते हैं?</string>
+    <string name="multiple_seller_header">There are %d sellers for this catalog, select any one seller from the list</string>
+    <string name="multiple_seller_header1">There is %d sellers for this catalog, select any one seller from the list</string>
+    <string name="meeting_new_buyer_popup">Register a new buyer or select an existing buyer?</string>
+    <string name="modal_bottom_subtext">यह कैटलॉग पहले से मौजूद है। आप इस कैटलॉग के seller बन जाइये या कोई और कैटलॉग add कीजिये।</string>
+
+
+    <!-- Manufacturer Dashboard -->
+    <string name="view_all_catalogs">Views on all your products (Last 7 days)</string>
+    <string name="active_catalogs">Active\nProducts</string>
+    <string name="add_new_catalog">+ Add New\nProduct</string>
+    <string name="top_most_catalog_7days">Products under \"Top 10 Most viewed catalogs in last 7 days\"</string>
+    <string name="total_followers">Total followers</string>
+    <string name="latest_catalog_view">Views on your latest\nproduct</string>
+
+    <string name="sucess_seller_dialog">आप इस ब्रांड और कैटलॉग के सेलर बन गए हैं।\nअपने कैटलॉग manage करने के लिए \"My Catalog\" और ब्रांड manage करने के लिए \"My Brand\" पे जाये।</string>
+
+    <string name="seller_near_me_subtext">वो कैटलॉग्स जो आपके राज्य के sellers बेच रहे हैं। और वो कैटलॉग्स जो दुसरे राज्य के sellers अपने wholesalers के माध्यम से आपके राज्य में बेच रहे हैं। </string>
+
+    <string name="seller_near_me_detail_subtext">+%d wholesalers from your state. अधिक जानकारी के लिए seller से chat/enquire कीजिये  </string>
+
+    <string name="seller_more">%d Suppliers</string>
+
+    <string name="already_seller_popup">आप already ये कैटलॉग बेच रहे हैं, कृपया कोई और कैटलॉग add करें </string>
+
+    <string name="add_broker_popup">आप से कोई ब्रोकर नहीं जुड़ा है, पहले ब्रोकर जोड़े।</string>
+    <string name="add_broker_popup_addnow">अभी जोड़े</string>
+    <string name="add_broker_popup_later">बाद में</string>
+
+
+    <string name="attachment_subtext">आप यहाँ कागज़ बिल, ट्रांसपोर्ट चालान या अन्य डाक्यूमेंट्स की फोटो जोड़ सकते हैं </string>
+
+    <string name="disable_catalog">Stop Selling</string>
+    <string name="logout_popup">Do you want to logout from Wishbook?</string>
+    <string name="own_company_subtext">Your owning company</string>
+    <string name="you_are_selling">You are selling this catalog</string>
+    <string name="you_were_selling">You were selling this catalog</string>
+    <string name="register_scan_label">If you were referred by a seller, enter his number here.</string>
+
+    <string name="otp_cancel_register">You have already registered. To proceed, please login.</string>
+
+    <string name="start_selling_popup">आप ये कैटलॉग फिर से बेचना शुरू करना चाहते हैं तो \"Start Selling Again\" पे टच करें। </string>
+
+    <string name="cod_shipping_amount">₹%1$s अभी, ₹%2$s नकद डिलीवरी होने पर। माल की डिलीवरी ना लेने पर ₹%1$s वापिस नहीं किये जायेंगे *COD T&amp;C</string>
+    <string name="cod_shipping_amount_1">माल की डिलीवरी ना लेने पर ₹%1$s वापिस नहीं किये जायेंगे**COD T&amp;C</string>
+
+    <string name="register_popup_msg">Wishbook App के  सभी features का उपयोग करने के लिए अपना registration पूरा करें। </string>
+    <string name="otp_pin_subtext">(Please enter the OTP to proceed)</string>
+    <string name="otp_pin_headertext"><![CDATA[A One-time Password(OTP) has been sent to your number <font color=#3a3a3a>%s</font>]]></string>
+
+    <string name="cod_dialog_title1">क्या आप COD option के साथ डिलीवरी चाहते हैं?</string>
+    <string name="cod_dialog_text1">COD option के लिए ₹%1$S अभी चुकाने होंगे बाकी ₹%2$S नकद डिलीवरी होने पर।
+माल की डिलीवरी ना लेने पर ₹%1$S वापिस नहीं किये जायेंगे *COD T&amp;C</string>
+    <string name="cod_dialog_text2">Cash on Delivery (COD) option Wishbook Shipping के साथ ही लिया जा सकता है।</string>
+    <string name="cod_dialog_poistive1">हाँ, COD चाहिए</string>
+    <string name="cod_dialog_negative1">नहीं, मैं किसी और तरीके से पेमेंट करूँगा</string>
+    <string name="cod_dialog_positive2">हाँ, COD और Wishbook Shipping चाहिए</string>
+    <string name="cod_dialog_negative2">नहीं, मैं किसी और तरीके से पेमेंट करूँगा</string>
+
+    <string name="cod_sub_text">₹%1$s अभी चुकाए बाकी ₹%2$s नकद डिलीवरी होने पर</string>
+    <string name="cod_sub_text_reseller">Cash-on-Delivery के लिए कृपया ₹%s deposit जमा करें।</string>
+    <string name="ask_admin_dialog_text">आपकी Wishbook access करने की request %s के admin को भेज दी गयी है। Wishbook के सारे features का उपयोग करने के लिए admin का approval ज़रूरी है।</string>
+    <string name="ask_admin_dialog_text_1">आपने registration करते समय जो कंपनी select की थी, उस कंपनी के admin को आपकी request approve करनी होगी।</string>
+    <string name="ask_admin_dialog_positive">हाँ, ठीक हैै</string>
+    <string name="ask_admin_dialog_negative">नहीं, मेरी अलग कंपनी है</string>
+
+
+    <string name="pending_permission_text">आपकी request %s ने अब तक approve नहीं की है।
+कृपया अपने admin से Wishbook access करने की request approve कराए। </string>
+    <string name="register_subtext_1">Wishbook के सभी features का पूरा उपयोग करने के लिए registration पूरा करें। </string>
+    <string name="register_autocomplete_subtext">अगर आपकी कंपनी इन में से एक है तो select कीजिये अन्यथा बाकी फॉर्म भरिये।</string>
+
+    <string name="positve_text">ठीक है</string>
+    <string name="negative_text">नहीं</string>
+    <string name="register_incomplete_dialog_text">आपने Registration पूरा नहीं किया है, क्या आप बाहर निकलना चाहते है?</string>
+
+    <string name="after_20_session">आपके %d sessions पूरे हो चुके हैं, आगे Wishbook उपयोग करने के लिए कृपया Registration पूरा करें|</string>
+
+    <string name="wishbook_channel">Wishbook Channel</string>
+    <string name="number_discount_available">%1$d %2$s available</string>
+    <string name="add_design_subtext">कृपया हर design का एक-एक फोटो ही डालें।</string>
+
+    <string name="update_app_text">Wishbook App का नया और तेज़ version आ गया है। अभी update कीजिये!</string>
+    <string name="share_app_sub_txt">Wishbook पसंद आया? अपने टेक्सटाइल से जुड़े साथियों के साथ share कीजिये! </string>
+    <string name="share_app_msg">कमाएँ रु 20,000/- से रु 50,000/- तक प्रति माह वो भी 0 [शुन्य] प्रारंभिक लागत से! अपना fashion business शुरू करें घर से या कहीं से भी, कभी भी और आगे बढ़ें! Wishbook Wholesale App के ज़रिए से कमाई करने के लिए मेरे और सैकड़ों री-सेलर्स से जुड़ें। अभी install करे: \n</string>
+
+    <string name="share_catalog_link_msg">नमस्ते! इस लिंक से मेरा catalog %1$s (%2$s) price, fabric, work और बाकी सभी details के साथ Wishbook App पे देखिये। </string>
+    <string name="share_catalog_link_without_brand_msg">नमस्ते! इस लिंक से मेरा catalog %1$s price, fabric, work और बाकी सभी details के साथ Wishbook App पे देखिये। </string>
+
+    <string name="buyer_group_search">Search in \"%s\"</string>
+    <string name="menu_edit">Edit</string>
+    <string name="buyer_ratings">Credit ratings</string>
+    <string name="bureau_report">Bureau report</string>
+    <string name="finacial_statements">Finacial statements</string>
+    <string name="refferead_by">Feedback by Suppliers</string>
+    <string name="average_payment_time">Average payment time</string>
+    <string name="goods_return_rate">Goods return rate</string>
+    <string name="buyer_s_credit_rating">Buyer\'s credit rating</string>
+    <string name="see_details">See Details</string>
+    <string name="not_available">Not Available</string>
+    <string name="wishbook_company_rating_note">Wishbook is committed to clean market transactions, and is attempting to rate merchants. Wishbook does not take liability for defaults - Please sell on credit at your own risk</string>
+    <string name="delivery_time">Delivery:</string>
+    <string name="return_policy">Return policy:</string>
+    <string name="buy_as_broker">Buy as Broker</string>
+
+    <string name="tutorial_one_text">400+ नए products हर हफ्ते</string>
+    <string name="tutorial_one_sub_text">साड़ी, कुर्ती, सूट, लेहेंगे होलेसले भाव में </string>
+    <string name="tutorial_two_text">सूरत, अहमदाबाद, जयपुर \n आदि होलसेल मंडियों के सबसे बढ़िया products</string>
+    <string name="tutorial_two_sub_text">Reselling के लिए single pieces भी उपलब्ध </string>
+    <string name="tutorial_three_text">Door-step Delivery!</string>
+    <string name="all_over_india_subtext">देशभर में कहीं भी, किसी भी size का ऑर्डरं</string>
+
+
+    <string name="terms_rating">मैं Wishbook को मेरी credit score report और bank account details निकालने की सहमति देता हूँ। मैं website में दिए गए नियम और शर्ते को स्वीकार करता हूँ।</string>
+    <string name="scan_title_1">Scan QR code given on your aadhar card\nto auto-fill KYC from</string>
+
+    <string name="credit_rating_tutorial_tile1">Wishbook से Interest-Free* Credit पे माल खरीदने के लिए हो जाइये तैयार!</string>
+    <string name="credit_rating_tutorial_sub_text">ज़्यादातर पार्टी से उधारी का लाभ लीजिए
+</string>
+    <string name="subtitle_2">केवल २ मिनट में ये फॉर्म भरके!</string>
+    <string name="credit_rating_home_tile">Credit पे माल चाहिए?\nWishbook Credit के लिए apply कीजिये!</string>
+
+    <string name="my_viewers_detail_subtext_1">आप इस कैटलॉग और इसके viewers को इसलिए देख पा रहे हैं क्योंकि आप %s ब्रांड के owner हैं।
+आप इस कैटलॉग को Wishbook पर बेचना भी शुरू कर सकते हैं।</string>
+
+    <string name="my_viewers_detail_subtext_2">सिर्फ़ आपके state के catalog viewers</string>
+
+
+    <string name="question1">Buyer आपसे कितने वक़्त से Business कर रहा है?</string>
+    <string name="question2">Buyer १ साल में आपसे कितने की खरीददारी करता है (मूल्य)? </string>
+    <string name="question3">Buyer ज़्यादातर कितने दिन की उधारी पर काम करता है ?</string>
+    <string name="question4">Buyer का Goods  Return (GR) rate कितना है?</string>
+    <string name="support_buyer_rating">कृपया नीचे लिखे प्रष्नों का उत्तर दे कर %s के साथ आपके लेन-देन संबंधित जानकारी प्रदान करें। इस से buyer को उधारी/loan पे माल खरीदने में सहायता मिलेगी। </string>
+    <string name="enquiry_question">What would you like to ask about?</string>
+    <string name="buyer_add_feedback">Give feedback for this Buyer</string>
+
+    <string name="bereau_question_title">Bureau verification question</string>
+    <string name="field_missing_subtext_bureau">Credit का approval पाने के लिए कृपया ज़रूरी जानकारी दें।.\n%1$s</string>
+
+    <string name="public_discount_switch_label">Public</string>
+    <string name="private_discount_switch_label">Private</string>
+    <string name="locationwise_group_switch_label">Location Wise</string>
+    <string name="custom_group_switch_label">Custom</string>
+    <string name="empty_text_network">You don\'t have anyone in your network yet, Please invite from ALL</string>
+
+    <string name="total_redeemed">Total redeemed</string>
+    <string name="total_received">Total received</string>
+    <string name="additional_discount_subtext">You have offered %s discount for this order</string>
+
+    <string name="seller_credit_notes">Buyer ये order उधारी पे करना चाहता है। अगर आप buyer को नहीं जानते तो order cancel कर सकते हैं, या आप चाहें तो कुछ additional discount (जो केवल इसी order के लिए मान्य होगा) दे कर buyer को अभी payment करने के लिए आकर्षित कर सकते हैं। Add Additional Discount</string>
+    <string name="seller_other_draft_notes">Buyer ये order करने में interested है। आप चाहें तो कुछ additional discount (जो केवल इसी order के लिए मान्य होगा) दे कर buyer को अभी payment करने के लिए आकर्षित कर सकते हैं। Add Additional Discount</string>
+    <string name="catalogupload_without_gst">बिना GST और discount के price लिखें</string>
+    <string-array name="account_type">
+        <item>Account type</item>
+        <item>Savings</item>
+        <item>Current</item>
+    </string-array>
+
+    <string name="add_catalog_single_pc_note_per">Single pieces बेचने के लिए आपका %s मार्जिन अपने आप add कर दिया जाएगा</string>
+    <string name="add_catalog_single_pc_note_price">Single pieces बेचने के लिए आपका %s मार्जिन अपने आप add कर दिया जाएगा</string>
+    <string name="ship_cashback_note">Cashback payment और delivery के बाद दिया जायेगा।</string>
+    <string name="buy_on_credit_cart_note">इस payment mode पे कोई discount नहीं दिया जाएगा।</string>
+    <string name="chque_note">कृपया  \'Wishbook Infoservices Pvt. Ltd\' के नाम पर चेक बना कर बैंक में जमा करें। आपका Order तभी dispatch होगा जब आर्डर का पूरा amount हमारे account में आ जायेगा।</string>
+    <string name="other_note_payment">अगर आपने हमारे executive को पेमेंट किया है तभी ये option select करें।</string>
+
+    <string name="other_note_order_detail">Order तभी dispatch होगा जब आर्डर का पूरा amount हमारे account में आ जायेगा।</string>
+
+
+    <string name="wishbook_credit_state1">आप ने अब तक \'Wishbook Credit\' के लिए apply नहीं किया है।  Don’t worry</string>
+    <string name="wishbook_credit_state2">आपकी Wishbook Credit application प्रक्रियाधीन है। अधिक जानकारी के लिए 02616718985 पे कॉल करें। </string>
+    <string name="wishbook_credit_state3">आपके Order का मूल्य Available Credit Limit से ज़्यादा है। कृपया Cart में से कुछ products हटाएँ।</string>
+
+
+    <string name="credit_without_approve_dialog">Sorry! पूरी जानकारी पाए बिना हम आपके लिए credit मंज़ूर नहीं कर सकते।\nअधिक जानकारी के लिए हमारी support team से बात करें।</string>
+    <string name="okay">ठीक है</string>
+
+    <string name="buyer_credit_note_order">अगर supplier आपको credit देना चाहेगा, तो ही माल dispatch होगा।</string>
+    <string name="buyer_cheque_other_note_order" translatable="false">Order तभी dispatch होगा जब आर्डर का पूरा amount हमारे account में आयेगा।</string>
+    <string name="buyer_cod_note_order">अगर आप डिलीवरी के समय order नहीं लेते हैं, या cash पेमेंट नहीं करते हैं, तो आपका advance amount ज़ब्त कर लिया जायेगा, Refund नहीं किया जायेगा।</string>
+    <string name="buyer_cod_note_resaler_order">Note: अगर आपका कस्टमर डिलीवरी के समय पेमेंट नहीं करता है तो आपके द्वारा जमा किया पेमेंट ज़ब्त कर लिया जाएगा।</string>
+
+
+    <string name="upload_seller_approval_stage1">Wishbook Supplier बनने में रूची दिखाने के लिए धन्यवाद! हमारी team आपके supplier status की समीक्षा के लिए आपको जल्द ही call करेगी।</string>
+    <string name="upload_seller_approval_stage2"><![CDATA[आपका Wishbook Supplier Status <font color="#FFAA00">Pending</font> है।]]></string>
+    <string name="upload_seller_approval_stage3"><![CDATA[क्षमा कीजिये! आपका Wishbook Supplier Status <font color="#e02b2b">अस्वीकार </font> कर दिया गया है। ]]></string>
+    <string name="upload_seller_approval_stage4"><![CDATA[बधाई हो! आपका Wishbook Supplier Status <font color="#05721c"> स्वीकृत </font>कर लिया गया है। अब आप Wishbook पर अपने catalogs upload कर सकते हैं।]]></string>
+
+    <string name="pre_order_cart_note">नीचे दिए products \'Pre-Launch\'  हैं। ये available होने पर ही dispatch किये जायेंगे।</string>
+
+    <string name="cod_500_subtext">Rs.500 से कम कीमत के orders पर cash-on-delivery की सुविधा उपलब्ध नहीं है।</string>
+
+
+    <string name="empty_wb_money">Oops! आपका account खाली है।</string>
+    <string name="empty_wb_reward_txt_manufacturer">Oops! आपका account खाली है। अभी products upload करना शुरू कीजिये और WB Reward कमाइए।</string>
+    <string name="empty_wb_reward_txt_wholsaler">Oops! आपका account खाली है। अभी products upload या order करना शुरू कीजिये और WB Reward कमाइए।</string>
+    <string name="empty_wb_reward_txt_retailer">Oops! आपका account खाली है। अभी products order करना शुरू कीजिये और WB Reward कमाइए।</string>
+
+    <string name="empty_brand_wise_discount">Hello! आपने किसी भी brand पर discount add नहीं किया है। नीचे (+) icon पे टच करें और discounts देना शुरू करें!\n\n
+ये discounts आपके द्वारा Wishbook को बेचे माल पर लागू होंगे। Buyers (retailers और resellers) को कितना discount दिखाना है ये निर्णय पूर्णतः Wishbook का होगा। </string>
+
+    <string name="order_track_note">Relax. आपका आर्डर dispatch होते ही आपको tracking details दिखने लगेंगी।</string>
+
+    <string name="error_no_of_size_set">कृपया %1$s sizes select कीजिये, या अपने सेट में number of pieces %2$s लिखिए </string>
+    <string name="resell_amount_error">Resell की कीमत आर्डर की कीमत से ज़्यादा होनी चाहिए।</string>
+    <string name="resell_amount_error_item">हर item की रीसेल कीमत उसकी ऑर्डर की कीमत से ज़्यादा या उसके बराबर होनी चाहिए।</string>
+    <string name="resell_amount_error_3x_item">बहुत ज़्यादा मार्जिन add करने पर ऑर्डर return हो जाते हैं। कृपया मार्जिन 200% से कम रखें।</string>
+    <string name="resell_cod_note">COD Option के लिए आपको ₹%s security deposit जमा करना होगा। \nDelivery होने के बाद यह deposit आपके बैंक account में जमा कर दिया जायेगा।\nलेकिन, कस्टमर डिलीवरी के समय पेमेंट नहीं करता है तो आपका security deposit ज़ब्त कर लिया जाएगा। *COD T&amp;C</string>
+    <string name="resell_payout_under_constructor">Weekly Payouts: इस हफ्ते डिलीवर हुए orders का पेमेंट अगले हफ्ते शनिवार तक आपके बैंक अकाउंट में कर दिया जायेगा। </string>
+
+    <string name="resell_order_note">अगर आप रीसेल आर्डर नहीं बनाना चाहते तो इस switch को बंद कर दें।</string>
+    <string name="resell_order_edit_text_hint">Enter Resell Amount (अपने margin के साथ)</string>
+    <string name="resell_bottom_sheet_other_note">यहाँ हर item के लिए अपना मार्जिन और शिपिंग जोड़ कर \'रीसेल कीमत\' लिखें। यह कीमत आपके कस्टमर को भेजे बिल पर लिखी होगी।</string>
+    <string name="resell_bottom_sheet_cod_note">यहाँ हर item के लिए अपना मार्जिन और शिपिंग जोड़ कर \'रीसेल कीमत\' लिखें। यह कीमत हम आपके कस्टमर से लेंगे।</string>
+    <string name="resell_switch_on_note">अगर आप ये नहीं चाहते की हम आपका मार्जिन जोड़ कर ये माल सीधे आपके कस्टमर को पहुँचा दें, तो इस switch को OFF कर दें।</string>
+    <string name="resell_switch_off_note">अगर आप चाहते की हम आपका मार्जिन जोड़ कर ये माल सीधे आपके कस्टमर को पहुँचा दें, तो इस switch को ON कर दें।</string>
+
+
+    <string name="cod_block">डिलीवरी के समय COD orders ना लेने के कारण आपके लिए COD की सुविधा बंद कर दी गयी है। Order बनाने के लिए पहले payment करें।</string>
+    <string name="cod_not_show">Sorry, आपके पिनकोड पर COD की सुविधा उपलब्ध नहीं है।</string>
+
+
+    <!--activity_pre_register.xml -->
+    <string name="select_company_type">इस से हम आपको बेहतर अनुभव प्रदान कर पाएंगे।</string>
+    <string name="reseller_sub_text">मुझे WhatsApp/ Facebook के माध्यम से माल बेचने के लिए सिंगल pieces खरीदने होते हैं</string>
+    <string name="retailer_sub_text">मुझे पूरे catalogs और सिंगल pieces खरीदने होते हैं</string>
+    <string name="manufaturer_sub_text">मैं होलसेल रेट में Wishbook को माल supply करना चाहता हूँ</string>
+    <string name="user_type_note1">Hello! आपके व्यवसाय के अनुसार नीचे दिए option चुनें। इस से हम आपको बेहतर अनुभव प्रदान कर पाएंगे। </string>
+    <string name="reseller_order_cod_verify_note">आपके ऑर्डर का COD verification बाकी है। बिना verification के माल dispatch नहीं किया जा सकता। कृपया हमारे support पे call या chat कर के verification पूरा करें।</string>
+    <string name="incentive_note_1"> Incentive हर हफ्ते आपके WB Reward Points में add किये जाते हैं।</string>
+    <string name="billing_address_header">कृपया Billing Address में अपना Address लिखें और Delivery Address में अपने buyer का address लिखें।</string>
+
+
+    <!-- dialog_view_tax_shipping_charges.xml -->
+    <string name="suggested_resell_price_pc">प्रस्तावित रीसेल कीमत/Pc.:</string>
+    <string name="suggested_resell_price">प्रस्तावित रीसेल कीमत:</string>
+    <string name="margin">आपका मार्जिन:</string>
+    <string name="cod_note2">Wholesale Price | Cash-on-Delivery \n Easy Returns*</string>
+    <string name="share_on_whatsapp_btn_text">Share on Whatsapp</string>
+    <string name="suggested_resell_price_note">प्रोडक्ट प्रस्तावित रीसेल कीमत पर शेयर किये जायेंगे</string>
+
+    <!-- Single Detail include_catalog_material_detail.xml -->
+    <string name="view_other_collection_subtext">कलेक्शन की दूसरी designs/colours देखें </string>
+    <string name="single_collection_sub_text">इसी कलेक्शन की दूसरी designs/colours देखने और शेयर करने के लिए कलेक्शन के नाम पेजाएँ</string>
+
+
+    <!-- Order Detail -->
+    <string name="order_replace_note1" >प्रोडक्ट्स replace/return करना चाहते हैं?\nहमारी Support Team को confirm कीजिये की माल आपको डिलीवर हो चूका है।</string>
+    <string name="order_replace_note1_sub_text">(Shipment status ‘Delivered’ हो जाने पर आप यहाँ से return/replacement के लिए request कर पाएंगे)</string>
+    <string name="order_replace_note2">आपने confirm किया है की माल आपको डिलीवर हो चूका है।</string>
+    <string name="order_replace_note2_sb_text">हमारी Support Team check कर के status update कर देगी। \n(Shipment status \‘Delivered\’ हो जाने पर आप यहाँ से return/replacement के लिए request कर पाएंगे)</string>
+
+
+    <!-- rate_review_bottomsheet.xml -->
+    <string name="review_reward_note"><![CDATA[डिलीवर हुए माल की असली फोटो add करने पर 5 WB Reward Points मिलेंगे]]></string>
+    <string name="total_shipping_charge">Total Shipping Charge</string>
+
+    <string name="ifsc_fith_should_zero_error">IFSC code गलत है। IFSC code का 5th अक्षर \'0\' (zero/ शून्य) होना चाहिए। कृपया सही details भरें।</string>
+    <string name="order_disable_note">आपके उच्च रिटर्न के कारण, आप Wishbook पर नया रिटर्न रिक्वेस्ट नहीं बना पाएंगे। अगर आपको लगता है कि यह संदेश गलती से है तो कृपया हमसे 02616718997 पर संपर्क करें।</string>
+</resources>

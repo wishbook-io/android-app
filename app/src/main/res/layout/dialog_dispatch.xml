@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="36dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="Enter Dispatch Details"
+                android:textSize="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="18dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/input_date_cont"
+                android:layout_height="wrap_content">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:id="@+id/input_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Password Label -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mode of Dispatch"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_transporter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Transporter/Courier name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_paymentDet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter tracking number"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_discard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Cancel"
+                android:backgroundTint="@color/color_primary"
+
+                android:textColor="#ffffff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Save"
+                android:backgroundTint="@color/color_primary"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

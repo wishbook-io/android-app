@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purchase_medium_gray"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/supporting_text"/>
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/item_picker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/supporting_text"
+        android:layout_above="@+id/frame"
+        app:dsv_orientation="vertical"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true">
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:background="@color/purchase_light_gray"
+                android:id="@+id/indicator1"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"/>
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:background="@color/purchase_light_gray"
+                android:id="@+id/indicator2"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"/>
+            <LinearLayout
+                android:layout_width="5dp"
+                android:background="@color/purchase_light_gray"
+                android:layout_height="30dp"
+                android:id="@+id/indicator3"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"/>
+            <LinearLayout
+                android:layout_width="5dp"
+                android:background="@color/purchase_light_gray"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:id="@+id/indicator4" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:outlineProvider="bounds"
+        android:id="@+id/frame"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:elevation="6dp">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_primary"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="normal" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="@dimen/toolbar_elevation"
+        android:transitionName="actionBar"
+        app:contentInsetStart="@dimen/toolbar_contentInset"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/SearchBarTheme"
+        tools:ignore="UnusedAttribute">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal">
+
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize"
+            android:layout_weight="0.35"
+            android:fillViewport="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="left">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ios_grey"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative_ctype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/catalog_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type &amp; availability"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/catalog_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/category_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/category_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+
+                    <TextView
+                        android:id="@+id/selected_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/category_label"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_strich"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/strich_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/strich"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/strich_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/brand_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brand"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/brand_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/price_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/price_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_fabric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/fabric_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fabric"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/fabric_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/work_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/work"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/work_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/purchase_light_gray" />
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_hidden_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/purchase_light_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/style_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <TextView
+                            android:id="@+id/style_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/purchase_light_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/state_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/state"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <TextView
+                            android:id="@+id/state_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/purchase_light_gray" />
+
+
+
+                    <TextView
+                        android:id="@+id/txt_view_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View more"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/color_primary"
+                        android:padding="8dp"/>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?actionBarSize"
+            android:layout_weight="0.65"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/purchase_medium_gray"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/purchase_light_gray"
+                android:hint="Search brand"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@color/purchase_dark_gray"
+                android:textColorHint="@color/purchase_light_gray"
+                android:textSize="@dimen/font_size_normal"
+                app:drawableLeftEditTextCompat="@drawable/ic_search_black" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+            <include layout="@layout/activity_common_progress" />
+
+            <LinearLayout
+                android:id="@+id/catalog_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                            android:id="@+id/edit_catalog_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="16dp"
+                            android:backgroundTint="@color/purchase_medium_gray"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/purchase_light_gray"
+                            android:hint="Search Catalog"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal"
+                            android:visibility="gone"
+                            app:drawableLeftEditTextCompat="@drawable/ic_search_black" />
+
+                        <LinearLayout
+                            android:id="@+id/public_supplier_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="16dp">
+
+                                <CheckBox
+                                    android:id="@+id/radioGroup_public"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="@string/from_my_network"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/purchase_dark_gray" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_checked_trusted_seller"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:visibility="gone">
+
+                            <CheckBox
+                                android:id="@+id/check_trusted_seller"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:layoutDirection="rtl"
+                                android:text="@string/trusted_sellers"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_checked_near_me"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:visibility="gone">
+
+                            <CheckBox
+                                android:id="@+id/check_near_me"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:layoutDirection="rtl"
+                                android:text="@string/near_me_filter"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_showDisabled"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="16dp">
+
+                                <CheckBox
+                                    android:id="@+id/check_buyer_disable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Show Disabled by me"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="16dp">
+
+                                <CheckBox
+                                    android:id="@+id/check_supplier_disable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Show Disabled by Supplier"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/purchase_light_gray" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_catalog_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Type"
+                                android:textColor="@color/color_primary"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/radio_catalog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Catalog"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/radio_noncatalog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Non-catalog"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@color/purchase_light_gray" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_availability"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Availability"
+                                android:textColor="@color/color_primary"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/check_full_catalog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Full-set"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/check_single_piece"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Single pcs. available"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/check_both"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Both available"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/chk_prelaunch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:gravity="left|center_vertical"
+                                    android:layoutDirection="rtl"
+                                    android:text="Include prelaunch"
+                                    android:textAlignment="gravity"
+                                    android:textColor="@color/purchase_dark_gray" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_place_order"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="PrivateResource">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_elevation"
+            android:layout_marginBottom="-3dp"
+            android:background="@drawable/bottom_above_shadow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- <android.support.v7.widget.AppCompatButton
+                 android:id="@+id/btn_clear_all"
+                 android:layout_width="0dp"
+                 android:layout_weight="0.35"
+                 android:layout_height="match_parent"
+                 android:background="@color/purchase_medium_gray"
+                 android:text="Clear All"
+                 android:textAllCaps="true"
+                 android:textColor="@android:color/white"
+                 android:textSize="@dimen/font_size_default"
+                 android:textStyle="normal" />-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clear_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:background="@color/color_primary"
+                android:text="Save"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_default"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_filter_apply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:background="@color/white"
+                android:text="@string/filter_apply"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_default"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

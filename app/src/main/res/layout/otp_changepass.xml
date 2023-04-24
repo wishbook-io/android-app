@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:theme="@style/TextLabel"
+        android:layout_marginBottom="8dp">
+        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText android:id="@+id/input_otp"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+            android:hint="OTP Recieved" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:theme="@style/TextLabel"
+        android:layout_marginBottom="8dp">
+        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText android:id="@+id/input_password"
+            android:textColor="#ffffff"
+            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:theme="@style/TextLabel"
+        android:layout_marginBottom="8dp">
+        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText android:id="@+id/input_confpassword"
+            android:textColor="#ffffff"
+            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Confirm password" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

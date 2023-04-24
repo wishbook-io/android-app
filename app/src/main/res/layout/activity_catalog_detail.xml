@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material_bg"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/linear_bottom_sticky_bar"
+                    android:fillViewport="true">
+
+                    <FrameLayout
+                        android:id="@+id/frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/include_catalog_basic_detail" />
+
+                            <include layout="@layout/include_product_horizontal_scroller" />
+
+                            <include layout="@layout/include_catalog_material_detail_v2" />
+
+
+                            <TextView
+                                android:id="@+id/list_empty1"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_below="@+id/linear_card_catalog_summary"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="No items to display"
+                                android:textSize="@dimen/font_size_heading" />
+
+                            <view
+                                android:id="@+id/recycler_view"
+                                class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/linear_card_catalog_summary"
+                                android:layout_marginBottom="12dp" />
+
+
+                            <include layout="@layout/include_retrun_policy" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_similar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:background="@android:color/white"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_marginTop="0dp"
+                                    android:gravity="left">
+
+                                    <TextView
+                                        android:id="@+id/txt_similar_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="4dp"
+                                        android:clickable="false"
+                                        android:padding="8dp"
+                                        android:text="Similar Products"
+                                        android:textColor="@color/purchase_dark_gray"
+                                        android:textSize="@dimen/font_size_subheading"
+                                        android:textStyle="normal" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="10dp"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical"
+                                        android:padding="8dp"
+                                        android:text="See all"
+                                        android:textColor="@color/color_primary"
+                                        android:textSize="@dimen/font_size_normal"
+                                        android:textStyle="normal"
+                                        android:visibility="gone" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycler_view_similar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/sectionMore"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/btn_see_all"
+                                        android:clickable="false"
+                                        android:gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:paddingTop="8dp"
+                                        android:paddingBottom="8dp"
+                                        android:text="See all"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/font_size_normal"
+                                        android:textStyle="normal"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+
+                                <com.wishbook.catalog.Utils.widget.WrapContentDraweeView
+                                    android:id="@+id/refer_earn_promotion_img_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_marginTop="8dp"
+                                    android:visibility="gone"
+                                    app:actualImageScaleType="fitXY"
+                                    app:placeholderImage="@drawable/uploadempty" />
+
+
+                                <View
+                                    android:id="@+id/view_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@color/purchase_light_gray" />
+
+                                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                                    android:id="@+id/txt_more_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:padding="8dp"
+                                    android:text="More Sarees"
+                                    android:textColor="@color/purchase_dark_gray"
+                                    android:textSize="@dimen/font_size_default"
+                                    app:drawableRightCompat="@drawable/ic_forward_black_24dp" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/btn_support_chat"
+                                android:layout_width="280dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/button_edge_less_transparent"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Chat With Us"
+                                android:textColor="@color/color_primary"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <LinearLayout
+                    android:id="@+id/linear_bottom_sticky_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="@dimen/toolbar_elevation"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    tools:ignore="PrivateResource">
+
+                    <LinearLayout
+                        android:id="@+id/linear_flow_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_alignParentBottom="true"
+                        android:elevation="@dimen/toolbar_elevation"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:ignore="PrivateResource">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginBottom="-2dp"
+                            android:background="@drawable/bottom_above_shadow" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_send_enquiry"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/send_enquiry"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/color_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_chat_supplier"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/chat_with_supplier"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/color_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_enquiry_chat"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="Chat/Enquiry"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_normal"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_purchase"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/orange"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="ADD TO CART"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_broker"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/buy_as_broker"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_normal"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_screen_owner_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_alignParentBottom="true"
+                        android:elevation="@dimen/toolbar_elevation"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:ignore="PrivateResource">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginBottom="-2dp"
+                            android:background="@drawable/bottom_above_shadow" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_edit_screen_set"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/edit_set"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/color_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_add_screen_set"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/color_primary"
+                                android:gravity="center"
+                                android:text="@string/add_set"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/catalog_sticky_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="8dp"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:padding="8dp">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/linear_brand_follow_container_2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:alignContent="flex_start"
+                        app:alignItems="flex_start"
+                        app:flexWrap="wrap">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/img_brand_logo_2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:scaleType="centerInside"
+                            app:actualImageScaleType="fitCenter"
+                            app:placeholderImage="@drawable/uploadempty" />
+
+                        <TextView
+                            android:id="@+id/txt_brand_name_2"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@string/font_medium"
+                            android:maxLines="2"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="12sp" />
+
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/txt_wishlist_layout_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:stateListAnimator="@null">
+
+                            <ImageView
+                                android:id="@+id/wishlogo_2"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/circle"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_bookmark_light_grey_24dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_add_product_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:stateListAnimator="@null"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:id="@+id/img_disable_2"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/circle_filled"
+                                android:padding="8dp"
+                                android:tint="@color/white"
+                                app:srcCompat="@drawable/ic_edit_pencil" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_share_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:stateListAnimator="@null">
+
+                            <ImageView
+                                android:id="@+id/img_share_2"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/circle_filled"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_share_white_fill_24" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

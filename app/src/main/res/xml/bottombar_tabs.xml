@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home_24dp"
+        activeColor="#0d80c1"
+        title="Home"/>
+    <tab
+        id="@+id/tab_catalogs"
+        icon="@drawable/ic_local_offer_24dp"
+        activeColor="#0d80c1"
+        title="Catalogs" />
+    <!--<tab
+        id="@+id/tab_contacts"
+        icon="@drawable/ic_people_24dp"
+        activeColor="#0d80c1"
+        title="Contacts" />-->
+
+    <tab
+        id="@+id/tab_orders"
+        icon="@drawable/ic_baseline_orders_24px"
+        activeColor="#0d80c1"
+        title="Orders" />
+
+<!--    <tab
+        id="@+id/tab_inventory"
+        icon="@drawable/inventoryicon"
+        activeColor="#0d80c1"
+        title="Inventory" />-->
+
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_person_white_24dp"
+        activeColor="#0d80c1"
+        title="Profile" />
+
+    <tab
+        id="@+id/tab_more"
+        icon="@drawable/ic_more_horiz_24dp"
+        activeColor="#0d80c1"
+        title="More" />
+</tabs>

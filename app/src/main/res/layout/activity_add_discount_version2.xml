@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit"
+        android:fillViewport="true"
+        android:background="@color/material_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_brands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <TextView
+                        style="@style/inner_heading_normal_primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:layout_marginBottom="8dp"
+                        android:text="Add brands" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexbox_brands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:alignContent="space_around"
+                        app:alignItems="flex_start"
+                        app:flexWrap="wrap"
+                        app:showDivider="middle">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_add_brands"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="3dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:background="@drawable/button_edge_less_padding_blue"
+                            android:elevation="0dp"
+                            android:gravity="center"
+                            android:stateListAnimator="@null"
+                            android:text="Add More +"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_primary"
+                            android:textSize="@dimen/font_size_medium"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/inner_heading_normal_primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="Discount" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_cash_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_cash_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter Full Catalog Discount(%)"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_single_pc_cash_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_single_pc_cash_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter Single Piece Discount(%)"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:text="SAVE"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

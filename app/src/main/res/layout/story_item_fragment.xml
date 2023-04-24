@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_alpha_60">
+
+
+    <com.wishbook.catalog.frescoZoomable.ZoomableDraweeView
+        android:id="@+id/img_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        fresco:actualImageScaleType="fitCenter" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_bottom_action"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/catalog_shadow"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show_details_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/button_edge_white"
+            android:elevation="2dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Show details"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_to_wishlist_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@+id/btn_show_details_bottom"
+            android:background="@drawable/button_edge_white"
+            android:elevation="2dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Add to wishlist"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:clickable="true"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                CircleProgressView:srcCompat="@drawable/ic_toolbar_back"/>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_brand_logo"
+                style="@style/DraweeRoundedCorners.Drawee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/img_back"
+                CircleProgressView:roundingBorderWidth="1.5dp"
+                CircleProgressView:roundingBorderColor="@color/white"
+                app:actualImageUri="https://www.fionasolitaires.in/img/timeline/21.jpg"
+                app:roundAsCircle="true"
+                android:layout_marginRight="8dp"
+                android:transitionName="brand_image"
+                fresco:actualImageScaleType="fitCenter" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_brand_name_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_brand_logo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand Name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_default" />
+
+                <TextView
+                    android:id="@+id/txt_catalog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_brand_name"
+                    android:layout_toRightOf="@+id/img_brand_logo"
+                    android:text="Catalog Name"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/last_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/play_last_frame"
+        android:paddingBottom="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/circle_play_next"
+                android:layout_width="140dp"
+                android:layout_height="140dp">
+
+                <at.grabner.circleprogress.CircleProgressView
+                    android:id="@+id/play_next_progress"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    CircleProgressView:cpv_autoTextSize="true"
+                    CircleProgressView:cpv_barColor="@color/white"
+                    CircleProgressView:cpv_barWidth="12dp"
+                    CircleProgressView:cpv_fillColor="@color/transparent"
+                    CircleProgressView:cpv_innerContourSize="0dp"
+                    CircleProgressView:cpv_maxValue="3000"
+                    CircleProgressView:cpv_outerContourSize="0dp"
+                    CircleProgressView:cpv_rimColor="@color/white_alpha_40"
+                    CircleProgressView:cpv_rimWidth="12dp"
+                    CircleProgressView:cpv_showUnit="false"
+                    CircleProgressView:cpv_spinColor="@color/white_alpha_40"
+                    CircleProgressView:cpv_textColor="@color/transparent"
+                    CircleProgressView:cpv_value="10" />
+
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    fresco:srcCompat="@drawable/ic_story_play_24dp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_wishlist_container"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|bottom"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Play Next"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Liked this Catalog..?"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_to_wishlist"
+                    android:layout_width="160dp"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_white_fill_blue"
+                    android:elevation="2dp"
+                    android:text="Add to wishlist"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_alpha_60"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Now"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_show_details"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_edge_white"
+                android:elevation="2dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Show details"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <com.wishbook.catalog.stories.StoryStatusView
+        android:id="@+id/storiesStatus"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="8dp" />
+</FrameLayout>

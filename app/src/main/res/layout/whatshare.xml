@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="#e7e7e7"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.wishbook.catalog.activities.Main2Activity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.wishbook.catalog.home.catalog.Fragment_Catalogs">
+        <include layout="@layout/toolbar_app"
+            />
+
+        <view
+            android:id="@+id/recycler_view"
+            class="androidx.recyclerview.widget.RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/wap_item"
+                fab:menu_colorNormal="#34af23"
+                fab:menu_colorPressed="#34af23"
+                fab:fab_colorNormal="#34af23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_whatspp"
+                fab:fab_size="normal"
+                fab:fab_label="WhatsApp"
+                android:layout_margin="10dp"
+                android:layout_alignBottom="@+id/recycler_view"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

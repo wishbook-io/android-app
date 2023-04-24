@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_delivery_root_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:gravity="left"
+            android:text="Delivery Info"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default"
+            android:textStyle="normal" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_pincode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_pincode"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="@string/digits"
+                    android:hint="Enter pincode"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_check_delivery_info"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_primary"
+                android:background="@null"
+                android:text="APPLY"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_delivery_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_delivery_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:text="Delivery : "
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txt_delivery_delivery_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_delivery_cod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:text="COD : "
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txt_delivery_cod_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_delivery_shipping_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:text="Shipping options : "
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txt_delivery_shipping_options"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

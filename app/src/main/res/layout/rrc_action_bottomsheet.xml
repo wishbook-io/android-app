@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/cancel_img"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:tint="@color/purchase_medium_gray"
+            app:srcCompat="@drawable/ic_wrong" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cancel_img"
+            android:layout_marginLeft="22dp"
+            android:fontFamily="@string/font_medium"
+            android:text="Cancel request"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_action_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/edit_img"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:tint="@color/purchase_medium_gray"
+            app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/edit_img"
+            android:layout_marginLeft="22dp"
+            android:fontFamily="@string/font_medium"
+            android:text="Edit Items"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default" />
+    </RelativeLayout>
+
+
+</LinearLayout>

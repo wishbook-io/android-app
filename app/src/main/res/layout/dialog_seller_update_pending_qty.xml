@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_availability_of"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_subheading" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_ready_qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0dp"
+        android:hint="Ready quantity"
+        android:textColorHint="@color/black"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_ready_qty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/purchase_light_gray"
+            android:hint="Ready quantity"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:digits="@string/digits"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:theme="@style/MyEditTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_unavailable_qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0dp"
+        android:hint="Unavailable quantity"
+        android:textColorHint="@color/black"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_unavailable_qty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/purchase_light_gray"
+            android:hint="Unavailable quantity"
+            android:inputType="numberDecimal"
+            android:digits="@string/digits"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:theme="@style/MyEditTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_dispatch_date"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_edge_grey_rectengle"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+            android:id="@+id/text_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="Expected Date"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:drawableLeftCompat="@drawable/ic_calender_24px" />
+
+
+        <TextView
+            android:id="@+id/edit_dispatch_label"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawablePadding="10dp"
+            android:gravity="right|center_vertical"
+            android:text="Edit expected date"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/btn_negative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/btn_positive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="Update"
+            android:textColor="@color/color_primary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

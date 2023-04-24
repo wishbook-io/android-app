@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/color_primary"
+            android:elevation="@dimen/toolbar_elevation"
+            android:transitionName="actionBar"
+            app:contentInsetStart="@dimen/toolbar_contentInset"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/AppTheme.ActionBar"
+            tools:ignore="UnusedAttribute" />
+
+        <LinearLayout
+            android:id="@+id/linear_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:elevation="6dp"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:focusableInTouchMode="true"
+                android:visibility="visible"
+                app:closeIcon="@null"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search by name"
+                app:searchIcon="@null" />
+
+
+            <ImageView
+                android:id="@+id/img_searchclose"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="8dp"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/include_permission" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_button"
+        android:layout_below="@+id/relative_header">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/txt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Fetching contacts.."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/aluminum"
+            android:textSize="@dimen/font_size_heading"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="66dp"
+        app:srcCompat="@drawable/ic_done_24dp" />
+
+    <LinearLayout
+        android:id="@+id/linear_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:ignore="PrivateResource">
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btn_select_none"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Select none"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_select_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/color_primary"
+            android:gravity="center"
+            android:text="Select All"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

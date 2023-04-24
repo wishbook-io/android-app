@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/met_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_subheading" />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                android:id="@+id/txt_new_buyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text=""
+                app:drawableRightCompat="@drawable/ic_add_black_24dp"
+                android:drawableTint="@color/color_primary"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/purchase_dark_gray"
+                android:visibility="gone"
+                android:textSize="@dimen/font_size_subheading" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/edit_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/applozic_ic_action_edit"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/done_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_right_48"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/met_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_normal" />
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:textSize="@dimen/font_size_normal"
+                      android:textColor="#3c3c3c"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:text="asrfafasf"
+                      android:id="@+id/met_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/font_size_normal"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/met_time" />
+            </LinearLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Running"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/btn_add_note"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/add_note"
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/met_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_size_default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/met_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#3c3c3c"
+                android:textSize="@dimen/font_size_default" />
+
+            <ImageView
+                android:id="@+id/met_statusicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="5dp"
+                app:srcCompat="@drawable/ic_right" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:textColor="@color/purchase_dark_gray"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/purchase_medium_gray" />
+    </LinearLayout>
+</LinearLayout>
+

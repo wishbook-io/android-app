@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/main"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catalog duration"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_primary" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:text="Your catalog will be visible for " />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:maxLength="3"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:theme="@style/AppThemeReseller"
+                    android:textSize="14dp"
+                    android:text="45"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:inputType="number"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:layout_height="wrap_content"
+                    android:text="days"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_primary"
+                android:text="How would you like to sell catalog"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_edge_less"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:layout_margin="12dp"
+                    android:paddingRight="7dp"
+                    android:layout_weight="1"
+                    android:text="Full catalog only"
+                    android:textColor="@color/color_primary"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_edge_less"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:layout_margin="12dp"
+                    android:layout_weight="1"
+                    android:text="Single pieces also"
+                    android:textColor="@color/color_primary"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_primary"
+                android:textSize="16dp"
+                android:text="Set the price for single Pcs."/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:theme="@style/AppThemeReseller"
+                    android:layout_marginRight="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:text="Single pcs. at " />
+                    <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:maxLength="3"
+                        android:theme="@style/AppThemeReseller"
+                        android:digits="0123456789"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:inputType="number"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:text="% higher rate"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:theme="@style/AppThemeReseller"
+                    android:layout_marginRight="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:text="Single pcs. at " />
+                    <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:theme="@style/AppThemeReseller"
+                        android:maxLength="3"
+                        android:digits="0123456789"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:inputType="number"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14dp"
+                        android:text="Rs. higher rate"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/main"
+            android:background="@color/color_primary"
+            android:text="DONE"/>
+    </RelativeLayout>
+
+</FrameLayout>

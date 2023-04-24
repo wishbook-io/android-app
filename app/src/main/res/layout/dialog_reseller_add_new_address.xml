@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Add new customer address"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_default" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_customer_name"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Name"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="text"
+                    android:maxLength="54"
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_customer_phone"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="@string/digits"
+                    android:hint="Phone number"
+                    android:inputType="number"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_address"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:hint="Address"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/purchase_light_gray" />
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/purchase_light_gray" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/edit_pincode"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="@string/digits"
+                    android:hint="Pincode"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20sp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:text="CANCEL"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:text="OK"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

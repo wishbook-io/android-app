@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wishbook.catalog.home.more.Fragment_ContactUs">
+    <include layout="@layout/toolbar_app" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_margin"
+        android:fillViewport="true"
+        android:padding="20dp">
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview"></WebView>
+
+
+    </ScrollView>
+
+</RelativeLayout>

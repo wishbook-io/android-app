@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="16dp"
+        android:gravity="left"
+        android:text="@string/resell_payout_under_constructor"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="@dimen/font_size_normal"
+        android:visibility="gone" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/nested_incentive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_total_incentive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@string/font_medium"
+                    android:gravity="center_horizontal"
+                    android:text="00"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_heading" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_incentives_earned"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_total_target"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/sales_target_this_week"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="60dp"
+                        android:background="@color/purchase_medium_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_total_sales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/total_sales_this_week"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="60dp"
+                        android:background="@color/purchase_medium_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_target_required"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/sales_required_to_reach_target"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Conditions* "
+                    android:textColor="@color/color_primary" />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_incentive_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_primary">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Weekly Dispatched Orders"
+                            android:textColor="@color/white" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="% Incentive on Orders"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_incentive_tier_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white">
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/font_size_medium"
+                        android:text="Incentive is added weekly as WB Reward Points."/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="@color/color_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@string/font_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="History"
+                        android:textColor="@color/color_primary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewIncentives"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/linear_payout_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No Data Available"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_heading" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+
+

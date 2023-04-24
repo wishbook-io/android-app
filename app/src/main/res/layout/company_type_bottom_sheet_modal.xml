@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            android:tint="@color/purchase_medium_gray" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Select Company Type"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_subheading" />
+
+        <TextView
+            android:id="@+id/txt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_normal"
+            android:text="OK"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_medium_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/manufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:theme="@style/AppTheme"
+            android:text="Manufacturer"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <CheckBox
+            android:id="@+id/wholesaler_distributor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Wholesaler/Distributor"
+            android:theme="@style/AppTheme"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <CheckBox
+            android:id="@+id/retailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:theme="@style/AppTheme"
+            android:text="Retailer"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <CheckBox
+            android:id="@+id/onlineretailer_reseller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Online Retailer/Reseller"
+            android:theme="@style/AppTheme"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <CheckBox
+            android:id="@+id/broker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Broker"
+            android:theme="@style/AppTheme"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

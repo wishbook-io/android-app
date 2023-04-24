@@ -1,0 +1,308 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        android:elevation="@dimen/toolbar_elevation"
+        android:transitionName="actionBar"
+        app:contentInsetStart="@dimen/toolbar_contentInset"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/MyActionBarTheme"
+        tools:ignore="UnusedAttribute" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="60dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:text="Filter"
+                    android:textSize="@dimen/font_size_subheading" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/spinner_brand_container">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_brands"
+                    style="@style/Spinner_Label"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_brands"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_single_category"
+                    style="@style/Spinner_Label"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                >
+            <EditText
+                android:id="@+id/input_catalog_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Catalog name"
+                android:inputType="text"
+                android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                >
+
+                <EditText
+                    android:id="@+id/input_fabric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fabric"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                >
+
+                <EditText
+                    android:id="@+id/input_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Work"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price range :"
+                style="@style/Spinner_Label"
+                android:layout_marginTop="8dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_primary"
+                    android:text="100"/>
+
+                <TextView
+                    android:id="@+id/txt_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_primary"
+                    android:text="10,000 +"/>
+            </RelativeLayout>
+
+          <!--  <org.florescu.android.rangeseekbar.RangeSeekBar
+                android:id="@+id/pricerangebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rsb:valuesAboveThumbs="true"
+                rsb:textAboveThumbsColor="@android:color/holo_blue_dark"
+                rsb:thumbShadow="true"
+                rsb:thumbShadowBlur="3dp"
+                rsb:thumbShadowColor="@color/primary_material_light"
+                rsb:showLabels="false"
+                rsb:thumbShadowXOffset="1dp"
+                rsb:thumbShadowYOffset="2dp"/>-->
+
+            <TextView
+                android:id="@+id/show_only"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show only : "
+                android:visibility="gone"
+                style="@style/Spinner_Label"
+                />
+            <RadioGroup
+                android:layout_marginTop="8dp"
+                android:id="@+id/radiogroup"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Enabled catalog"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:id="@+id/enabled_catalog" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Disabled catalog"
+                    android:id="@+id/disabled_catalog"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/public_supplier_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supplier Approved : "
+                style="@style/Spinner_Label"
+                />
+            <RadioGroup
+                android:layout_marginTop="16dp"
+                android:id="@+id/radioGroup_public"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:id="@+id/supplier_approved_true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:id="@+id/supplier_approved_false"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+            </RadioGroup>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/check_trusted_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Show catalogs from Trusted Seller Only"/>
+            <LinearLayout
+                android:id="@+id/linear_showDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Disable Catalog : "
+                    style="@style/Spinner_Label"
+                    />
+                <CheckBox
+                    android:id="@+id/check_buyer_disable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Disabled by me"/>
+
+                <CheckBox
+                    android:id="@+id/check_supplier_disable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Disabled by Supplier"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/button_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:padding="@dimen/margin_10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_discard"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_edge_less_padding_blue"
+            android:text="@string/reset"
+            android:textColor="@color/color_primary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_edge_less_padding_blue_fill"
+            android:text="@string/filter_apply"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

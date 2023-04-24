@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="36dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="Add Supplier"
+                android:textSize="@dimen/font_size_heading" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                style="@style/common_input_edittext_supplier"
+                app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                android:id="@+id/input_buyername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the supplier's name"
+                android:inputType="text"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Password Label -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/relationship_supplier"
+                style="@style/Spinner_Label"
+               />
+            <Spinner
+                android:id="@+id/spinner_buyertype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/buyertype"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile_number"
+               android:digits="@string/digits"
+                style="@style/Spinner_Label"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@drawable/ic_stay_current_portrait_24dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="India"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/countrycodes" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:id="@+id/input_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="mobile number"
+                    android:maxLength="10"
+                    android:inputType="phone"
+                    android:digits="@string/digits"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_normal"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_discard"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:text="@string/discard"
+                android:textColor="@color/color_primary" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_edge_less_padding_blue_fill"
+                android:text="@string/add"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

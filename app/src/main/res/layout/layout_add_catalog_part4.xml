@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_catalog_availability"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Availability"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/linear_dispatch_date"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_edge_grey_rectengle"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                android:id="@+id/text_dispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/select_dispatch_date"
+                android:textColor="@color/color_primary"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:drawableLeftCompat="@drawable/ic_calender_24px" />
+
+
+            <TextView
+                android:id="@+id/edit_dispatch_label"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="10dp"
+                android:gravity="right|center_vertical"
+                android:text="Edit dispatch date"
+                android:textColor="@color/color_primary"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_enable_duration_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hint_dispatch"
+                style="@style/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="left"
+                android:text="@string/sub_text_disable"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/enter_duration"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <EditText
+                    android:id="@+id/edit_enable_duration"
+                    android:layout_width="50dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btn_edge_grey_rectengle"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="30"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Days"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

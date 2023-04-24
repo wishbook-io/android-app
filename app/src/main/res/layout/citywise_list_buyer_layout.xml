@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_below="@+id/filter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context="com.wishbook.catalog.home.catalog.Fragment_Catalogs">
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

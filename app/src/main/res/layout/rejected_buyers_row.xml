@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/containerrej"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/buyer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyer Name"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_subheading"
+            />
+
+        <TextView
+            android:id="@+id/buyer_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Buyer Type"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+            android:id="@+id/buyer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyer_name"
+            android:layout_marginTop="5dp"
+            app:drawableLeftCompat="@drawable/ic_call_24dp"
+            android:gravity="center_vertical"
+            android:text="Buyer Mobile"
+           android:digits="@string/digits"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/buyer_email_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyer_number"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <TextView
+        android:id="@+id/txt_weekly_order_label"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:background="@drawable/table_cell"
+        android:gravity="center_vertical|left"
+        android:text="Weekly Orders	"
+        android:textColor="@color/purchase_dark_gray" />
+
+
+    <TextView
+        android:id="@+id/txt_weekly_order_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/table_cell"
+        android:text="% Incentive on Orders"
+        android:textColor="@color/purchase_dark_gray" />
+
+
+</LinearLayout>

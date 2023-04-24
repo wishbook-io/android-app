@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_add"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/color_primary"
+            android:elevation="@dimen/toolbar_elevation"
+            android:transitionName="actionBar"
+            app:contentInsetStart="@dimen/toolbar_contentInset"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/AppTheme.ActionBar"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/search_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="@dimen/toolbar_elevation"
+            android:transitionName="actionBar"
+            android:visibility="gone"
+            app:contentInsetStart="@dimen/toolbar_contentInset"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/SearchBarTheme"
+            tools:ignore="UnusedAttribute">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="-16dp"
+                    android:transitionName="search_activity_transition"
+                    android:visibility="visible"
+                    app:closeIcon="@null"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Search by name"
+                    app:searchIcon="@null" />
+
+                <ImageView
+                    android:id="@+id/img_searchclose"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:tint="@color/purchase_medium_gray"
+                    app:srcCompat="@drawable/ic_close_black_24dp" />
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_filter">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:visibility="gone">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Data Available"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_subheading" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/activity_common_progress" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:elevation="10dp"
+        android:text="+ Add set"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

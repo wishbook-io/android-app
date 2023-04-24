@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item  android:id="@+id/share"
+        android:title="Share"
+        app:showAsAction="always"/>
+    <item  android:id="@+id/product_add"
+        android:title="Add Product"/>
+    <item  android:id="@+id/sales_order"
+        android:title="create sales order"/>
+    <item  android:id="@+id/purchase_order"
+        android:title="create purchase order"/>
+    <item  android:id="@+id/enable"
+        android:title="enable"/>
+    <item  android:id="@+id/diable"
+        android:title="disable"/>
+    <item  android:id="@+id/barcode"
+        android:title="Generate Barcode"/>
+    <item  android:id="@+id/change_type"
+        android:title="Change Type"
+        android:visible="false"/>
+
+</menu>

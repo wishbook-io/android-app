@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_rrc_reason_title"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_subheading" />
+
+
+    <Spinner
+        android:id="@+id/spinner_reason"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/replacement_reasons"
+        android:spinnerMode="dialog" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_light_gray" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_other_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter Other reason"
+        android:textColorHint="@color/black"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_other_reason"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/purchase_light_gray"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:theme="@style/MyEditTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/btn_negative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/btn_positive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="Submit"
+            android:textColor="@color/color_primary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

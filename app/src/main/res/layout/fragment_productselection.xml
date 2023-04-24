@@ -1,0 +1,128 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    tools:context="com.wishbook.catalog.home.more.Fragment_AboutUs">
+
+    <!--<include layout="@layout/toolbar" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/prod_selcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECTED PRODUCTS : 0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#565656"
+                android:textSize="@dimen/font_size_subheading"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:id="@+id/frame">
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_below="@+id/linearLayout" />
+            <TextView android:id="@+id/list_empty1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_heading"
+                android:text="No items to display"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame"
+            android:background="@drawable/layer_card_background"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:padding="15dp">
+
+            <RadioGroup
+                android:id="@+id/rad_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rad_addto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Add To" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_selection"
+                    style="@style/Spinner_Label"
+                    />
+                <Spinner
+                    android:id="@+id/list_sel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+                <RadioButton
+                    android:id="@+id/rad_createnew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Create New" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:id="@+id/input_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the selection title"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="Save"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

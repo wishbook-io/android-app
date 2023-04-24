@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="36dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_requesttype"
+            style="@style/Spinner_Label"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/spinner_requesttype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_grouptype"
+            style="@style/Spinner_Label"
+           />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/spinner_grouptype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+              
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Password Label -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Cancel"
+                android:textColor="#ffffff" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Submit"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

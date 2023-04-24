@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_inquiry"
+        android:title="Enquire"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/menu_purchase_order"
+        android:title="Create Purchase Order"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_supplier_chat"
+        android:title="Chat with Supplier"
+        android:visible="false"
+        app:showAsAction="never"
+        />
+
+
+    <item
+        android:id="@+id/menu_share"
+        android:title="share"
+        android:visible="false"
+        android:icon="@drawable/ic_share_catalog_white"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_wishlist"
+        android:icon="@drawable/ic_bookmark_gold_24dp"
+        android:title="Wishlist"
+        android:visible="true"
+        app:actionLayout="@layout/menu_action_item_badge_custom"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/cart"
+        android:title="My Cart"
+        android:visible="true"
+        android:icon="@drawable/ic_shopping_cart_24dpbl"
+        app:showAsAction="always"/>
+
+
+</menu>

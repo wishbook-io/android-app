@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:checkableBehavior="all"
+        >
+        <item android:id="@+id/enquiry_approved"
+            android:title="@string/enquiry_approved"
+            android:orderInCategory="100"
+            app:showAsAction="never" />
+
+        <item android:id="@+id/enquiry_pending"
+            android:title="@string/enquiry_pending"
+            android:orderInCategory="100"
+            app:showAsAction="never"/>
+
+        <item android:id="@+id/enquiry_pending_reference"
+            android:title="@string/enquiry_pending_reference"
+            android:orderInCategory="100"
+            app:showAsAction="never" />
+
+        <item android:id="@+id/enquiry_references_filled"
+            android:title="@string/enquiry_references_filled"
+            android:orderInCategory="100"
+            app:showAsAction="never" />
+    </group>
+</menu>

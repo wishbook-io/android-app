@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wishbook.catalog.home.contacts.Fragment_MyContacts"
+    tools:showIn="@layout/fragment_importcontact">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/contact_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Contacts"
+        android:visibility="gone"></androidx.appcompat.widget.SearchView>
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/select_all_container"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_search_view"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/select_all_contacts"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_all_contact" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="1"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_all_container" />
+    </LinearLayout>
+    <com.futuremind.recyclerviewfastscroll.FastScroller
+        android:id="@+id/fastscroll"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/emptytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Fetching contacts.."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/aluminum"
+        android:textSize="@dimen/font_size_heading"
+        android:visibility="invisible" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refresh"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_margin="15dp"
+        app:srcCompat="@drawable/ic_cached_24dp" />
+
+    <include layout="@layout/include_permission" />
+</RelativeLayout>

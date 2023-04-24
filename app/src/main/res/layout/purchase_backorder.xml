@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout10">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/catalog_container"
+                android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/spinner_sel_lay"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_selection"
+                        style="@style/Spinner_Label"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_sel"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/subdetail"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                            style="@style/common_input_edittext_order_number"
+                            android:id="@+id/input_ordernum"
+                            android:layout_width="match_parent"
+                            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter the order number"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        android:id="@+id/full_catalog_quantity">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter quantity"
+                            style="@style/Spinner_Label"
+                            />
+                        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                            android:id="@+id/quatity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Quantity"
+                            android:inputType="text"
+                            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                            android:text="1"
+                            android:singleLine="true"
+                            android:digits="@string/digits"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:id="@+id/label">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Products 0"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            android:id="@+id/productssize" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recyclerview" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Order summary"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total products"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/totalproducts" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total value"
+                        android:id="@+id/totalprice" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Screenshot"
+
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:id="@+id/screenshot" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Order"
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:id="@+id/orderBut" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:text="Cancel"
+                android:layout_height="match_parent"
+                android:id="@+id/cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

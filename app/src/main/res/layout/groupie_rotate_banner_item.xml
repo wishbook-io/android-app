@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/banner_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.wishbook.catalog.Utils.widget.LoopViewPager
+        android:id="@id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="48dp"
+        app:ci_drawable="@drawable/circle_blue_radius"
+        app:ci_drawable_unselected="@drawable/circle_white_radius" />
+
+
+</RelativeLayout>

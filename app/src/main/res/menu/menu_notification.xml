@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wishbook.catalog.login.Activity_Login">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="Search"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_wishlist"
+        android:icon="@drawable/ic_bookmark_gold_24dp"
+        android:title="Wishlist"
+        android:visible="true"
+        app:actionLayout="@layout/menu_action_item_badge_custom"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        android:title="My Cart"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_unread_applozic"
+        android:icon="@drawable/ic_chat_white_24dp"
+        android:title="Unread Chat"
+        android:visible="false"
+        app:actionLayout="@layout/menu_action_item_badge_custom"
+        app:showAsAction="always"
+        />
+
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_notifications_24dp"
+        android:title="Notification"
+        android:visible="true"
+        app:actionLayout="@layout/menu_action_item_badge_custom"
+        app:showAsAction="always"
+        />
+
+</menu>

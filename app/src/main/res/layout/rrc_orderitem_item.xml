@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="2dp">
+
+
+    <CheckBox
+        android:id="@+id/chck_rrc_item"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:scaleX="1.1"
+        android:scaleY="1.1" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/prod_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="4dp"
+        android:minHeight="100dp"
+        android:src="@drawable/noprev"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@drawable/uploadempty" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catalog Name"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/txt_catalog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_design_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_design_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design name"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/txt_design_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_catalog_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:singleLine="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request Worthy Qty"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/txt_order_qty_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input_rrc_request_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Quantity"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/purchase_dark_gray">
+
+            <EditText
+                android:id="@+id/edit_rrc_request_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:theme="@style/MyEditTheme" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

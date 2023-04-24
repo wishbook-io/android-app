@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/product_layout"
+    android:visibility="gone"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wishbook.catalog.home.contacts.Fragment_BuyersPending"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar_app" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/aluminum"
+            android:textSize="@dimen/font_size_subheading"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Please Enter Your Brand Detail" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="200dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="20dp"
+                android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/defaultccimage"
+                    android:id="@+id/imageView2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_upload"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="12dp"
+                    android:text="Upload Image"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    style="@style/common_input_edittext_brand_name"
+                    android:id="@+id/input_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_your_brand_name"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Password Label -->
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:text="Save"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

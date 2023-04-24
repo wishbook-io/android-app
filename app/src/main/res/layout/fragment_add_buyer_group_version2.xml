@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switch_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                app:selectedColor="@color/color_primary"
+                app:selectedTab="0"
+                app:strokeRadius="8dp"
+                app:strokeWidth="1dp"
+                app:switchTabs="@array/switch_tabs_buyer_group"
+                app:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_group_name"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Enter group name"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_buyertype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_buyer_type"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select buyer type"
+                        android:text="All Type"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_state"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select state"
+                        android:text="All States"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_city"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select city"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:text="All Cities"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_category"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select categories"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:text="All Categories"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_buyer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_buyer"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select buyers"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:text="CREATE"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+</RelativeLayout>

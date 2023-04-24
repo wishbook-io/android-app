@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_above="@+id/share_go"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="@dimen/card_elevation"
+                card_view:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/group_share_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/spinner_label"
+                            style="@style/Spinner_Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="12sp"
+                            android:text="@string/select_buyersgroup" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <Spinner
+                                android:id="@+id/spinner_buyergroups"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dropdown" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/purchase_light_gray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/single_share_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/buyer_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_buyername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/purchase_medium_gray">
+
+                                <TextView
+                                    style="@style/Spinner_Label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enter buyer name"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/edit_buyername"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="8dp"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/font_size_normal" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="@color/purchase_light_gray" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/date_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:hint="Enter Dispatch Date"
+                            android:textColorHint="@color/color_primary">
+
+                            <EditText
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_primary"
+                                android:textSize="@dimen/font_size_normal"
+                                style="@style/input_edit_text_light"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fullcatalog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:visibility="gone"
+                        android:text="@string/sell_full_catalog" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="@dimen/card_elevation"
+                android:visibility="gone"
+                card_view:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_margin_details"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_subheading" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/old_price_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_margin"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+
+                            <TextView
+                                android:id="@+id/txt_old_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Existing Price: "
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+
+                            <TextView
+                                android:id="@+id/old_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:text=""
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+
+                        </RelativeLayout>
+
+                        <RadioGroup
+                            android:id="@+id/radiogroup_share_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/old_price_container"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_share_different_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:checked="false"
+                                android:text="Share at a different price"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_new_price_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="Enter New Price"
+                                    android:textColor="@color/purchase_dark_gray" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColorHint="@color/color_primary">
+
+                                    <EditText
+                                        android:id="@+id/input_new_price"
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:layout_marginLeft="10dp"
+                                        android:digits="@string/digits"
+                                        android:ems="10"
+                                        android:maxLength="6"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="numberSigned"
+                                        android:text="0"
+                                        style="@style/input_edit_text_light"
+                                        android:textAlignment="viewEnd" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <RadioButton
+                                android:id="@+id/radio_share_add_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="@string/share_after_adding_margin"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_fixed_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/radio_share_add_margin"
+                                android:layout_marginLeft="16dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroupprice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:paddingTop="10dp">
+
+                                    <RadioButton
+                                        android:id="@+id/check_add"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="10dp"
+                                        android:checked="false"
+                                        android:text="Add/Sub %"
+                                        android:textColor="@color/purchase_dark_gray"
+                                        android:textSize="@dimen/font_size_default" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/fixed_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="false"
+                                        android:text="Add/Sub fixed amt."
+                                        android:textColor="@color/purchase_dark_gray"
+                                        android:textSize="@dimen/font_size_default" />
+
+                                </RadioGroup>
+
+                                <RelativeLayout
+                                    android:id="@+id/edit_price_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/old_price_container"
+                                    android:layout_margin="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toRightOf="@id/radiogroupprice">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txt_input_percentage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColorHint="@color/color_primary">
+
+                                        <EditText
+                                            android:id="@+id/input_percentage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginBottom="5dp"
+                                            android:backgroundTint="@color/purchase_light_gray"
+                                            android:digits="@string/digits_with_minus"
+                                            android:ems="10"
+                                            android:imeOptions="actionDone"
+                                            android:maxLength="3"
+                                            android:inputType="numberSigned"
+                                            android:text=""
+                                            android:textAlignment="viewEnd" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txt_input_percentage"
+                                        android:layout_marginTop="-20dp"
+                                        android:textColorHint="@color/color_primary">
+
+                                        <EditText
+                                            android:id="@+id/input_price"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:backgroundTint="@color/purchase_light_gray"
+                                            android:digits="@string/digits_with_minus"
+                                            android:ems="10"
+                                            android:maxLength="6"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="numberSigned"
+                                            android:padding="5dp"
+                                            android:text=""
+                                            android:textAlignment="viewEnd" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+                        <RelativeLayout
+                            android:id="@+id/price_change_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/radiogroup_share_type"
+                            android:layout_marginTop="16dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+
+                            <TextView
+                                android:id="@+id/txt_new_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Price: "
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+                            <TextView
+                                android:id="@+id/new_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:text=""
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_default" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/share_go"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:text="@string/done"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+</RelativeLayout>

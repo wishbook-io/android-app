@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="20dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pod_rem"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_wrong" />
+
+        <LinearLayout
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/prod_img"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/noprev" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_value_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/image"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/input_sku"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Design No."
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/image"
+                android:textColorHint="@color/purchase_medium_gray">
+
+                <EditText
+                    android:id="@+id/input_price"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter price"
+                    android:inputType="numberSigned"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="@dimen/font_size_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_single_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Single pc. price:"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_single_pc_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/Pc"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_select_size_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose sizes you sell" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flex_select_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dp"
+                    app:flexWrap="wrap">
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_value_container"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            app:alignContent="space_around"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:showDivider="middle">
+
+            <TextView
+                android:id="@+id/btn_first_additional_image"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text=" + Add more images of the same design "
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary"
+                android:textSize="13sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/attach_button"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:padding="2dp"
+                android:text="+ Add\n Images"
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary"
+                android:textSize="15sp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <LinearLayout
+            android:id="@+id/public_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="7dp">
+
+                <com.wishbook.catalog.Utils.widget.EditTextBackEvent
+                    android:id="@+id/public_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="@string/digits"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter public price"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    app:drawableLeftEditTextCompat="@drawable/rupee" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="36dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="New Group"
+                android:textSize="@dimen/font_size_subheading" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                style="@style/common_input_edittext_group_name"
+                app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                android:id="@+id/input_groupname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the group name"
+                android:inputType="text"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black_light"
+            android:layout_height="wrap_content"
+            android:text="@string/buyer_group_type"/>
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/text_location_wise"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/color_primary"
+                android:layout_height="wrap_content"
+                android:text="Location Wise"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/create_group_indicator"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:id="@+id/text_custom"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Custom"/>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/buyer_type_container">
+            <EditText
+                android:focusable="false"
+                android:hint="@string/select_buyer"
+                android:id="@+id/spinner_buyertype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="All types"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/state_container"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <EditText
+                android:focusable="false"
+                android:hint="@string/select_state"
+                android:id="@+id/spinner_state"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="All States"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_container"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="@string/select_city"
+                android:id="@+id/spinner_city"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="All Cities"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/buyer_container"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+            <EditText
+                android:focusable="false"
+                android:hint="@string/select_buyer_notype"
+                android:id="@+id/spinner_buyer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/category_container">
+            <EditText
+                android:focusable="false"
+                android:hint="@string/select_category"
+                android:id="@+id/spinner_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="All Categories"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_discard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/color_primary"
+                android:text="Discard"
+                android:textColor="#ffffff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/color_primary"
+                android:text="Add"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

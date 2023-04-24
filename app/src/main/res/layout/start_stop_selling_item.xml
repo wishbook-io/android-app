@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/prod_img"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:src="@drawable/noprev"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/uploadempty" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Design number"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_design_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Design name"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price per design"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_price_per_design"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.XXX"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_sell_yes_no_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Selling"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_start_stop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_select_size_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose sizes you sell" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flex_select_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    app:flexWrap="wrap"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dp">
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_light_gray" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="@string/scan_title_1"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/aadhar_scan_tutorial" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_scan"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_purchase_blue"
+                android:stateListAnimator="@null"
+                android:text="SCAN NOW"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="OR"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_manually"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:stateListAnimator="@null"
+                android:text="FILL MANUALLY"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

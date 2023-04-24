@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        android:elevation="0dp"
+        android:transitionName="actionBar"
+        app:contentInsetStart="@dimen/toolbar_contentInset"
+        android:clickable="false"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/AppTheme.ActionBar"
+        tools:ignore="UnusedAttribute" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:elevation="@dimen/toolbar_elevation"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/catalog_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="8dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/uploadempty" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_catalog_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_catalog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catalog name"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_price_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_resolve"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:text="RESOLVE"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_default" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_buy_now"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_purchase_orange"
+            android:fontFamily="@string/font_medium"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/font_size_default" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_child_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        android:background="@color/conversation_list_all_background">
+
+        <include layout="@layout/activity_common_progress" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footerAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

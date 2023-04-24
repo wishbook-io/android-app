@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#e7e7e7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/guest_user_layout" />
+
+    <include layout="@layout/include_sort_search_bar" />
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/filter"
+        android:background="@color/white"
+        android:elevation="@dimen/toolbar_elevation">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            &lt;!&ndash;<TextView
+                android:id="@+id/trusted_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trusted_seller"
+                android:visibility="visible"
+                android:ellipsize="end"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/font_size_subheading"
+                android:textColor="@android:color/white"/>&ndash;&gt;
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/trusted_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_edge_less"
+                android:text="@string/trusted_seller"
+                android:textAllCaps="false"
+                android:layout_marginLeft="15dp"
+                android:visibility="visible"
+                android:textColor="@color/color_primary" />
+        <TextView
+            android:id="@+id/filter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_subheading"
+            android:visibility="gone"
+            android:textColor="@color/color_primary"/>
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear_filter"
+            android:text="Clear"
+            android:layout_toLeftOf="@+id/prebook_filter"
+            android:visibility="invisible"
+            android:layout_marginRight="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/font_size_subheading"
+                android:textColor="@color/color_primary"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/prebook_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prebook"
+            android:padding="12dp"
+            android:layout_toLeftOf="@+id/instock_filter"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_subheading"
+            android:textColor="@color/color_primary"/>
+        <TextView
+            android:id="@+id/instock_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instock"
+            android:padding="12dp"
+            android:layout_toLeftOf="@+id/filter_image"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_subheading"
+            android:textColor="@color/color_primary"/>
+
+
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/filter_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/filter"
+            android:tint="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>&ndash;&gt;
+
+        <TextView
+            android:id="@+id/filter_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_primary"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="3dp"
+            android:drawableTint="@color/color_primary"
+            android:drawableTop="@drawable/ic_filter"/>
+
+        <com.wishbook.catalog.Utils.widget.MaterialBadgeTextView
+            android:id="@+id/badge_filter_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary"/>
+    </RelativeLayout>-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_filter">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filter"
+            tools:context="com.wishbook.catalog.home.catalog.Fragment_Catalogs">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <view
+                    android:id="@+id/recycler_view"
+                    class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/list_empty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No items to display"
+                    android:textSize="@dimen/font_size_heading" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

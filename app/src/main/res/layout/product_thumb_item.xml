@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_container"
+    android:layout_width="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_img"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:padding="1.5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        app:actualImageScaleType="fitCenter" />
+
+</RelativeLayout>

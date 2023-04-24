@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/senderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.applozic.mobicomkit.uiwidgets.uikit.AlMessageSenderView
+            android:id="@+id/alMessageSenderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+        <com.applozic.mobicomkit.uiwidgets.uikit.AlAttachmentView
+            android:id="@+id/alAttachmentView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.applozic.mobicomkit.uiwidgets.uikit.AlConversationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/senderLayout" />
+
+    <com.applozic.mobicomkit.uiwidgets.uikit.AlTypingIndicator
+        android:id="@+id/alTypingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/snackbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</RelativeLayout>

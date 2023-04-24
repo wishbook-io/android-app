@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.orderNew.details.Activity_MultipleSeller">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_primary"
+        android:theme="@style/MyActionBarTheme" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seller_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/done"
+        android:layout_below="@+id/toolbar_top"
+        android:scrollbars="vertical" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@string/font_medium"
+        android:text="DONE"
+        android:textSize="16sp" />
+</RelativeLayout>

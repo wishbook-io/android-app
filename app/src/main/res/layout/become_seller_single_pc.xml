@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/product_img"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/contacts_home_grey" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Design number"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_design_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Design "
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price per design"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_price_per_design"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. XXX"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_select_size_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose sizes you sell" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flex_select_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="8dp"
+            app:flexWrap="wrap">
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_set_single_price_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_common_margin_note1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/max_margin_note_1"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_common_margin_note2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/max_margin_note_2"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Set margin"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_single_pc_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="current price: "
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/rg_add_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_single_piece_per"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="   Enter margin (%)"
+                android:textColor="@color/purchase_dark_gray" />
+
+            <RadioButton
+                android:id="@+id/radio_single_piece_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="   Enter margin (Rs.)"
+                android:textColor="@color/purchase_dark_gray" />
+
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_edge_grey_rectengle"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_add_margin"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:digits=".0123456789"
+                android:gravity="center"
+                android:hint="Enter margin"
+                android:inputType="number"
+                android:maxLength="5"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColorHint="@color/purchase_light_gray"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_single_pc_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txt_single_pc_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="Price for single Pc.: "
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

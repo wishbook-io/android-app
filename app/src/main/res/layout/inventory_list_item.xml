@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/product_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Large Text" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/in_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_title"
+                android:text="Large Text"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/quantity"
+            android:layout_toStartOf="@+id/quantity"
+            android:visibility="gone"
+            android:text="X" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/delete_add_container"
+            android:layout_toStartOf="@+id/delete_add_container"
+            android:inputType="number" />
+
+        <FrameLayout
+            android:id="@+id/delete_add_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/delete_inventory" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:text="Add"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

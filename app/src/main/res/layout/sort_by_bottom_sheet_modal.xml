@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            android:tint="@color/purchase_medium_gray" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Change "
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_subheading" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_medium_gray" />
+
+
+    <RadioGroup
+        android:id="@+id/sort_by_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/latest_selected"
+            style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="16dp"
+            android:text="Recently Uploaded"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:theme="@style/AppTheme" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/number_of_views_selected"
+            style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:padding="16dp"
+            android:text="Number of Views"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:theme="@style/AppTheme" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/price_low_to_high_selected"
+            style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:padding="16dp"
+            android:text="Price: Low to High"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:theme="@style/AppTheme" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/price_high_to_low_selected"
+            style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:padding="16dp"
+            android:text="Price: High to Low"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:theme="@style/AppTheme" />
+
+
+    </RadioGroup>
+
+
+</LinearLayout>

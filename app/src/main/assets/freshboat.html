@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" id="spd-busns-spt" async=""
+            src="https://cdn.in-freshbots.ai/assets/share/js/fbotsChat.min.js"
+            data-client="abee5f7abe19c3475df2e9410fde61c83ea4b63c"
+            data-bot-hash="8e9b441c3b917ac76f8aa8a8975734e6d604a73a" data-region="in"
+            data-env=""></script>
+</head>
+<body>
+<script>
+  alert("Test One");
+</script>
+<script>
+     (function (d, w, c) { if(!d.getElementById("spd-busns-spt")) { var n = d.getElementsByTagName('script')[0], s = d.createElement('script'); var loaded = false; s.id = "spd-busns-spt"; s.async = "async"; s.src = 'https://cdn.in-freshbots.ai/assets/share/js/fbotsChat.min.js'; s.setAttribute("data-client", "abee5f7abe19c3475df2e9410fde61c83ea4b63c"); s.setAttribute("data-bot-hash", "8e9b441c3b917ac76f8aa8a8975734e6d604a73a"); s.setAttribute("data-env", ""); s.setAttribute("data-region", "in"); if (c) { s.onreadystatechange = s.onload = function () { if (!loaded) { c(); } loaded = true; }; } n.parentNode.insertBefore(s, n); } })(document, window,function(){
+      var USER_SESSION_TOKEN = getParameterByName('sessionId');
+    var USER_ID = getParameterByName('userId');
+    var USER_NAME = getParameterByName('name');
+    var TXN_ID = getParameterByName('txnId');
+  
+    console.log(USER_SESSION_TOKEN + ":" + USER_ID + ":" + USER_NAME + ":" + TXN_ID);
+
+    Freshbots.initiateWidget({
+      getSessionData: function () {
+        return {
+          "token": USER_SESSION_TOKEN,
+          "userId": USER_ID,
+          "name": USER_NAME,
+          "language": "en"
+        };
+      },
+      print: function (a, b) {
+        console.log("print called: a:" + a + " b: " + b);
+        return {
+          "a": a,
+          "b": b
+        };
+      },
+      autoInitChat: false,
+      getClientParams: function () {
+        return {
+          "src": "txn",
+          "xtrnlTcktId": TXN_ID //the txn id here
+        };
+      }
+    }, function (successResponse) {
+      console.log("Yay!!");
+      console.log("Calling initiate chat");
+      //Freshbots.initiateChat();
+ //Freshbots.initiateChat(true);
+ Freshbots.showWidget(true);
+      console.log("Called initiate chat");
+    }, function (errorResponse) {
+      console.log("Alas!!");
+    });
+    setTimeout(function () {
+      Freshbots.showWidget(true);
+    }, 0);
+	toggleChatOpen();
+
+
+     });
+
+
+
+</script>
+
+
+</body>
+</html>

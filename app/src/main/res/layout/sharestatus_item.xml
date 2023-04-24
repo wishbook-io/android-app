@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/push_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_margin="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cat_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                fresco:actualImageScaleType="fitCenter"
+                android:src="@drawable/noprev" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Catalog Name"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Designs"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Shares"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Catalog Views"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Products Views"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Status"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nprods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/npeople"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:text="1"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                android:id="@+id/nopened"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/npeople"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:text="1"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/forward" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/productsviewed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:id="@+id/status_tex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="pending"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

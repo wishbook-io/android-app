@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_payout_notified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Bank Details not correct"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/reward_points"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_heading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/_1_wb_points_1_rs"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_medium" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_total_earn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@string/font_medium"
+        android:gravity="center_horizontal"
+        android:text="00"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_heading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/available_wb_points"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_medium" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_received_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_size_default" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/total_received"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_default" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="60dp"
+            android:background="@color/purchase_medium_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_due_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_default" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/total_redeemed"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_default" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_tc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms &amp; Conditions* "
+        android:textColor="@color/color_primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/color_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@string/font_medium"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="History"
+            android:textColor="@color/color_primary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

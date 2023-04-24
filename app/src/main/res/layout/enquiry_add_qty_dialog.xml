@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/qty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="@dimen/font_size_subheading"
+        android:layout_centerVertical="true"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/input_sets_container"
+        android:layout_toRightOf="@id/qty_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <EditText
+            android:id="@+id/input_sets"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="No of sets"
+            android:inputType="number"
+            android:maxLength="10"
+            android:digits="@string/digits"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/or_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textSize="@dimen/font_size_subheading"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/input_sets_container"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/or_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <EditText
+            android:id="@+id/input_pcs"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="No of pieces"
+            android:inputType="number"
+            android:maxLength="10"
+            android:digits="@string/digits"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
+</RelativeLayout>

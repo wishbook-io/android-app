@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:text="Catalog designs"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default"
+            android:textStyle="normal" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_products_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp" />
+
+
+            <ImageButton
+                android:id="@+id/img_header_left_nav"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|left"
+                android:background="@color/black_alpha_60"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+            <ImageButton
+                android:id="@+id/img_header_right_nav"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|right"
+                android:background="@color/black_alpha_60"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_products_header_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="No item to display"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

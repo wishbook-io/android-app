@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_frame"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <FrameLayout
+        android:id="@+id/btn_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_point"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_step"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_purchase_blue"
+            android:text="Get Started"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:elevation="2dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_point"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout>

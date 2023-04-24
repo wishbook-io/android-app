@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/chk_product"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/prod_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/noprev"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/uploadempty" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_design_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Design name"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="item price"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/txt_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="item price"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Resale price"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/txt_product_resale_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="item price"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_light_gray" />
+
+</LinearLayout>

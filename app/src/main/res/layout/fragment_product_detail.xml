@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_bg"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linear_flow_button"
+                android:layout_below="@+id/liner_follow_brand"
+                android:fillViewport="true">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <com.wishbook.catalog.Utils.widget.WrapContentDraweeView
+                            android:id="@+id/product_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:placeholderImage="@drawable/uploadempty"
+                            app:srcCompat="@drawable/uploadempty" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_viewpager_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white">
+
+
+                            <com.wishbook.catalog.Utils.widget.LoopViewPager
+                                android:id="@id/viewPager"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp" />
+
+                            <me.relex.circleindicator.CircleIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="48dp"
+                                app:ci_drawable="@drawable/circle_filled"
+                                app:ci_drawable_unselected="@drawable/circle_blue_border" />
+
+
+                        </RelativeLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview_thumb_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/white"
+                            android:paddingTop="8dp"
+                            android:visibility="gone">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <TextView
+                            android:id="@+id/txt_product_disable_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:text="This Product is Disable"
+                            android:textColor="@color/red"
+                            android:visibility="gone" />
+
+
+                        <include layout="@layout/include_catalog_material_detail_v2" />
+
+
+                        <include layout="@layout/include_retrun_policy" />
+
+
+                        <TextView
+                            android:id="@+id/btn_support_chat"
+                            android:layout_width="280dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/button_edge_less_transparent"
+                            android:gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="Chat With Us"
+                            android:textColor="@color/color_primary"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/linear_flow_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/toolbar_elevation"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:ignore="PrivateResource">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginBottom="-3dp"
+                    android:background="@drawable/bottom_above_shadow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_share_product"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Share"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_add_to_cart"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="ADD TO CART"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_to_wishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="60dp"
+                android:scaleType="center"
+                android:theme="@style/FABWhite"
+                app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior"
+                app:srcCompat="@drawable/ic_bookmark_border_blue_24dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

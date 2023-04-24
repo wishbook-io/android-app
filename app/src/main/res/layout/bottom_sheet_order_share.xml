@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_primary"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Share items"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_subheading" />
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_done"
+        android:layout_below="@+id/linear_toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_share_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"></androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relative_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+
+                <ProgressBar
+                    android:id="@+id/location_animation"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location_animation"
+                    android:gravity="center"
+                    android:text="Loading.."
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_empty"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="No Data Available!"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

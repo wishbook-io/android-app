@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_catalog_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue_shopping"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+      android:layout_margin="16dp"
+        android:background="@drawable/btn_purchase_orange"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="Continue Shopping"
+        android:textSize="14sp" />
+
+</LinearLayout>

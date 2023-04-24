@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    tools:context=".MainActivity">
+    <include layout="@layout/toolbar_app" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:padding="10dp"
+        android:background="@drawable/layer_card_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar" />
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_img"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.7"
+        android:background="@color/contacts_home_grey"
+        app:actualImageScaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Design: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_design_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product id: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_product_code_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_single_pc_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="(Incl.Shipping &amp; Tax)"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_single_pc_price_final_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="40dp"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/edit_resale_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_edge_grey_rectengle"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:hint="Enter Resale Amount"
+            android:inputType="number"
+            android:maxLength="7"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColorHint="@color/purchase_light_gray"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resale price: "
+                android:textColor="@color/green"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_resale_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/green"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

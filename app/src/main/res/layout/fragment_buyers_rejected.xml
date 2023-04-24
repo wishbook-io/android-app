@@ -1,0 +1,43 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wishbook.catalog.home.more.Fragment_BuyersRejected"
+    tools:showIn="@layout/fragment_buyers_pending">
+    <include layout="@layout/toolbar_app" />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/group_search"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:queryHint="Search Contacts" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView android:id="@+id/list_empty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_heading"
+            android:text="No items to display"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

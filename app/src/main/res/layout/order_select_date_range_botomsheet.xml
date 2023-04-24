@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="20dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_primary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_close_white_24dp" />
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Choose a date range "
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_subheading" />
+
+    </LinearLayout>
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_all_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="All Orders"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="Today"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_yesterday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="Yesterday"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_this_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="Last 7 Days"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_this_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="This month"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/txt_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bottom_line"
+        android:ellipsize="marquee"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:text="Custom"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_normal" />
+
+
+</LinearLayout>

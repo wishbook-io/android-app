@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:fitsSystemWindows="true"
+    tools:context="com.wishbook.catalog.home.more.Fragment_AboutUs">
+
+    <LinearLayout
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:elevation="6dp"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/color_primary"
+        app:tabSelectedTextColor="@color/color_primary"
+        app:tabTextColor="#616161" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context=".MainActivity" />
+</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/fabaddbuyer"
+        app:srcCompat="@drawable/ic_add_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

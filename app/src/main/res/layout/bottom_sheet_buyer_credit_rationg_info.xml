@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/txt_toolbar_tile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Title"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_subheading" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/purchase_light_gray" />
+
+        <LinearLayout
+            android:id="@+id/linear_credit_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/linear_overall_rating"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/buyer_ratings" />
+
+
+                <TextView
+                    android:id="@+id/txt_overall_rating_value"
+                    style="@style/green_text_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:text="-" />
+
+                <ImageView
+                    android:id="@+id/img_overall_rating"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_credit_rating_good"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_bureau_report"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/bureau_report" />
+
+
+                <TextView
+                    android:id="@+id/txt_bereau_value"
+                    style="@style/green_text_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_finacial_statement"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/finacial_statements" />
+
+
+                <TextView
+                    android:id="@+id/txt_finacial_statement_value"
+                    style="@style/green_text_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/refferead_by" />
+
+
+                <TextView
+                    android:id="@+id/txt_feedback_suppliers_value"
+                    style="@style/list_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_supplier_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_avg_payment_time"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/average_payment_time"
+                    android:textColor="@color/purchase_medium_gray" />
+
+
+                <TextView
+                    android:id="@+id/txt_avg_payment_value"
+                    style="@style/list_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_goods_retrun_rate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/company_rating_label_nomal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/goods_return_rate"
+                    android:textColor="@color/purchase_medium_gray" />
+
+
+                <TextView
+                    android:id="@+id/txt_goods_return_value"
+                    style="@style/green_text_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wishbook_company_rating_note"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/relative_bottom_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+
+            <ProgressBar
+                android:id="@+id/location_animation"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location_animation"
+                android:gravity="center"
+                android:text="Loading.."
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_default" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
+
+

@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    tools:context="com.wishbook.catalog.home.catalog.Fragment_Catalogs">
+    <include layout="@layout/toolbar_app" />
+    <view
+        android:id="@+id/recycler_view"
+        android:layout_below="@+id/appbar"
+        class="androidx.recyclerview.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+
+        android:id="@+id/fabaddbuyer"
+        app:srcCompat="@drawable/ic_loop_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

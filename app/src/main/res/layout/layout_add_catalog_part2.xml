@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/work_fabric_section"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fabric &amp; Work Details"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/fabric_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Fabric Details: "
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexbox_fabric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    app:alignContent="space_around"
+                    app:alignItems="flex_start"
+                    app:flexWrap="wrap"
+                    app:showDivider="middle">
+
+
+                    <TextView
+                        android:id="@+id/btn_add_fabric_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/button_edge_less_padding_blue"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="+ Add Fabric"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primary"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:id="@+id/work_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="Work Details: "
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexbox_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    app:alignContent="space_around"
+                    app:alignItems="flex_start"
+                    app:flexWrap="wrap"
+                    app:showDivider="middle">
+
+
+                    <TextView
+                        android:id="@+id/btn_add_work_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/button_edge_less_padding_blue"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="+ Add Work"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primary"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--- Style Container -->
+        <LinearLayout
+
+            android:id="@+id/style_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="Style (Optional): "
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexbox_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        app:alignContent="space_around"
+                        app:alignItems="flex_start"
+                        app:flexWrap="wrap"
+                        app:showDivider="middle">
+
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_add_style_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_edge_less_padding_blue"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="+ Add Style"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primary"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

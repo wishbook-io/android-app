@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/linear_no_permission"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="Please give permission to read your contacts"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/btn_enable_permission"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txt_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_edge_less"
+        android:gravity="center"
+        android:text="Enable Now"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp" />
+</LinearLayout>

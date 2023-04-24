@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    android:orientation="vertical">
+
+    <com.wishbook.catalog.Utils.RecyclerViewEmptySupport
+        android:id="@+id/recycler_view"
+        class="androidx.recyclerview.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+
+    <TextView
+        android:id="@+id/empty_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No Products to display"
+        android:textSize="@dimen/font_size_heading" />
+</LinearLayout>

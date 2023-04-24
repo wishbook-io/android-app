@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/nested_wb_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/wb_header_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_collapseMode="parallax">
+
+                    <RelativeLayout
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:elevation="2dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/back_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_toolbar_back"
+                            android:tint="@color/color_primary"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/wb_money"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_heading" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/_1_wb_money_1_rs"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_medium" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_available_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="0"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_heading" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/available_wb_money"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_medium" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txt_received_money"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="0"
+                                        android:textColor="@color/green"
+                                        android:textSize="@dimen/font_size_default" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/total_received"
+                                        android:textColor="@color/purchase_dark_gray"
+                                        android:textSize="@dimen/font_size_default" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0.5dp"
+                                    android:layout_height="60dp"
+                                    android:background="@color/purchase_medium_gray" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txt_redeemed_money"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="0"
+                                        android:textColor="@color/purchase_medium_gray"
+                                        android:textSize="@dimen/font_size_default" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/total_redeemed"
+                                        android:textColor="@color/purchase_dark_gray"
+                                        android:textSize="@dimen/font_size_default" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:background="@color/color_primary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="3dp"
+                                    android:fontFamily="@string/font_medium"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="History"
+                                    android:textColor="@color/color_primary"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/empty_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_empty_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No Data Available"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_subheading" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

@@ -1,0 +1,436 @@
+Information:Gradle tasks [:app:assembleRelease]
+google-services plugin could not detect any version for com.google.android.gms, default version: 8.3.0 will be used.
+please apply google-services plugin at the bottom of the build file.
+:app:preBuild UP-TO-DATE
+:app:preReleaseBuild UP-TO-DATE
+:app:checkReleaseManifest
+:app:preDebugBuild UP-TO-DATE
+:app:prepareComAfollestadMaterialDialogsCore0859Library UP-TO-DATE
+:app:prepareComAllenliuBadgeviewLibrary102Library UP-TO-DATE
+:app:prepareComAndroidSupportAnimatedVectorDrawable2340Library UP-TO-DATE
+:app:prepareComAndroidSupportAppcompatV72340Library UP-TO-DATE
+:app:prepareComAndroidSupportCardviewV72321Library UP-TO-DATE
+:app:prepareComAndroidSupportDesign2321Library UP-TO-DATE
+:app:prepareComAndroidSupportRecyclerviewV72340Library UP-TO-DATE
+:app:prepareComAndroidSupportSupportV42340Library UP-TO-DATE
+:app:prepareComAndroidSupportSupportVectorDrawable2340Library UP-TO-DATE
+:app:prepareComCrashlyticsSdkAndroidAnswers138Library UP-TO-DATE
+:app:prepareComCrashlyticsSdkAndroidBeta121Library UP-TO-DATE
+:app:prepareComCrashlyticsSdkAndroidCrashlytics261Library UP-TO-DATE
+:app:prepareComCrashlyticsSdkAndroidCrashlyticsCore2310Library UP-TO-DATE
+:app:prepareComEdmodoCropper101Library UP-TO-DATE
+:app:prepareComFacebookFrescoDrawee081Library UP-TO-DATE
+:app:prepareComFacebookFrescoFbcore081Library UP-TO-DATE
+:app:prepareComFacebookFrescoFresco081Library UP-TO-DATE
+:app:prepareComFacebookFrescoImagepipeline081Library UP-TO-DATE
+:app:prepareComGetkeepsafeRelinkerRelinker121Library UP-TO-DATE
+:app:prepareComGithubClansFab163Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesAuth830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesBase830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesBasement830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesGcm830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesLocation830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesMaps830Library UP-TO-DATE
+:app:prepareComGoogleAndroidGmsPlayServicesMeasurement830Library UP-TO-DATE
+:app:prepareComJakewhartonButterknife810Library UP-TO-DATE
+:app:prepareComSunzxyAndroidFrescopluslib100Library UP-TO-DATE
+:app:prepareIoFabricSdkAndroidFabric1312Library UP-TO-DATE
+:app:prepareIoReactivexRxandroid121Library UP-TO-DATE
+:app:prepareIoRealmRealmAndroidLibrary100Library UP-TO-DATE
+:app:prepareMeZhanghaiAndroidMaterialprogressbarLibrary115Library UP-TO-DATE
+:app:prepareReleaseDependencies
+:app:compileReleaseAidl
+:app:compileReleaseRenderscript
+:app:generateReleaseBuildConfig
+:app:mergeReleaseShaders
+:app:compileReleaseShaders
+:app:generateReleaseAssets
+:app:mergeReleaseAssets
+:app:processReleaseManifest
+/home/trivenilabs/wishbook_android/factorizingnew/app/src/main/AndroidManifest.xml:45:9-53:20 Warning:
+	Element receiver#com.google.android.gms.gcm.GcmReceiver at AndroidManifest.xml:45:9-53:20 duplicated with element declared at AndroidManifest.xml:28:9-36:20
+:app:fabricGenerateResourcesRelease
+:app:generateReleaseResValues UP-TO-DATE
+:app:processReleaseGoogleServices
+:app:generateReleaseResources
+:app:mergeReleaseResources
+:app:processReleaseResources
+:app:generateReleaseSources
+:app:incrementalReleaseJavaCompilationSafeguard
+:app:compileReleaseJavaWithJavac
+Note: Version 1.2.0 of Realm is now available: http://static.realm.io/downloads/java/latest
+Note: Processing class NotificationModel
+Note: Processing class ResponseCache
+Note: Creating DefaultRealmModule
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:app:compileReleaseNdk UP-TO-DATE
+:app:compileReleaseSources
+:app:transformClassesWithRealmTransformerForRelease
+:app:processReleaseJavaRes UP-TO-DATE
+:app:transformResourcesWithMergeJavaResForRelease
+:app:transformClassesAndResourcesWithProguardForRelease
+ProGuard, version 5.2.1
+Reading input...
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/libs/universal-image-loader-1.9.5.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/libs/commons-lang3-3.4.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.1.0/d6854f42bfb4098d3d2358d93201307b9f1cc95d/butterknife-annotations-8.1.0.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/1.0.0/a3f198fe36d4071e5832d7aad8ca19798e87a64c/realm-annotations-1.0.0.jar] (filtered)
+Reading program jar [/home/tech2/Downloads/android-studio/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar] (filtered)
+Reading program jar [/home/tech2/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar] (filtered)
+Reading program jar [/home/tech2/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/io.realm/realm-android-library/1.0.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.edmodo/cropper/1.0.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.3/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.sunzxy.android/frescopluslib/1.0.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.8.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.8.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.8.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.8.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.5.9/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.5/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.1.0/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.allenliu.badgeview/library/1.0.2/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.10/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.1/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.8/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.12/jars/classes.jar] (filtered)
+Reading program jar [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/transforms/mergeJavaRes/release/jars/2/1f/main.jar] (filtered)
+Reading program directory [/home/trivenilabs/wishbook_android/factorizingnew/app/build/intermediates/transforms/RealmTransformer/release/folders/1/1/realm] (filtered)
+Reading library jar [/home/tech2/Android/Sdk/platforms/android-23/android.jar]
+Reading library jar [/home/tech2/Android/Sdk/platforms/android-23/optional/org.apache.http.legacy.jar]
+Note: duplicate definition of library class [android.net.http.SslCertificate]
+Note: duplicate definition of library class [android.net.http.SslError]
+Note: duplicate definition of library class [android.net.http.SslCertificate$DName]
+Note: duplicate definition of library class [org.apache.http.conn.scheme.SocketFactory]
+Note: duplicate definition of library class [org.apache.http.conn.scheme.HostNameResolver]
+Note: duplicate definition of library class [org.apache.http.conn.ConnectTimeoutException]
+Note: duplicate definition of library class [org.apache.http.params.HttpParams]
+Note: there were 7 duplicate class definitions.
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#duplicateclass)
+Initializing...
+Note: the configuration refers to the unknown class 'com.google.vending.licensing.ILicensingService'
+Note: the configuration refers to the unknown class 'com.android.vending.licensing.ILicensingService'
+Note: android.support.v4.app.NotificationCompatJellybean calls 'Field.getType'
+Note: com.google.android.gms.internal.zztl calls 'Field.getType'
+Note: com.google.gson.FieldAttributes calls 'Field.getGenericType'
+Note: com.google.gson.FieldAttributes calls 'Field.getType'
+Note: com.google.gson.internal.$Gson$Types calls 'Class.getGenericInterfaces'
+Note: com.google.gson.internal.$Gson$Types calls 'Class.getGenericSuperclass'
+Note: com.google.gson.internal.$Gson$Types calls 'Class.getTypeParameters'
+Note: com.google.gson.internal.Excluder calls 'Field.getType'
+Note: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory calls 'Field.getType'
+Note: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory calls 'Field.getGenericType'
+Note: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory calls 'Class.getGenericSuperclass'
+Note: com.google.gson.reflect.TypeToken calls 'Class.getGenericSuperclass'
+Note: com.google.gson.reflect.TypeToken calls 'Class.getTypeParameters'
+Note: com.google.gson.reflect.TypeToken calls 'Class.getGenericInterfaces'
+Note: com.nineoldandroids.util.ReflectiveProperty calls 'Field.getType'
+Note: com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder calls 'Field.getType'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware calls 'Field.getType'
+Note: com.wishbook.catalog.home.more.adapters.treeview.treerecyclerview.node.NodeHelper calls 'Field.getType'
+Note: org.apache.commons.lang3.builder.Diff calls 'Class.getTypeParameters'
+Note: org.apache.commons.lang3.reflect.MethodUtils calls 'Method.getGenericParameterTypes'
+Note: org.apache.commons.lang3.reflect.TypeLiteral calls 'Class.getTypeParameters'
+Note: org.apache.commons.lang3.reflect.TypeUtils calls 'Class.getTypeParameters'
+Note: org.apache.commons.lang3.reflect.TypeUtils calls 'Class.getGenericInterfaces'
+Note: org.apache.commons.lang3.reflect.TypeUtils calls 'Class.getGenericSuperclass'
+Note: com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl calls 'Class.getEnclosingClass'
+Note: org.apache.commons.lang3.ClassUtils calls 'Class.getEnclosingClass'
+Note: org.apache.commons.lang3.reflect.ConstructorUtils calls 'Class.getEnclosingClass'
+Note: org.apache.commons.lang3.reflect.TypeUtils calls 'Class.getEnclosingClass'
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.OkHttpClient
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Cache
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.OkHttpClient
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Request$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.OkHttpClient
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Call
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Response
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.ResponseBody
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Response
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.ResponseBody
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.OkHttpClient
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Cache
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Request$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Response
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Cache
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Request
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Call
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Response
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.ResponseBody
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.OkHttpClient
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.CacheControl
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Request$Builder
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Response
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.ResponseBody
+Warning:com.squareup.picasso.OkHttpDownloader: can't find referenced class com.squareup.okhttp.Cache
+Warning:rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.ConcurrentCircularArrayQueue: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.ConcurrentSequencedCircularArrayQueue: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.MpmcArrayQueueConsumerField: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.MpmcArrayQueueProducerField: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.MpscLinkedQueue: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.SpmcArrayQueueConsumerField: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.SpmcArrayQueueProducerField: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.SpscArrayQueue: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.SpscUnboundedArrayQueue: can't find referenced class sun.misc.Unsafe
+Warning:rx.internal.util.unsafe.UnsafeAccess: can't find referenced class sun.misc.Unsafe
+Note: android.support.v4.media.IMediaBrowserServiceCallbacksAdapterApi21: can't find dynamically referenced class android.service.media.IMediaBrowserServiceCallbacks
+Note: android.support.v4.media.IMediaBrowserServiceCallbacksAdapterApi21: can't find dynamically referenced class android.content.pm.ParceledListSlice
+Note: android.support.v4.media.IMediaBrowserServiceCallbacksAdapterApi21$Stub: can't find dynamically referenced class android.service.media.IMediaBrowserServiceCallbacks$Stub
+Note: android.support.v4.media.ParceledListSliceAdapterApi21: can't find dynamically referenced class android.content.pm.ParceledListSlice
+Note: android.support.v4.text.ICUCompatApi23: can't find dynamically referenced class libcore.icu.ICU
+Note: android.support.v4.text.ICUCompatIcs: can't find dynamically referenced class libcore.icu.ICU
+Note: android.support.v7.widget.DrawableUtils: can't find dynamically referenced class android.graphics.Insets
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.FacebookSdk
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.CallbackManager$Factory
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.login.LoginManager
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.CallbackManager
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.FacebookCallback
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.FacebookSdk
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.login.LoginManager
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.login.LoginManager
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session$OpenRequest
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session$StatusCallback
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.FacebookCallback
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session
+Note: com.google.android.gms.internal.zzlf: can't find dynamically referenced class com.facebook.Session$StatusCallback
+Note: com.google.android.gms.internal.zzlf$1: can't find dynamically referenced class com.facebook.login.LoginResult
+Note: com.google.android.gms.internal.zzlf$1: can't find dynamically referenced class com.facebook.FacebookException
+Note: com.google.android.gms.internal.zzlf$1: can't find dynamically referenced class com.facebook.AccessToken
+Note: com.google.android.gms.internal.zzlf$2: can't find dynamically referenced class com.facebook.SessionState
+Note: com.google.android.gms.maps.internal.zzy: can't find dynamically referenced class com.google.android.gms.maps.internal.CreatorImpl
+Note: com.google.gson.internal.UnsafeAllocator: can't find dynamically referenced class sun.misc.Unsafe
+Note: com.squareup.picasso.Utils: can't find dynamically referenced class com.squareup.okhttp.OkHttpClient
+Note: android.support.v4.app.NotificationCompatJellybean accesses a declared field 'icon' dynamically
+      Maybe this is program field 'android.support.design.R$attr { int icon; }'
+      Maybe this is program field 'android.support.design.R$id { int icon; }'
+      Maybe this is program field 'android.support.v4.app.NotificationCompat$Action { int icon; }'
+      Maybe this is program field 'android.support.v7.appcompat.R$attr { int icon; }'
+      Maybe this is program field 'android.support.v7.appcompat.R$id { int icon; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.MaterialDialog { android.widget.ImageView icon; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.MaterialDialog$Builder { android.graphics.drawable.Drawable icon; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.R$attr { int icon; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.R$id { int icon; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.internal.ThemeSingleton { android.graphics.drawable.Drawable icon; }'
+      Maybe this is program field 'com.sunzxy.frescopluslib.R$attr { int icon; }'
+      Maybe this is program field 'com.sunzxy.frescopluslib.R$id { int icon; }'
+      Maybe this is program field 'com.wishbook.catalog.R$attr { int icon; }'
+      Maybe this is program field 'com.wishbook.catalog.R$id { int icon; }'
+      Maybe this is program field 'io.fabric.sdk.android.services.settings.AppRequestData { io.fabric.sdk.android.services.settings.IconRequest icon; }'
+      Maybe this is program field 'io.fabric.sdk.android.services.settings.AppSettingsData { io.fabric.sdk.android.services.settings.AppIconSettingsData icon; }'
+      Maybe this is program field 'me.zhanghai.android.materialprogressbar.R$attr { int icon; }'
+      Maybe this is program field 'me.zhanghai.android.materialprogressbar.R$id { int icon; }'
+      Maybe this is library field 'android.R$attr { int icon; }'
+      Maybe this is library field 'android.R$id { int icon; }'
+      Maybe this is library field 'android.app.LauncherActivity$ListItem { android.graphics.drawable.Drawable icon; }'
+      Maybe this is library field 'android.app.Notification { int icon; }'
+      Maybe this is library field 'android.app.Notification$Action { int icon; }'
+      Maybe this is library field 'android.appwidget.AppWidgetProviderInfo { int icon; }'
+      Maybe this is library field 'android.content.pm.PackageItemInfo { int icon; }'
+      Maybe this is library field 'android.content.pm.ResolveInfo { int icon; }'
+      Maybe this is library field 'android.inputmethodservice.Keyboard$Key { android.graphics.drawable.Drawable icon; }'
+      Maybe this is library field 'android.speech.tts.TextToSpeech$EngineInfo { int icon; }'
+Note: android.support.v4.app.NotificationCompatJellybean accesses a declared field 'title' dynamically
+      Maybe this is program field 'android.support.design.R$attr { int title; }'
+      Maybe this is program field 'android.support.design.R$id { int title; }'
+      Maybe this is program field 'android.support.v4.app.NotificationCompat$Action { java.lang.CharSequence title; }'
+      Maybe this is program field 'android.support.v7.appcompat.R$attr { int title; }'
+      Maybe this is program field 'android.support.v7.appcompat.R$id { int title; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.MaterialDialog { android.widget.TextView title; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.MaterialDialog$Builder { java.lang.CharSequence title; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.R$attr { int title; }'
+      Maybe this is program field 'com.afollestad.materialdialogs.R$id { int title; }'
+      Maybe this is program field 'com.sunzxy.frescopluslib.R$attr { int title; }'
+      Maybe this is program field 'com.sunzxy.frescopluslib.R$id { int title; }'
+      Maybe this is program field 'com.wishbook.catalog.R$attr { int title; }'
+      Maybe this is program field 'com.wishbook.catalog.R$id { int title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.Response_catalogapp { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.CatalogMinified { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.Popular { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.Response_ShareStatus { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.Response_catalog { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.Response_catalogAdd { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.Response_catalogMini { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.commonmodels.responses.SharedByMe { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.home.models.Add_Catalog_Response { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.home.models.CatalogObj { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.home.models.ProductObj { java.lang.String title; }'
+      Maybe this is program field 'com.wishbook.catalog.home.notifications.models.NotificationModel { java.lang.String title; }'
+      Maybe this is program field 'io.fabric.sdk.android.services.settings.PromptSettingsData { java.lang.String title; }'
+      Maybe this is program field 'me.zhanghai.android.materialprogressbar.R$attr { int title; }'
+      Maybe this is program field 'me.zhanghai.android.materialprogressbar.R$id { int title; }'
+      Maybe this is library field 'android.R$attr { int title; }'
+      Maybe this is library field 'android.R$id { int title; }'
+      Maybe this is library field 'android.app.Notification$Action { java.lang.CharSequence title; }'
+      Maybe this is library field 'android.preference.PreferenceActivity$Header { java.lang.CharSequence title; }'
+Note: android.support.v4.app.NotificationCompatJellybean accesses a declared field 'actionIntent' dynamically
+      Maybe this is program field 'android.support.v4.app.NotificationCompat$Action { android.app.PendingIntent actionIntent; }'
+      Maybe this is library field 'android.app.Notification$Action { android.app.PendingIntent actionIntent; }'
+Note: com.afollestad.materialdialogs.internal.MDTintHelper accesses a declared field 'mCursorDrawable' dynamically
+Note: com.google.gson.internal.UnsafeAllocator accesses a declared field 'theUnsafe' dynamically
+Note: com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder accesses a declared field 'peerHost' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field peerHost; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field peerHost; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder accesses a declared field 'peerPort' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field peerPort; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field peerPort; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder accesses a declared field 'sslParameters' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field sslParameters; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field sslParameters; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder accesses a declared field 'useSni' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field useSni; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field useSni; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'peerHost' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field peerHost; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field peerHost; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'peerPort' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field peerPort; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field peerPort; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'sslParameters' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field sslParameters; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field sslParameters; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'npnProtocols' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field npnProtocols; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'alpnProtocols' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field alpnProtocols; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'useSni' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.SSLEngineSNIConfigurator$EngineHolder { java.lang.reflect.Field useSni; }'
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field useSni; }'
+Note: com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware accesses a declared field 'sslNativePointer' dynamically
+      Maybe this is program field 'com.wishbook.catalog.Utils.networking.async.http.spdy.SpdyMiddleware { java.lang.reflect.Field sslNativePointer; }'
+Note: rx.internal.util.PlatformDependent accesses a field 'SDK_INT' dynamically
+      Maybe this is library field 'android.os.Build$VERSION { int SDK_INT; }'
+Note: the configuration keeps the entry point 'android.support.design.widget.NavigationView { void setNavigationItemSelectedListener(android.support.design.widget.NavigationView$OnNavigationItemSelectedListener); }', but not the descriptor class 'android.support.design.widget.NavigationView$OnNavigationItemSelectedListener'
+Note: the configuration keeps the entry point 'android.support.design.widget.Snackbar$SnackbarLayout { void setOnLayoutChangeListener(android.support.design.widget.Snackbar$SnackbarLayout$OnLayoutChangeListener); }', but not the descriptor class 'android.support.design.widget.Snackbar$SnackbarLayout$OnLayoutChangeListener'
+Note: the configuration keeps the entry point 'android.support.design.widget.Snackbar$SnackbarLayout { void setOnAttachStateChangeListener(android.support.design.widget.Snackbar$SnackbarLayout$OnAttachStateChangeListener); }', but not the descriptor class 'android.support.design.widget.Snackbar$SnackbarLayout$OnAttachStateChangeListener'
+Note: the configuration keeps the entry point 'android.support.design.widget.TabLayout { void setOnTabSelectedListener(android.support.design.widget.TabLayout$OnTabSelectedListener); }', but not the descriptor class 'android.support.design.widget.TabLayout$OnTabSelectedListener'
+Note: the configuration keeps the entry point 'android.support.design.widget.TabLayout { void setTabsFromPagerAdapter(android.support.v4.view.PagerAdapter); }', but not the descriptor class 'android.support.v4.view.PagerAdapter'
+Note: the configuration keeps the entry point 'android.support.v4.view.ViewPager { void setAdapter(android.support.v4.view.PagerAdapter); }', but not the descriptor class 'android.support.v4.view.PagerAdapter'
+Note: the configuration keeps the entry point 'android.support.v4.view.ViewPager { void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener); }', but not the descriptor class 'android.support.v4.view.ViewPager$OnAdapterChangeListener'
+Note: the configuration keeps the entry point 'android.support.v4.view.ViewPager { void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener); }', but not the descriptor class 'android.support.v4.view.ViewPager$OnPageChangeListener'
+Note: the configuration keeps the entry point 'android.support.v4.widget.DrawerLayout { void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener); }', but not the descriptor class 'android.support.v4.widget.DrawerLayout$DrawerListener'
+Note: the configuration keeps the entry point 'android.support.v4.widget.NestedScrollView { void setOnScrollChangeListener(android.support.v4.widget.NestedScrollView$OnScrollChangeListener); }', but not the descriptor class 'android.support.v4.widget.NestedScrollView$OnScrollChangeListener'
+Note: the configuration keeps the entry point 'android.support.v4.widget.SlidingPaneLayout { void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener); }', but not the descriptor class 'android.support.v4.widget.SlidingPaneLayout$PanelSlideListener'
+Note: the configuration keeps the entry point 'android.support.v4.widget.SwipeRefreshLayout { void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener); }', but not the descriptor class 'android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener'
+Note: the configuration keeps the entry point 'android.support.v7.view.menu.ActionMenuItemView { void setItemInvoker(android.support.v7.view.menu.MenuBuilder$ItemInvoker); }', but not the descriptor class 'android.support.v7.view.menu.MenuBuilder$ItemInvoker'
+Note: the configuration keeps the entry point 'android.support.v7.view.menu.ActionMenuItemView { void setPopupCallback(android.support.v7.view.menu.ActionMenuItemView$PopupCallback); }', but not the descriptor class 'android.support.v7.view.menu.ActionMenuItemView$PopupCallback'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActionBarContainer { void setTabContainer(android.support.v7.widget.ScrollingTabContainerView); }', but not the descriptor class 'android.support.v7.widget.ScrollingTabContainerView'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActionBarOverlayLayout { void setActionBarVisibilityCallback(android.support.v7.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback); }', but not the descriptor class 'android.support.v7.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActionMenuView { void setPresenter(android.support.v7.widget.ActionMenuPresenter); }', but not the descriptor class 'android.support.v7.widget.ActionMenuPresenter'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActionMenuView { void setOnMenuItemClickListener(android.support.v7.widget.ActionMenuView$OnMenuItemClickListener); }', but not the descriptor class 'android.support.v7.widget.ActionMenuView$OnMenuItemClickListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActivityChooserView { void setActivityChooserModel(android.support.v7.widget.ActivityChooserModel); }', but not the descriptor class 'android.support.v7.widget.ActivityChooserModel'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ActivityChooserView { void setProvider(android.support.v4.view.ActionProvider); }', but not the descriptor class 'android.support.v4.view.ActionProvider'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ContentFrameLayout { void setAttachListener(android.support.v7.widget.ContentFrameLayout$OnAttachListener); }', but not the descriptor class 'android.support.v7.widget.ContentFrameLayout$OnAttachListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.FitWindowsFrameLayout { void setOnFitSystemWindowsListener(android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener); }', but not the descriptor class 'android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.FitWindowsLinearLayout { void setOnFitSystemWindowsListener(android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener); }', but not the descriptor class 'android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setAccessibilityDelegateCompat(android.support.v7.widget.RecyclerViewAccessibilityDelegate); }', but not the descriptor class 'android.support.v7.widget.RecyclerViewAccessibilityDelegate'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setAdapter(android.support.v7.widget.RecyclerView$Adapter); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$Adapter'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setRecyclerListener(android.support.v7.widget.RecyclerView$RecyclerListener); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$RecyclerListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setLayoutManager(android.support.v7.widget.RecyclerView$LayoutManager); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$LayoutManager'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setRecycledViewPool(android.support.v7.widget.RecyclerView$RecycledViewPool); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$RecycledViewPool'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setViewCacheExtension(android.support.v7.widget.RecyclerView$ViewCacheExtension); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$ViewCacheExtension'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setChildDrawingOrderCallback(android.support.v7.widget.RecyclerView$ChildDrawingOrderCallback); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$ChildDrawingOrderCallback'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$OnScrollListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.RecyclerView { void setItemAnimator(android.support.v7.widget.RecyclerView$ItemAnimator); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$ItemAnimator'
+Note: the configuration keeps the entry point 'android.support.v7.widget.SearchView { void setOnQueryTextListener(android.support.v7.widget.SearchView$OnQueryTextListener); }', but not the descriptor class 'android.support.v7.widget.SearchView$OnQueryTextListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.SearchView { void setOnCloseListener(android.support.v7.widget.SearchView$OnCloseListener); }', but not the descriptor class 'android.support.v7.widget.SearchView$OnCloseListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.SearchView { void setOnSuggestionListener(android.support.v7.widget.SearchView$OnSuggestionListener); }', but not the descriptor class 'android.support.v7.widget.SearchView$OnSuggestionListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.SearchView { void setSuggestionsAdapter(android.support.v4.widget.CursorAdapter); }', but not the descriptor class 'android.support.v4.widget.CursorAdapter'
+Note: the configuration keeps the entry point 'android.support.v7.widget.Toolbar { void setOnMenuItemClickListener(android.support.v7.widget.Toolbar$OnMenuItemClickListener); }', but not the descriptor class 'android.support.v7.widget.Toolbar$OnMenuItemClickListener'
+Note: the configuration keeps the entry point 'android.support.v7.widget.ViewStubCompat { void setOnInflateListener(android.support.v7.widget.ViewStubCompat$OnInflateListener); }', but not the descriptor class 'android.support.v7.widget.ViewStubCompat$OnInflateListener'
+Note: the configuration keeps the entry point 'com.afollestad.materialdialogs.internal.MDButton { void setStackedGravity(com.afollestad.materialdialogs.GravityEnum); }', but not the descriptor class 'com.afollestad.materialdialogs.GravityEnum'
+Note: the configuration keeps the entry point 'com.afollestad.materialdialogs.internal.MDRootLayout { void setButtonGravity(com.afollestad.materialdialogs.GravityEnum); }', but not the descriptor class 'com.afollestad.materialdialogs.GravityEnum'
+Note: the configuration keeps the entry point 'com.afollestad.materialdialogs.internal.MDRootLayout { void setButtonStackedGravity(com.afollestad.materialdialogs.GravityEnum); }', but not the descriptor class 'com.afollestad.materialdialogs.GravityEnum'
+Note: the configuration keeps the entry point 'com.facebook.drawee.view.DraweeView { void setHierarchy(com.facebook.drawee.interfaces.DraweeHierarchy); }', but not the descriptor class 'com.facebook.drawee.interfaces.DraweeHierarchy'
+Note: the configuration keeps the entry point 'com.facebook.drawee.view.DraweeView { void setController(com.facebook.drawee.interfaces.DraweeController); }', but not the descriptor class 'com.facebook.drawee.interfaces.DraweeController'
+Note: the configuration keeps the entry point 'com.github.clans.fab.FloatingActionMenu { void setLabelEllipsize(com.github.clans.fab.Label); }', but not the descriptor class 'com.github.clans.fab.Label'
+Note: the configuration keeps the entry point 'com.github.clans.fab.FloatingActionMenu { void setOnMenuToggleListener(com.github.clans.fab.FloatingActionMenu$OnMenuToggleListener); }', but not the descriptor class 'com.github.clans.fab.FloatingActionMenu$OnMenuToggleListener'
+Note: the configuration keeps the entry point 'com.google.android.gms.ads.identifier.AdvertisingIdClient { com.google.android.gms.internal.zzav zza(android.content.Context,com.google.android.gms.common.zza); }', but not the descriptor class 'com.google.android.gms.common.zza'
+Note: the configuration keeps the entry point 'com.google.android.gms.common.GooglePlayServicesUtil { android.app.Dialog zza(int,android.app.Activity,android.support.v4.app.Fragment,int,android.content.DialogInterface$OnCancelListener); }', but not the descriptor class 'android.support.v4.app.Fragment'
+Note: the configuration keeps the entry point 'com.google.android.gms.common.GooglePlayServicesUtil { boolean showErrorDialogFragment(int,android.app.Activity,android.support.v4.app.Fragment,int,android.content.DialogInterface$OnCancelListener); }', but not the descriptor class 'android.support.v4.app.Fragment'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView { void setImage(com.wishbook.catalog.Utils.ImageZoomUtils.ImageSource); }', but not the descriptor class 'com.wishbook.catalog.Utils.ImageZoomUtils.ImageSource'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView { void setRegionDecoderFactory(com.wishbook.catalog.Utils.ImageZoomUtils.decoder.DecoderFactory); }', but not the descriptor class 'com.wishbook.catalog.Utils.ImageZoomUtils.decoder.DecoderFactory'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView { void setBitmapDecoderFactory(com.wishbook.catalog.Utils.ImageZoomUtils.decoder.DecoderFactory); }', but not the descriptor class 'com.wishbook.catalog.Utils.ImageZoomUtils.decoder.DecoderFactory'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView { void setOnImageEventListener(com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView$OnImageEventListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.ImageZoomUtils.SubsamplingScaleImageView$OnImageEventListener'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.MultiSpinner { void setOnItemsSelectedListener(com.wishbook.catalog.Utils.MultiSpinner$MultiSpinnerListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.MultiSpinner$MultiSpinnerListener'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.RecyclerViewEmptySupport { void setAdapter(android.support.v7.widget.RecyclerView$Adapter); }', but not the descriptor class 'android.support.v7.widget.RecyclerView$Adapter'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.touchImageView.TouchImageView { void setOnTouchImageViewListener(com.wishbook.catalog.Utils.touchImageView.TouchImageView$OnTouchImageViewListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.touchImageView.TouchImageView$OnTouchImageViewListener'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.touchImageView.TouchImageView { void setState(com.wishbook.catalog.Utils.touchImageView.TouchImageView$State); }', but not the descriptor class 'com.wishbook.catalog.Utils.touchImageView.TouchImageView$State'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.widget.EditTextBackEvent { void setOnEditTextImeBackListener(com.wishbook.catalog.Utils.widget.EditTextBackEvent$EditTextImeBackListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.widget.EditTextBackEvent$EditTextImeBackListener'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.widget.TabBarView { void setOnTabBarClickListener(com.wishbook.catalog.Utils.widget.TabBarView$OnTabBarClickListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.widget.TabBarView$OnTabBarClickListener'
+Note: the configuration keeps the entry point 'com.wishbook.catalog.Utils.widget.TabMainView { void setOnAnimationEndListener(com.wishbook.catalog.Utils.widget.TabMainView$OnAnimationEndListener); }', but not the descriptor class 'com.wishbook.catalog.Utils.widget.TabMainView$OnAnimationEndListener'
+Note: the configuration keeps the entry point 'io.realm.internal.CheckedRow { void nativeSetMixed(long,long,io.realm.internal.Mixed); }', but not the descriptor class 'io.realm.internal.Mixed'
+Note: the configuration keeps the entry point 'io.realm.internal.Table { void nativeSetMixed(long,long,long,io.realm.internal.Mixed); }', but not the descriptor class 'io.realm.internal.Mixed'
+Note: the configuration keeps the entry point 'io.realm.internal.TableView { void nativeSetMixed(long,long,long,io.realm.internal.Mixed); }', but not the descriptor class 'io.realm.internal.Mixed'
+Note: the configuration keeps the entry point 'io.realm.internal.UncheckedRow { void nativeSetMixed(long,long,io.realm.internal.Mixed); }', but not the descriptor class 'io.realm.internal.Mixed'
+Note: there were 2 references to unknown classes.
+      You should check your configuration for typos.
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#unknownclass)
+Note: there were 24 classes trying to access generic signatures using reflection.
+      You should consider keeping the signature attributes
+      (using '-keepattributes Signature').
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#attributes)
+Note: there were 4 classes trying to access enclosing classes using reflection.
+      You should consider keeping the inner classes attributes
+      (using '-keepattributes InnerClasses').
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#attributes)
+Note: there were 63 unkept descriptor classes in kept class members.
+      You should consider explicitly keeping the mentioned classes
+      (using '-keep').
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#descriptorclass)
+Note: there were 31 unresolved dynamic references to classes or interfaces.
+      You should check if you need to specify additional program jars.
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#dynamicalclass)
+Note: there were 17 accesses to class members by means of introspection.
+      You should consider explicitly keeping the mentioned class members
+      (using '-keep' or '-keepclassmembers').
+      (http://proguard.sourceforge.net/manual/troubleshooting.html#dynamicalclassmember)
+Warning:there were 96 unresolved references to classes or interfaces.
+         You may need to add missing library jars or update their versions.
+         If your code works fine without the missing classes, you can suppress
+         the warnings with '-dontwarn' options.
+         (http://proguard.sourceforge.net/manual/troubleshooting.html#unresolvedclass)
+Warning:Exception while processing task java.io.IOException: Please correct the above warnings first.
+:app:transformClassesAndResourcesWithProguardForRelease FAILED
+Error:Execution failed for task ':app:transformClassesAndResourcesWithProguardForRelease'.
+> java.io.IOException: Please correct the above warnings first.
+Information:BUILD FAILED
+Information:Total time: 13.57 secs
+Information:1 error
+Information:45 warnings
+Information:See complete output in console

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:outlineProvider="bounds">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_primary"
+            android:minHeight="56dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:transitionName="actionBar"
+            android:visibility="visible"
+            app:contentInsetLeft="15dp"
+            app:contentInsetStart="15dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/MyActionBarTheme"
+            tools:ignore="UnusedAttribute" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical">
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                android:id="@+id/txt_home_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/home_search"
+                android:drawablePadding="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Search for Brands, Fabric, Work and more"
+                android:textColor="@color/purchase_medium_gray"
+                android:transitionName="search_activity_transition"
+                app:drawableLeftCompat="@drawable/summary_search"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/contacts_home_grey"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/banner_container"
+                android:layout_width="match_parent"
+                android:focusable="true"
+                android:layout_height="wrap_content">
+
+
+                <com.wishbook.catalog.Utils.widget.LoopViewPager
+                    android:id="@id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="gone" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="48dp"
+                    app:ci_drawable="@drawable/circle_blue_radius"
+                    app:ci_drawable_unselected="@drawable/circle_white_radius" />
+
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/contacts_home_grey"
+                android:elevation="6dp"
+                android:outlineProvider="bounds">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/contacts_home_grey"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_stories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txt_stories_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="false"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="3dp"
+                            android:text="Wishbook Stories"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_normal"
+                            android:textStyle="normal" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_stories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:layout_marginBottom="8dp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/clear_stroy_pref"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clear Story Pref"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <com.wishbook.catalog.Utils.widget.WrapContentDraweeView
+                        android:id="@+id/reseller_banner_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                       android:layout_marginBottom="12dp"
+                        app:actualImageScaleType="fitXY"
+                        app:placeholderImage="@drawable/uploadempty" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/third_banner_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="12dp"
+                        app:actualImageScaleType="fitXY"
+                        app:placeholderImage="@drawable/uploadempty" />
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/forth_banner_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="12dp"
+                        app:actualImageScaleType="fitXY"
+                        app:placeholderImage="@drawable/uploadempty" />
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_how_to_resell_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/top_10_gradient"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="#How to Resell on Wishbook"
+                            android:textColor="@color/white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_how_to_resell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                    <!-- 6. User WishList-->
+                    <LinearLayout
+                        android:id="@+id/linear_wishlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="false"
+                                android:padding="8dp"
+                                android:text="From Your Wishlist"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_subheading"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/wishlist_see_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:clickable="false"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:text="See all"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_wishlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:layout_marginBottom="8dp"
+
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <!-- 7. Lehengas Banner-->
+
+
+
+                    <!-- 8. All Public Brands-->
+                    <include layout="@layout/include_brand_recycler" />
+
+                    <!-- 9. Brands Follow-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_followedbyme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:layout_marginTop="16dp"
+                        android:visibility="visible" />
+
+                    <!-- 10. Suit Banner-->
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/video_feedback_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/video_feedback_header"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="#HappyBuyers"
+                            android:textColor="@color/white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_video_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <!-- 14. FeedBack Banner -->
+                    <RelativeLayout
+                        android:id="@+id/feedback_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+
+
+                    <com.wishbook.catalog.Utils.widget.WrapContentDraweeView
+                        android:id="@+id/refer_earn_promotion_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        app:actualImageScaleType="fitXY"
+                        app:placeholderImage="@drawable/uploadempty" />
+
+                    <View
+                        android:id="@+id/anchor_point1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_user_recommded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_recommeded1"
+                            android:layout_width="60dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:id="@+id/txt_recommded_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="false"
+                            android:padding="8dp"
+                            android:text="Suggested Products"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_subheading"
+                            android:textStyle="normal" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view_recommded"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginBottom="8dp" />
+
+                        </RelativeLayout>
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/fifth_banner_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="8dp"
+                            app:actualImageScaleType="fitXY"
+                            android:visibility="gone"
+                            app:placeholderImage="@drawable/uploadempty" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_recommded_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/sixth_banner_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="8dp"
+                            app:actualImageScaleType="fitXY"
+                            android:visibility="gone"
+                            app:placeholderImage="@drawable/uploadempty" />
+
+                    </LinearLayout>
+
+
+                    <com.wishbook.catalog.Utils.CustomViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/recent_catalog_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#fff"
+                        android:clickable="false"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Recently Viewed Products"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_subheading"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <!-- 16. Recent Viewed -->
+
+                    <View
+                        android:id="@+id/space"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:background="#fff" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/see_all_recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txt_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:duplicateParentState="true"
+                            android:fontFamily="@string/font_medium"
+                            android:text="SEE ALL"
+                            android:textColor="@color/color_primary"
+                            android:textSize="@dimen/font_size_default" />
+
+                        <ImageView
+                            android:id="@+id/btn_catalog_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:duplicateParentState="true"
+                            android:tint="@color/color_primary"
+                            app:srcCompat="@drawable/ic_down_arrow_black_24dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

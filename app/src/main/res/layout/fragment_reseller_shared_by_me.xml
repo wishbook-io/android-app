@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <HorizontalScrollView
+            android:id="@+id/h_filter_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/linear_filter_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_view_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View"
+                        android:textColor="@color/purchase_medium_gray"
+                        android:textSize="12sp" />
+
+                    <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                        android:id="@+id/txt_collection_type_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawablePadding="5dp"
+                        android:text="Collection"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="13sp"
+                        app:drawableRightCompat="@drawable/ic_down_arrow_black_24dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_date_range_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date Range"
+                        android:textColor="@color/purchase_medium_gray"
+                        android:textSize="12sp" />
+
+                    <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                        android:id="@+id/txt_selected_date_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:drawablePadding="5dp"
+                        android:text="18-04-2019 To 18-05-2019"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="13sp"
+                        app:drawableRightCompat="@drawable/ic_down_arrow_black_24dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/h_filter_top_bar">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewPayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No Data Found"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

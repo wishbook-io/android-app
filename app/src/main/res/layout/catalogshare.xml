@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  <include layout="@layout/toolbar"></include>-->
+        <RelativeLayout
+            android:id="@+id/liner_follow_brand"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/white"
+            android:elevation="@dimen/toolbar_elevation"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_brand_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                fab:actualImageScaleType="fitCenter"
+                fab:placeholderImage="@drawable/uploadempty"
+                android:src="@drawable/ic_action_catalogs" />
+
+            <TextView
+                android:id="@+id/txt_brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_brand_logo"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_brand_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_edge_less"
+                android:text="@string/btn_follow"
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linear_flow_button"
+            android:layout_below="@+id/liner_follow_brand">
+
+            <view
+                android:id="@+id/recycler_view"
+                class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/list_empty1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No items to display"
+                android:textSize="@dimen/font_size_heading" />
+        </FrameLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="9dp"
+            android:visibility="visible"
+            fab:menu_animationDelayPerItem="50"
+            fab:menu_backgroundColor="@android:color/transparent"
+            fab:menu_buttonSpacing="0dp"
+            fab:menu_colorNormal="#DA4336"
+            fab:menu_colorPressed="#E75043"
+            fab:menu_colorRipple="#99FFFFFF"
+            fab:menu_fab_size="normal"
+            fab:menu_icon="@drawable/ic_share_24dp"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_cornerRadius="3dp"
+            fab:menu_labels_ellipsize="none"
+            fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            fab:menu_labels_margin="0dp"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_padding="8dp"
+            fab:menu_labels_paddingBottom="4dp"
+            fab:menu_labels_paddingLeft="8dp"
+            fab:menu_labels_paddingRight="8dp"
+            fab:menu_labels_paddingTop="4dp"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="false"
+            fab:menu_labels_textColor="#FFFFFF"
+            fab:menu_labels_textSize="@dimen/font_size_normal"
+            fab:menu_openDirection="up"
+            fab:menu_shadowColor="#66000000"
+            fab:menu_shadowRadius="4dp"
+            fab:menu_shadowXOffset="1dp"
+            fab:menu_shadowYOffset="3dp"
+            fab:menu_showShadow="true">
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/other_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:srcCompat="@drawable/ic_transform_24dp"
+                fab:fab_colorNormal="#454545"
+                fab:fab_label="Others"
+                fab:fab_size="mini"
+                fab:menu_colorNormal="#454545"
+                fab:menu_colorPressed="#454545" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fb_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fb"
+                fab:fab_colorNormal="#3b5998"
+                fab:fab_label="FaceBook"
+                fab:fab_size="mini"
+                fab:menu_colorNormal="#3b5998"
+                fab:menu_colorPressed="#3b5998" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/wap_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_whatspp"
+                fab:fab_colorNormal="#34af23"
+                fab:fab_label="WhatsApp"
+                fab:fab_size="mini"
+                fab:menu_colorNormal="#34af23"
+                fab:menu_colorPressed="#34af23" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_flow_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:elevation="@dimen/toolbar_elevation"
+                    tools:ignore="PrivateResource">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginBottom="-2dp"
+                        android:background="@drawable/bottom_above_shadow"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_send_enquiry"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="@string/send_enquiry"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/color_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_chat_supplier"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="@string/chat_with_supplier"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/color_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_purchase"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/orange"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/create_order"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_sales_order"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/orange"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Create Sales Order"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_enable_catalog"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="Enable Catalog"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/color_primary"
+                            android:textSize="@dimen/font_size_default"
+                            android:visibility="gone"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

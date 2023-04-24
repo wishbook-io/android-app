@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_catalog_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Catalog Name:"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_default" />
+
+
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+            <TextView
+                android:id="@+id/txt_catalog_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_marginLeft="4dp"
+                android:layout_toLeftOf="@+id/img_close"
+                android:layout_toStartOf="@+id/img_close"
+                android:layout_toEndOf="@+id/txt_catalog_name_label"
+                android:layout_toRightOf="@+id/txt_catalog_name_label"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_default" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_linear_toolar_container"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purchase_medium_gray" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_toolbar"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txt_single_piece_catalog_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Single Piece"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_full_catalog_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Full Catalog"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_single_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_full_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gst_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GST"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_single_tax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_full_tax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Shipping"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_single_shipping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_full_shipping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_single_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_full_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_reseller_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:id="@+id/linear_suggested_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_resell_price_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/suggested_resell_price"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/font_size_default" />
+
+                <TextView
+                    android:id="@+id/txt_resell_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Rs. resell price"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/font_size_default"
+                    android:fontFamily="@string/font_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/margin"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/font_size_default" />
+
+                <TextView
+                    android:id="@+id/txt_margin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="0.5"
+                    android:text="Rs. resell price"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/font_size_default"
+                    android:fontFamily="@string/font_medium" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_cod_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cod_note2"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_size_default" />
+
+            <LinearLayout
+                android:id="@+id/linear_whatsapp_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_whatsapp_fill"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_on_whatsapp_btn_text"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/ic_whatsapp_white" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_suggested_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/suggested_resell_price_note"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+
+        <ProgressBar
+            android:id="@+id/location_animation"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_animation"
+            android:gravity="center"
+            android:text="Loading.."
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_default" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

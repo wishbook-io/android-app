@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar_app" />
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+
+            <!-- Password Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_buyersgroup"
+                    style="@style/Spinner_Label"
+                   />
+                <Spinner
+                    android:id="@+id/spinner_buyergroups"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0000"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="There are no users in the selected group"
+                android:id="@+id/errortext" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/input_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write Message"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:text="Go"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

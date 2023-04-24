@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_below="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView android:id="@+id/list_empty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_heading"
+            android:text="@string/no_item_found"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/orderbut_container">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Order"
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:id="@+id/orderBut" />
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>

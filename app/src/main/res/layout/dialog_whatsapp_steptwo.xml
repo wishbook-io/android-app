@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_share_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/color_primary"
+            app:srcCompat="@drawable/ic_share_24dp_bl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="46dp"
+            android:gravity="center_vertical"
+            android:text="Share Product Details"
+            android:textColor="@color/color_primary"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_close_dialog"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/ic_close_white_24dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

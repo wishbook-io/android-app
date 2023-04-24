@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wishbook.catalog.home.more.Fragment_AboutUs">
+
+    <include layout="@layout/toolbar_app" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_submit"
+        android:layout_below="@+id/appbar"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/discount_setting_sub_text"
+                android:textColor="@color/green"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="10sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_wholeseller"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text="EDIT"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/color_primary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_wholeseller_cd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_wholeseller_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/cash_discount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/purchase_dark_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_wholeseller_crd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_wholeseller_crd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/credit_discount"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_wholeseller_dayscr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_wholeseller_dayscr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/days_credit"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/purchase_medium_gray" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_retailer"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text="EDIT"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/color_primary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_retailer_cd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_retailer_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/cash_discount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/purchase_dark_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_retailer_crd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_retailer_crd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/credit_discount"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_retailer_dayscr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_retailer_dayscr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/days_credit"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/purchase_medium_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_broker"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text="EDIT"
+                    android:visibility="gone"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_primary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_broker_cd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_broker_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/cash_discount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/purchase_dark_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_broker_crd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_broker_crd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/credit_discount"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_broker_dayscr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_broker_dayscr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/days_credit"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/purchase_medium_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/txt_public_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_public"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_public_hint"
+                    android:layout_toRightOf="@+id/txt_public_label"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text="EDIT"
+                    android:visibility="gone"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_primary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_public_cd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_public_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/cash_discount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/purchase_dark_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_public_crd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_public_crd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/credit_discount"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_public_dayscr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <EditText
+                            android:id="@+id/edit_public_dayscr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/days_credit"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/purchase_medium_gray" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_submit"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:elevation="8dp"
+                android:text="@string/cancel_text"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_primary"
+                android:elevation="8dp"
+                android:text="@string/submit_text"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

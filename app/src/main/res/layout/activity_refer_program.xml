@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_referral_promotion_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_reward_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_medium"
+            android:text="XXX"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="WB Rewards Balance"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_reward_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="8dp"
+            android:text="view history"
+            android:textColor="@color/color_primary" />
+
+
+        <TextView
+            android:id="@+id/txt_invite_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Invite Link"
+            android:textColor="@color/purchase_dark_gray"
+            android:textIsSelectable="true"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite and Earn WB Rewards!"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Invite Friends and Relatives Via"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="17sp" />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableAppCompactButton
+                android:id="@+id/btn_share_phonebook"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:stateListAnimator="@null"
+                android:text="Phonebook"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:drawableLeftButtonCompat="@drawable/ic_phone_border" />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableAppCompactButton
+                android:id="@+id/btn_share_whatsapp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_edge_green"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="30dp"
+                android:stateListAnimator="@null"
+                android:text="Whatsapp"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:drawableLeftButtonCompat="@drawable/ic_share_whatsapp" />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableAppCompactButton
+                android:id="@+id/btn_share_facebook"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:stateListAnimator="@null"
+                android:text="Facebook"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableLeftButtonCompat="@drawable/ic_facebook_border" />
+
+            <com.wishbook.catalog.Utils.widget.CustomDrawableAppCompactButton
+                android:id="@+id/btn_share_other"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:stateListAnimator="@null"
+                android:text="Other"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:drawableLeftButtonCompat="@drawable/ic_shareapp_other" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

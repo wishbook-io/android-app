@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:text="Sort"
+                    android:textSize="@dimen/font_size_subheading" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/sort_by"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/latest_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="Recently Uploaded" />
+
+
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/number_of_views_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+
+                    android:layoutDirection="rtl"
+                    android:text="Number of Views" />
+
+                <RadioButton
+                    android:id="@+id/user_rating_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="User Rating" />
+
+
+
+                <RadioButton
+                    android:id="@+id/price_low_to_high_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="Price: Low to High" />
+
+                <RadioButton
+                    android:id="@+id/price_high_to_low_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="Price: High to Low" />
+
+
+                <RadioButton
+                    android:id="@+id/a_to_z_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="Alphabetically: A to Z" />
+
+
+                <RadioButton
+                    android:id="@+id/z_to_a_selected"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="10dp"
+                    android:layoutDirection="rtl"
+                    android:text="Alphabetically: Z to A" />
+            </RadioGroup>
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_discard"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_edge_less_padding_blue"
+            android:text="@string/reset"
+            android:textColor="@color/color_primary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_edge_less_padding_blue_fill"
+            android:text="@string/sort"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>
+
+
+

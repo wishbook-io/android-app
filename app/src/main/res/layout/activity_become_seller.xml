@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_vertical"
+        android:background="@color/color_primary"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Become a Seller"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_subheading" />
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_done"
+        android:layout_below="@+id/linear_toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_toolbar"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catalog duration"
+                android:textColor="@color/color_primary"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your catalog will be visible for "
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edit_enable_duration"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:text="30"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14dp"
+                    android:theme="@style/AppThemeReseller" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="days"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_medium"
+                android:text="How would you like to sell catalog"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_isFull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+
+                <RadioButton
+                    android:id="@+id/radio_Full_catalog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Full catalog only"
+                    android:textColor="@color/purchase_dark_gray" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_single_piece"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Single pieces and full catalog both"
+                    android:textColor="@color/purchase_dark_gray" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_brand_discount_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Your discount to wishbook for this brand: 10%(Full) 10%(Single pc) "
+                android:textColor="@color/green"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/single_piece_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_medium"
+                    android:text="Set margin for single pcs."
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/margin_note"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/txt_current_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current price /Pc"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linear_single_pc_per"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <RadioButton
+                        android:id="@+id/radio_per"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:theme="@style/AppThemeReseller" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_per_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current price +"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edit_per"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp"
+                            android:theme="@style/AppThemeReseller" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_single_pc_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <RadioButton
+                        android:id="@+id/radio_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:theme="@style/AppThemeReseller" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_price_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current price + "
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edit_price"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp"
+                            android:theme="@style/AppThemeReseller" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_catalog_select_size_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose sizes you sell" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flex_catalog_select_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dp"
+                    app:flexWrap="wrap">
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_set_single_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set margin"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_price_per_design"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text=""
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_common_margin_note1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/max_margin_note_1"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_common_margin_note2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/max_margin_note_2"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/rg_add_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_single_piece_per"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   Enter margin (%)"
+                        android:textColor="@color/purchase_dark_gray" />
+
+                    <RadioButton
+                        android:id="@+id/radio_single_piece_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   Enter margin (Rs.)"
+                        android:textColor="@color/purchase_dark_gray" />
+
+
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/btn_edge_grey_rectengle"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_add_margin"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:digits=".0123456789"
+                        android:gravity="center"
+                        android:hint="Enter margin"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/txt_selected_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/purchase_dark_gray" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_single_pc_price_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_single_pc_product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="Price for single Pc.: "
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_primary"
+        android:text="DONE"
+        android:textColor="#fff" />
+</RelativeLayout>

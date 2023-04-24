@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/font_size_heading"
+    android:id="@+id/dialog_title"
+    android:textColor="@color/black"
+    android:text="@string/change_type_dialog_title"/>
+    <RadioGroup
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/catalog_type_radio_group">
+        <RadioButton
+            android:text="@string/private_type"
+            android:id="@+id/private_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="@string/public_type"
+            android:id="@+id/public_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+            android:id="@+id/add_public_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_public_price"
+            android:inputType="text"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

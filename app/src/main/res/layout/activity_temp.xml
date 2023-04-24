@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_send_enquiry"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+        <TextView
+            android:id="@+id/txt_catalog_sub_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/enquiry_question" />
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox_enquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            app:alignContent="space_around"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:showDivider="middle">
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/noncatalog_banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/noprev"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/uploadempty" />
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send_enquiry"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:text="send"
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

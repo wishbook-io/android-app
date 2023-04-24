@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="26dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_stay_current_portrait_24dp" />
+
+                        <TextView
+                            android:id="@+id/countrycodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="India"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                            android:id="@+id/input_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                            android:hint="Mobile"
+                            android:inputType="number"
+                           android:digits="@string/digits"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_normal"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+
+            <!-- Password Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinput_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:errorEnabled="true"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_lock_24dp"
+                    android:hint="Password"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinput_confpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:passwordToggleEnabled="true"
+                android:visibility="gone"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    android:id="@+id/input_confpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_lock_24dp"
+                    android:hint="Confirm Password"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    style="@style/common_input_edittext_person_name"
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_person_24dp"
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:hint="Name( Person / Company )"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_state"
+                    style="@style/Spinner_Label"
+             />
+                <Spinner
+                    android:id="@+id/spinner_state"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_city"
+                    style="@style/Spinner_Label"
+                   />
+                <Spinner
+                    android:id="@+id/spinner_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                >
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    style="@style/common_input_edittext_person_name"
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_person_24dp"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Email Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_mail_24dp"
+                    android:hint="user@domain.com"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/invite_as_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite as"
+                        style="@style/Spinner_Label"
+                        />
+                    <Spinner
+                        android:id="@+id/buyer_supplier"
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_grouptype"
+                        style="@style/Spinner_Label"
+                        />
+                    <Spinner
+                        android:id="@+id/group_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_broker_user_container"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexbox_suppliers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:alignContent="space_around"
+                    app:alignItems="flex_start"
+                    app:flexWrap="wrap"
+                    app:showDivider="middle">
+
+                    <TextView
+                        android:id="@+id/txt_supplier_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left|center"
+                        android:text="Supplier :"
+                        android:visibility="gone"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="10dp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_connect_supplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_edge_less_padding_blue"
+                    android:padding="5dp"
+                    android:text="@string/connect_supplier_with_broker"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_normal"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/newcompanycheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Do not create new company for me" />
+
+<LinearLayout
+    android:id="@+id/donotcreate"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="I am"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_usertype"
+            style="@style/Spinner_Label"
+            />
+        <Spinner
+            android:entries="@array/user_type"
+            android:id="@+id/spinner_usertype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:text="for"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/companyautocomp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/check_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="I agree to the " />
+                <TextView
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/tnc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Conditions"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="#3399FF"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                </LinearLayout>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/check_approve"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:visibility="gone"
+                    android:text="Auto-approve my Supplier requests" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/check_discoverable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:visibility="gone"
+                    android:text="Make myself discoverable to those not in my network" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:text="Register"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_filter">
+
+            <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@string/font_medium"
+                            android:text="Categories"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_collection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@string/font_medium"
+                            android:text="Collections"
+                            android:layout_margin="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_catalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="0dp"
+        app:borderWidth="0dp"
+        app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior"
+        app:srcCompat="@drawable/ic_add_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

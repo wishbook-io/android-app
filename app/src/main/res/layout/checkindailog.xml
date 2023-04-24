@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="Check In (Add Visit)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+           <!-- <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_buyer_notype" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                            android:id="@+id/buyer_select"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+
+                        <ProgressBar
+                            android:visibility="invisible"
+                            android:id="@+id/progress_bar"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/spinner_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+            </android.support.design.widget.TextInputLayout>-->
+
+            <LinearLayout
+                android:id="@+id/buyer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_buyername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <TextView
+                        style="@style/Spinner_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter buyer name"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/edit_buyername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_size_normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/purchase_light_gray" />
+                    <!-- <EditText
+                         android:id="@+id/edit_buyername"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:hint="Enter buyer name"
+                         android:inputType="text"
+                         android:singleLine="true"
+                         android:enabled="false"
+                         android:textColorHint="@color/purchase_light_gray"
+                         android:textSize="@dimen/font_size_normal" />-->
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:gravity="center"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <EditText
+                    android:id="@+id/edit_new_buyer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="New Buyer"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="8dp">
+                <EditText
+                    android:id="@+id/note_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Note"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Cancel"
+                android:backgroundTint="@color/color_primary"
+                android:textColor="#ffffff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_gotomeet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:backgroundTint="@color/color_primary"
+                android:text="Go to Meeting"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/linearLayout7"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView10">
+    <LinearLayout
+        android:id="@+id/mapcontainerq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+    </LinearLayout>
+        <TextView
+            android:id="@+id/location_error_text"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Location not found"
+            android:textSize="@dimen/font_size_subheading"
+            />
+    </FrameLayout>
+</RelativeLayout>

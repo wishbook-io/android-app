@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="5dp">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/text_catalog"
+            style="@style/Spinner_Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Product Type"
+            android:textColor="@color/purchase_dark_gray" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_catalog_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:entries="@array/catalog_type"
+        android:spinnerMode="dropdown"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/purchase_light_gray"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/rg_product_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp">
+
+        <RadioButton
+            android:id="@+id/radio_catalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Catalog" />
+
+        <RadioButton
+            android:id="@+id/radio_noncatalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Non- Catalog" />
+
+        <RadioButton
+            android:id="@+id/radio_setmatching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Set matching" />
+
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_screen_quality_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0dp"
+        android:hint="Enter item name"
+        android:textColorHint="@color/black"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_screen_quality_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/purchase_light_gray"
+            android:inputType="text"
+            android:maxLength="60"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:theme="@style/MyEditTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_inputlayout_top_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/text_top_category"
+            style="@style/Spinner_Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Select Top Category"
+            android:textColor="@color/purchase_dark_gray" />
+
+
+        <Spinner
+            android:id="@+id/spinner_top_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/purchase_light_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_inputlayout_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/text_category"
+            style="@style/Spinner_Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Select Category"
+            android:textColor="@color/purchase_dark_gray" />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purchase_light_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_inputlayout_photoshoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_photoshoot"
+            style="@style/Spinner_Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Select photoshoot type"
+            android:textColor="@color/purchase_dark_gray" />
+
+        <Spinner
+            android:id="@+id/spinner_photoshoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/photo_shoot_type"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purchase_light_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_catalog_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_inputlayout_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/text_brand"
+                style="@style/Spinner_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/select_brands"
+                android:textColor="@color/purchase_dark_gray" />
+
+
+            <Spinner
+                android:id="@+id/spinner_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/purchase_light_gray" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/hint_brand"
+            style="@style/hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/hint_brands"
+            android:textSize="10sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_inputlayout_catalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                    android:id="@+id/auto_text_catalog"
+                    style="@style/input_edit_text_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Product Name"
+                    android:imeOptions="flagNoExtractUi|actionSearch"
+                    android:inputType="textCapSentences"
+                    android:textColorHint="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <ProgressBar
+                    android:id="@+id/progess_catalog"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_select_top_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

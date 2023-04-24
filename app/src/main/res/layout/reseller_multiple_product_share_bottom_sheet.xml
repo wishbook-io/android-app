@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/relative_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_bg"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_primary"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Set the margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_subheading" />
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_share"
+            android:layout_below="@+id/linear_toolbar"
+            android:fillViewport="true">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_common_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="Set Common Additional Margin"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_common_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_common_per"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter Add. margin (%)"
+                            android:textColor="@color/purchase_dark_gray" />
+
+                        <RadioButton
+                            android:id="@+id/radio_common_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Enter Add. margin (Rs.)"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edit_common_add_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:digits=".0123456789"
+                            android:gravity="center"
+                            android:text=""
+                            android:hint="Enter margin"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColorHint="@color/purchase_light_gray"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_share_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:layout_below="@+id/linear_common_margin"
+                    android:layout_marginTop="5dp">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/relative_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+
+                    <ProgressBar
+                        android:id="@+id/location_animation"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location_animation"
+                        android:gravity="center"
+                        android:text="Loading.."
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_default" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_below="@+id/linear_share_container"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="No Data Available!"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_weight="3"
+            android:background="@color/color_primary"
+            android:gravity="center"
+            android:text="Share"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

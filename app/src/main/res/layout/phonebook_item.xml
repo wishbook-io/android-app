@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/textInt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical|left"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/contact_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/data_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/contact_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="contact name"
+                        android:textColor="@color/aluminum"
+                        android:textSize="@dimen/font_size_normal" />
+
+
+                    <TextView
+                        android:id="@+id/contact_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:digits="@string/digits"
+                        android:text="contact number"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

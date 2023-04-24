@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_options_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingLeft="@dimen/page_left_margin"
+    android:paddingRight="@dimen/page_right_margin"
+    android:background="?attr/selectableItemBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/filter_name"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=""
+            android:textSize="16dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+             />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/is_selected"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

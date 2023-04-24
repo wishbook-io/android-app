@@ -1,0 +1,370 @@
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+# Optimization is turned off by default. Dex does not like code run
+# through the ProGuard optimize and preverify steps (and performs some
+# of these optimizations on its own).
+#-dontoptimize
+#-dontpreverify
+
+# If you want to enable optimization, you should include the
+# following:
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+-optimizationpasses 5
+-allowaccessmodification
+#
+# Note that you cannot just include these flags in your own
+# configuration file; if you are including this file, optimization
+# will be turned off. You'll need to either edit this file, or
+# duplicate the contents of this file and remove the include of this
+# file from your project's proguard.config path property.
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.support.v4.app.Fragment
+-keep public class * extends android.support.v4.app.DialogFragment
+-keep public class * extends android.app.Fragment
+-keep public class com.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * {
+ native <methods>;
+}
+
+-keep public class * extends android.view.View {
+ public <init>(android.content.Context);
+ public <init>(android.content.Context, android.util.AttributeSet);
+ public <init>(android.content.Context, android.util.AttributeSet, int);
+ public void set*(...);
+}
+
+-keepclasseswithmembers class * {
+ public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+ public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+ public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+ public static **[] values();
+ public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class **.R$* {
+ public static <fields>;
+}
+
+-keep class android.support.v4.app.** { *; }
+-keep interface android.support.v4.app.** { *; }
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version. We know about them, and they are safe.
+-dontwarn android.support.**
+-dontwarn com.google.ads.**
+
+
+
+# Platform calls Class.forName on types which do not exist on Android to determine platform.
+-dontnote retrofit2.Platform
+# Platform used when running on Java 8 VMs. Will not be used at runtime.
+-dontwarn retrofit2.Platform$Java8
+# Retain generic type information for use by reflection by converters and adapters.
+-keepattributes Signature
+# Retain declared checked exceptions for use by a Proxy instance.
+-keepattributes Exceptions
+
+-keepattributes InnerClasses
+#okhttp3
+-keepattributes Annotation
+-keepattributes
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.**
+-dontwarn okio.**
+
+# Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
+# EnclosingMethod is required to use InnerClasses.
+-keepattributes Signature, InnerClasses, EnclosingMethod
+
+# Retrofit does reflection on method and parameter annotations.
+-keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
+
+# Retain service method parameters when optimizing.
+-keepclassmembers,allowshrinking,allowobfuscation interface * {
+    @retrofit2.http.* <methods>;
+}
+
+# Ignore annotation used for build tooling.
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+
+# Ignore JSR 305 annotations for embedding nullability information.
+-dontwarn javax.annotation.**
+
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit
+
+
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
+-if interface * { @retrofit2.http.* <methods>; }
+-keep,allowobfuscation interface <1>
+
+
+# rxjava
+-keep class rx.schedulers.Schedulers {
+    public static <methods>;
+}
+-keep class rx.schedulers.ImmediateScheduler {
+    public <methods>;
+}
+-keep class rx.schedulers.TestScheduler {
+    public <methods>;
+}
+-keep class rx.schedulers.Schedulers {
+    public static ** test();
+}
+
+-keep class rx.internal.util.unsafe.** {
+    *;
+}
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+    long producerIndex;
+    long consumerIndex;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+    long producerNode;
+    long consumerNode;
+}
+
+#data binding
+-dontwarn android.databinding.**
+-keep class android.databinding.** { *; }
+
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+
+-dontwarn com.squareup.okhttp.**
+
+
+
+#fresco
+-dontwarn javax.annotation.**
+-keep,allowobfuscation @interface com.facebook.common.internal.DoNotStrip
+
+#fresco proguard start
+-keep,allowobfuscation @interface com.facebook.common.internal.DoNotStrip
+-keep @com.facebook.common.internal.DoNotStrip class *
+-keepclassmembers class * {
+    @com.facebook.common.internal.DoNotStrip *;
+}
+
+# Keep native methods
+-keepclassmembers class * {
+    native <methods>;
+}
+
+-dontwarn okio.**
+-dontwarn com.squareup.okhttp.**
+-dontwarn okhttp3.**
+-dontwarn javax.annotation.**
+-dontwarn com.android.volley.toolbox.**
+-dontwarn com.facebook.infer.**
+#fresco proguard rule end
+
+# Keep native methods
+-keepclassmembers class * {
+    native <methods>;
+}
+
+#FreshDesk Hotline
+
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#  public *;
+#}
+
+-keep class com.freshdesk.hotline.** { *; }
+-dontwarn com.freshdesk.hotline.**
+-keep class com.demach.konotor.** { *; }
+
+# Rules to keep the FCM dependency optional
+-dontwarn com.google.firebase.messaging.RemoteMessage
+-keep class com.google.firebase.messaging.RemoteMessage
+#GMS GOOGLE
+-keep class com.google.firebase.messaging.** { *; }
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+-dontwarn sun.misc.Unsafe
+# Proguard for Calligraphy
+# Keep calligraphy classes when calligraphy is included as a dependency
+-keep class uk.co.chrishenx.calligraphy.** { *; }
+# Ignore warning from proguard for calligraphy classes, when calligraphy is not included
+-dontwarn uk.co.chrishenx.calligraphy.**
+
+#CropImnageView
+-dontwarn com.theartofdev.edmodo.cropper.**
+
+
+
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify
+-verbose
+
+# standard, except v4.app.Fragment, its required when app uses Fragments
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.support.v7.app.ActionBarActivity
+-keep public class * extends android.support.v4.app.Fragment
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+
+-keepclasseswithmembers class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class * extends android.app.Activity {
+       public void *(android.view.View);
+}
+
+#appsee
+-keep class com.appsee.** { *; }
+-dontwarn com.appsee.**
+-keep class android.support.** { *; }
+-keep interface android.support.** { *; }
+-keepattributes SourceFile,LineNumberTable
+
+
+#bottombar
+-dontwarn com.roughike.bottombar.**
+
+#crashanalytics
+-keepattributes SourceFile,LineNumberTable
+-keep public class * extends java.lang.Exception
+-keep class com.crashlytics.** { *; }
+-dontwarn com.crashlytics.**
+
+#Keeping Models
+
+-keep class com.wishbook.catalog.home.more.creditRating.** { *; }
+-keep class com.wishbook.catalog.commonmodels.** { *; }
+-keep class com.wishbook.catalog.commonmodels.dbmodel.** { *; }
+-keep class com.wishbook.catalog.commonmodels.responses.** { *; }
+-keep class com.wishbook.catalog.commonmodels.postpatchmodels.** { *; }
+-keep class com.wishbook.catalog.login.models.** { *; }
+-keep class com.wishbook.catalog.home.models.** { *; }
+-keep class com.wishbook.catalog.home.inventory.barcode.adaptermodel.** { *; }
+-keep class com.wishbook.catalog.home.inventory.** { *; }
+-keep class com.wishbook.catalog.home.inventory.barcode.adaptermodel.** { *; }
+-keep class com.wishbook.catalog.home.notifications.models.NotificationModel.** { *; }
+-keep class com.wishbook.catalog.home.notifications.models.** { *; }
+-dontwarn com.wishbook.catalog.home.orderNew.adapters.MoreCatalogViewAdapter.ViewChangeListener.**
+-keep class com.wishbook.catalog.home.orderNew.add.Fragment_CreatePurchaseOrderNew.** {*;}
+-keep public interface com.wishbook.catalog.home.orderNew.adapters.MoreCatalogViewAdapter.ViewChangeListener {*;}
+-keep class com.wishbook.catalog.home.orderNew.** { *; }
+
+
+# Proguard config for AppCompat
+# Ref : https://code.google.com/p/android/issues/detail?id=78293
+-keep public class android.support.v7.widget.** { *; }
+-keep public class android.support.v7.internal.widget.** { *; }
+-keep public class android.support.v7.internal.view.menu.** { *; }
+
+-keep public class * extends android.support.v4.view.ActionProvider {
+    public <init>(android.content.Context);
+}
+
+# Retain generated class which implement Unbinder.
+-keep public class * implements butterknife.Unbinder { public <init>(**, android.view.View); }
+-keep public class * implements butterknife.internal.ViewBinder   { public <init>(**, android.view.View);}
+# Prevent obfuscation of types which use ButterKnife annotations since the simple name
+# is used to reflectively look up the generated ViewBinding.
+-keep class butterknife.*
+-keepclasseswithmembernames class * { @butterknife.* <methods>; }
+-keepclasseswithmembernames class * { @butterknife.* <fields>; }
+ -keep class **$$ViewBinder { *; }
+
+
+#keep json classes      com.applozic
+-keepclassmembernames class * extends com.applozic.mobicommons.json.JsonMarker {
+!static !transient <fields>;
+}
+
+-keepclassmembernames class * extends com.applozic.mobicommons.json.JsonParcelableMarker {
+!static !transient <fields>;
+}
+#GSON Config      com.applozic
+-keepattributes Signature
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class org.eclipse.paho.client.mqttv3.logging.JSR47Logger { *; }
+-keep class android.support.** { *; }
+-keep interface android.support.** { *; }
+-dontwarn android.support.v4.**
+-keep public class com.google.android.gms.* { public *; }
+-dontwarn com.google.android.gms.**
+-keep class com.google.gson.** { *; }
+
+#Google gms
+-keep class android.support.** { *; }
+-keep interface android.support.** { *; }
+-dontwarn android.support.v4.**
+-keep public class com.google.android.gms.* { public *; }
+-dontwarn com.google.android.gms.**
+-keep class com.google.gson.** { *; }
+
+#moneysmart
+-keep class co.in.moneysmart.** {*;}
+
+
+# For CleverTap SDK
+-dontwarn com.clevertap.android.sdk.**
+
+
+
+# Branch Proguard
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient { com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context); } -keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info { java.lang.String getId(); boolean isLimitAdTrackingEnabled(); }
+
+-dontwarn com.google.firebase.appindexing.** -dontwarn com.android.installreferrer.api.**
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient { com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context); } -keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info { java.lang.String getId(); boolean isLimitAdTrackingEnabled(); }
+
+
+# CashFree
+-keep class com.gocashfree.cashfreesdk.** {*;}
+-dontwarn com.gocashfree.cashfreesdk.**
+
+

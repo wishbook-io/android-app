@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bottom_sheet_size"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Select Size"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_subheading" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flex_available_sizes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/h1"
+            android:layout_marginTop="15dp"
+            app:alignContent="space_between"
+            app:alignItems="center"
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="center">
+
+            <!-- <RadioGroup
+                 android:id="@+id/size_group"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginRight="16dp"
+                 android:layout_marginLeft="16dp"
+                 android:orientation="horizontal">
+
+
+             </RadioGroup>-->
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary"
+            android:text="DONE"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</FrameLayout>

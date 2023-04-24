@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:text="Enquiry details" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp"
+            android:gravity="left|center"
+            android:text="Enter Quantity" />
+
+        <EditText
+            android:layout_width="40dp"
+            android:hint="Sets"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/txt_only_sets"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_single_pcs"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/radio_sets"
+                android:layout_marginRight="10dp" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:hint="Sets"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:maxLength="3"
+                android:id="@+id/txt_sets"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:textColor="@color/purchase_dark_gray"
+                android:layout_height="match_parent"
+                android:id="@+id/radio_pcs"
+                android:layout_marginRight="10dp" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:hint="Pcs."
+                android:inputType="number"
+                android:maxLength="3"
+                android:id="@+id/txt_pcs"
+                android:textSize="14sp"
+                android:textColor="@color/purchase_dark_gray"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_catalog_sub_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp"
+            android:text="@string/enquiry_question" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/purchase_dark_gray"
+            android:paddingTop="6dp"
+            style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+            android:text="Price &amp; Discounts"
+            android:theme="@style/AppTheme" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_fabric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/purchase_dark_gray"
+            android:theme="@style/AppTheme"
+            android:paddingTop="6dp"
+            style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+            android:text="Fabric &amp; Materials" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp"
+            android:paddingRight="16dp"
+            android:theme="@style/AppTheme"
+            android:paddingTop="6dp"
+            style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+            android:text="Dispatch &amp; Delivery" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20sp"
+            android:clickable="true"
+            android:id="@+id/btn_cancel"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="CANCEL"
+                android:layout_gravity="end"
+                android:textSize="16sp"
+                android:textColor="@color/purchase_dark_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:id="@+id/btn_send"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SEND"
+                android:layout_gravity="end"
+                android:textSize="16sp"
+                android:textColor="@color/color_primary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

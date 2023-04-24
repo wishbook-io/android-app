@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_margin="3dp"
+    >
+    <LinearLayout
+        android:background="@drawable/layer_card_background_nopadding"
+        android:layout_width="40dp"
+        android:id="@+id/checkbox_container"
+       android:gravity="center_vertical"
+        android:layout_height="match_parent">
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/selection"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/order_container"
+        android:layout_weight="10"
+        android:background="@drawable/layer_card_background_nopadding"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_subheading"
+                android:textStyle="bold"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Order : "
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_subheading"
+                android:textStyle="bold"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/order_num" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|right"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/companyname" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/totalrate" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/totalproducts" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|right"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/customerstatus"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/date" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|right"
+            android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/processstatus"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

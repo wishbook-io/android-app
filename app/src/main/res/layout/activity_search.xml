@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_button"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="@dimen/toolbar_elevation"
+            android:transitionName="actionBar"
+            app:contentInsetStart="@dimen/toolbar_contentInset"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/SearchBarTheme"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="-16dp"
+                    android:transitionName="search_activity_transition"
+                    android:visibility="visible"
+                    app:closeIcon="@null"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Search by brand, fabric, work, fabric"
+                    app:searchIcon="@null" />
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:tint="@color/purchase_dark_gray"
+                    app:srcCompat="@drawable/ic_photo_camera_black_24dp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/relative_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/catalog_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:visibility="gone">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/txt_empty_msg"
+                        style="@style/order_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="No Data Found" />
+
+                </RelativeLayout>
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/suggestion_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="false" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_local_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_local_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_search_img"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/btn_purchase_blue"
+                android:text="Try Searching with Image" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_shared_by_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginTop="16dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_common_progress" />
+</RelativeLayout>

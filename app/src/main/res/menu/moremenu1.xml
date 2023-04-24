@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Users" android:id="@+id/users" >
+        <menu >
+            <item
+                android:id="@+id/ab_register_user"
+                android:title="Register New User"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_rejected_buyers"
+                android:title="Rejected Buyers"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_rejected_suppliers"
+                android:title="Rejected Suppliers"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item android:title="Product" android:id="@+id/product">
+        <menu>
+            <item
+                android:visible="false"
+                android:id="@+id/ab_brands"
+                android:title="Brands"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_categories"
+                android:title="Categories"
+                app:showAsAction="never" />
+
+            <item
+                android:visible="false"
+                android:id="@+id/ab_buyer_groups"
+                android:title="Buyer Groups"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_sync"
+                android:title="Sync"
+                android:visible="false"
+                app:showAsAction="never" />
+
+            <item
+                android:visible="false"
+                android:id="@+id/ab_invoice"
+                android:title="Invoice"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+
+    <item android:title="Settings" android:id="@+id/settings">
+        <menu>
+            <item
+                android:visible="false"
+                android:id="@+id/ab_profile"
+                android:title="Profile"
+                app:showAsAction="never" />
+            <item
+                android:visible="false"
+                android:id="@+id/ab_changepass"
+                android:title="Change Password"
+                app:showAsAction="never" />
+            <item
+                android:visible="false"
+                android:id="@+id/ab_help"
+                android:title="Help"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_aboutus_policies"
+                android:title="About us &amp; Policies"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_contactUs"
+                android:title="Contact Us"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_AboutUs"
+                android:title="About us"
+                android:visible="false"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_logout"
+                android:title="Logout"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

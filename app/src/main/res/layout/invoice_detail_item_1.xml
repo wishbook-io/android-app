@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical|left"
+
+            android:layout_height="wrap_content" android:layout_weight="3.5" android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Item Type"
+                android:textStyle="bold"
+                android:id="@+id/item_type"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content" android:layout_weight="1.6" android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Quantity"
+                android:textStyle="bold"
+
+                android:id="@+id/quantity" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content" android:layout_weight="1.5" android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:textStyle="bold"
+
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Rate"
+
+                android:id="@+id/rate" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical|right"
+            android:layout_height="wrap_content" android:layout_weight="1.5" android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="#3c3c3c"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Amount"
+                android:id="@+id/amount"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

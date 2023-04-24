@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/product_img"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        app:actualImageScaleType="fitCenter"
+        android:background="@color/contacts_home_grey" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Brand :"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_brand_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- "
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Catalog: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_catalog_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Design: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_design_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Id: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_product_code_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_size_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Pending since: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_pending_since_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Qty pending: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_pending_qty_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty ready: "
+                android:layout_marginRight="8dp"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_ready_qty_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Expected date: "
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_expected_date_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="8dp"
+            android:text="Update"
+            android:textColor="@color/color_primary" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

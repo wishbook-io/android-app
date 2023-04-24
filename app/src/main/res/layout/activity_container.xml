@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        android:elevation="@dimen/toolbar_elevation"
+        android:transitionName="actionBar"
+        app:contentInsetStart="@dimen/toolbar_contentInset"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/AppTheme.ActionBar"
+        tools:ignore="UnusedAttribute" />
+
+
+        <FrameLayout
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"></FrameLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/badge_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/support_chat_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="56dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="16dp"
+                android:scaleType="center"
+                android:padding="0dp"
+                app:borderWidth="0dp"
+                android:theme="@style/FABWhite"
+                app:srcCompat="@drawable/ic_support_home"
+                app:useCompatPadding="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_layout"
+            android:background="@drawable/badge_item"
+            android:text="0"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

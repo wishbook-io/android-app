@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/share_details"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_margin="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cat_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/uploadempty"
+                android:src="@drawable/noprev" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/cat_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Catalog Name"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/catalog_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="by"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="@dimen/font_size_normal" />
+
+                    <TextView
+                        android:id="@+id/catalog_brand_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:text="Brand Name"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Total Designs"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Total Shares"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Total Catalog Views"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Total Products Views"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_normal" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nprods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/npeople"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:text="1"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                android:id="@+id/nopened"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/npeople"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:text="1"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_normal" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/productsviewed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:text="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_details"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Opens By :"
+        android:textSize="@dimen/font_size_subheading"
+        android:visibility="gone" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:background="#F5F5F5"
+        android:elevation="6dp"
+        android:fillViewport="false"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/color_primary"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/color_primary"
+        app:tabTextColor="#616161" />
+
+    <com.wishbook.catalog.Utils.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs" />
+</RelativeLayout>

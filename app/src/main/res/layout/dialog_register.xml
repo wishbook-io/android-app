@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_dialog_register_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:visibility="visible"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_key_sign" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/register_popup_msg"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="@dimen/font_size_default" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/txt_later"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="Later" />
+
+        <TextView
+            android:id="@+id/txt_register"
+            android:contentDescription="123456"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/button_edge_less_padding_blue"
+            android:text="Register Now"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/font_size_default"
+            android:textColor="@color/color_primary" />
+
+    </RelativeLayout>
+
+</LinearLayout>

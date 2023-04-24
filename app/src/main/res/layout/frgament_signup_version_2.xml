@@ -1,0 +1,473 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_bg">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_app" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/intro_text_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear_step_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <EditText
+                                android:id="@+id/input_name"
+                                style="@style/common_input_edittext_person_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Name"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColorHint="@color/purchase_light_gray"
+                                android:textSize="@dimen/font_size_normal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/countrycodes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="India"
+                                    android:textColor="@color/purchase_dark_gray"
+                                    android:textSize="@dimen/font_size_normal" />
+
+                                <View
+                                    android:layout_width="50dp"
+                                    android:layout_height="0.7dp"
+                                    android:background="@color/purchase_light_gray" />
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/purchase_medium_gray">
+
+                                <EditText
+                                    android:id="@+id/input_mobile"
+                                    style="@style/input_edit_text_light"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:digits="@string/digits"
+                                    android:hint="@string/enter_mobile_number"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/purchase_light_gray"
+                                    android:textSize="@dimen/font_size_normal" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_state_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/linear_state"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Select State"
+                                    android:textColorHint="@color/purchase_medium_gray">
+
+                                    <TextView
+                                        style="@style/Spinner_Label"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/select_state" />
+
+                                    <Spinner
+                                        android:id="@+id/spinner_state"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:spinnerMode="dialog" />
+
+                                    <View
+                                        android:layout_width="120dp"
+                                        android:layout_height="0.5dp"
+                                        android:background="@color/purchase_light_gray" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linear_city"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Select State"
+                                    android:textColorHint="@color/purchase_medium_gray">
+
+                                    <TextView
+                                        style="@style/Spinner_Label"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/select_city" />
+
+                                    <Spinner
+                                        android:id="@+id/spinner_city"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:spinnerMode="dialog" />
+
+                                    <View
+                                        android:layout_width="120dp"
+                                        android:layout_height="0.5dp"
+                                        android:background="@color/purchase_light_gray" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <EditText
+                                android:id="@+id/input_email"
+                                style="@style/common_input_edittext_person_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Enter mail ID (optional)"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColorHint="@color/purchase_light_gray"
+                                android:textSize="@dimen/font_size_normal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <EditText
+                                android:id="@+id/input_username"
+                                style="@style/common_input_edittext_person_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Enter Username (optional)"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColorHint="@color/purchase_light_gray"
+                                android:textSize="@dimen/font_size_normal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_step_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/newcompanycheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:checked="false"
+                            android:text="@string/company_already_registered"
+                            android:textColor="@color/intro_text_color" />
+
+
+                        <LinearLayout
+                            android:id="@+id/donotcreate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp">
+
+                                <TextView
+                                    style="@style/Spinner_Label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/select_usertype" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_usertype"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/user_type"
+                                    android:spinnerMode="dropdown" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="@color/purchase_light_gray" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="30dp">
+
+                                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                                        android:id="@+id/companyautocomp"
+                                        style="@style/input_edit_text_light"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter Company name"
+                                        android:imeOptions="flagNoExtractUi|actionSearch"
+                                        android:inputType="textCapSentences"
+                                        android:textColorHint="@color/purchase_medium_gray"
+                                        android:textSize="@dimen/font_size_normal" />
+
+
+                                    <ProgressBar
+                                        android:id="@+id/progress_bar"
+                                        android:layout_width="25dip"
+                                        android:layout_height="25dip"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="right"
+                                        android:visibility="invisible" />
+                                </RelativeLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txt_input_companyname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <EditText
+                                android:id="@+id/input_companyname"
+                                style="@style/common_input_edittext_person_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Company Name"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColorHint="@color/purchase_light_gray"
+                                android:textSize="@dimen/font_size_normal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtinput_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textColorHint="@color/purchase_medium_gray"
+                            app:passwordToggleEnabled="true">
+
+                            <EditText
+                                android:id="@+id/input_password"
+                                style="@style/input_edit_text_light"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_password"
+                                android:textColorHint="@color/purchase_light_gray"
+                                android:textSize="@dimen/font_size_normal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/txtinput_confpassword"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColorHint="@color/purchase_medium_gray"
+                                android:visibility="visible"
+                                app:passwordToggleEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/input_confpassword"
+                                    style="@style/input_edit_text_light"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/confirm_password"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/purchase_light_gray"
+                                    android:textSize="@dimen/font_size_normal" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/img_check_password"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                app:srcCompat="@drawable/ic_right"
+                                android:tint="@color/green"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/check_terms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:checked="false"
+                                android:text="I agree to the "
+                                android:textColor="@color/intro_text_color" />
+
+                            <TextView
+                                android:id="@+id/tnc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Terms &amp; Conditions"
+                                android:textColor="@color/color_primary" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_scan_dialog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/register_scan_label"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="bottom|center_horizontal">
+
+
+
+                        <TextView
+                            android:id="@+id/btn_register"
+                            android:layout_width="140dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/btn_capsule_fill_blue"
+                            android:gravity="center"
+                            android:text="Next"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_default" />-->
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

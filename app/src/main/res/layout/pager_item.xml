@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:id="@+id/main_attachment_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.wishbook.catalog.frescoZoomable.ZoomableDraweeView
+                    android:id="@+id/prod_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    fresco:actualImageScaleType="fitCenter" />
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/left_nav"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical|left"
+                android:src="@drawable/product_visit_left"
+                android:background="@android:color/transparent"
+                />
+
+                <ImageButton
+                    android:id="@+id/right_nav"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/product_visit_right"
+                    android:visibility="gone" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descontent"
+                    android:animateLayoutChanges="true"
+                    android:visibility="visible"
+                    android:layout_above="@+id/subproductmenu"
+                    android:background="#E6FFFFFF">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/container_product_sku">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:id="@+id/sku_lable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Design No : " />
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/prod_sku"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/container_product_name">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Catalog : "/>
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/prod_catalog"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""/>
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/container_product_brand"
+                                android:layout_below="@+id/container_product_name">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    >
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/font_size_subheading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Brand : "/>
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/prod_brand"
+                                        android:textSize="@dimen/font_size_subheading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    >
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/prod_price"
+                                        android:layout_marginRight="10dp"
+                                        android:textStyle="bold"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="22sp"
+                                        android:text="\u20B9 270"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/container_product_fabric"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/container_product_brand">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/fabric"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Fabric : "
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/prod_fabric"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:text=""
+                                    android:textSize="@dimen/font_size_subheading" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/container_product_work"
+                                android:layout_below="@+id/container_product_fabric">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/work"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Work : "/>
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/prod_work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:text=""/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/container_product_sold_by"
+                                android:layout_below="@+id/container_product_fabric">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/sold_by"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sold by : "/>
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/prod_sold_by"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/font_size_subheading"
+                                    android:text=""/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/subproductmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageButton
+                            android:id="@+id/proddes_but"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@color/transparent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_menulist" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/like_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/like_but"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_unliked" />
+
+                <TextView
+                    android:id="@+id/prod_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0 likes"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/star_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/prod_starbut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/card_edge_rec_yellow"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:text="Select" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

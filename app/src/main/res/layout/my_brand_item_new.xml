@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/brand_item_main_container"
+    android:layout_width="match_parent"
+    android:background="@drawable/layer_card_background"
+    android:layout_margin="3dp"
+    android:layout_height="280dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:src="@drawable/noprev"
+                android:scaleType="fitCenter"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/uploadempty"
+                android:id="@+id/brand_img" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_subheading"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Brand Name"
+                android:textStyle="bold"
+                android:id="@+id/brand_name"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/font_size_subheading"
+                android:layout_height="wrap_content"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0 catalogs"
+                android:id="@+id/catalogs_count"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

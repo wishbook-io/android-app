@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/purchase_medium_gray"
+                app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Clearance Discount"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_default" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_linear_toolar_container"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/purchase_medium_gray" />
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_toolbar"
+        android:layout_above="@+id/linear_button_container"
+        android:overScrollMode="never"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Discount %"
+                    android:textColor="@color/purchase_dark_gray" />
+
+                <EditText
+                    android:id="@+id/edit_per"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/btn_edge_grey_rectengle"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="Enter Percentage"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColorHint="@color/purchase_light_gray"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_bg"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_button_container"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_edge"
+            android:text="Delete"
+            android:textColor="@color/red" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_purchase_blue"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

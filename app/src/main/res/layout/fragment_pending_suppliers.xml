@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wishbook.catalog.home.contacts.Fragment_SuppliersPending">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/group_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:iconifiedByDefault="false"
+        android:visibility="visible"
+        android:queryHint="Search Contacts" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/group_search">
+    <view
+        android:id="@+id/recycler_view"
+        class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView android:id="@+id/list_empty1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/font_size_heading"
+        android:text="No items to display"
+        android:layout_gravity="center" />
+    </FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/fabaddsupplier"
+        app:srcCompat="@drawable/ic_add_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right" />
+</RelativeLayout>

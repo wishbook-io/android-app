@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="visible"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/include_filter_bar" />
+        
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_filter">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_seller_approval_status" />
+
+                    <TextView
+                        android:id="@+id/txt_select_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_primary"
+                        android:layout_marginLeft="8dp"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:text="Select none"/>
+
+                    <LinearLayout
+                        android:id="@+id/linear_promotional_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/linear_approval_status"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@string/font_medium"
+                            android:text="Categories"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <view
+                        android:id="@+id/recycler_view"
+                        class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/list_empty1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No catalogs to display"
+                        android:textSize="@dimen/font_size_subheading"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_button_add_catalog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="0dp"
+            android:visibility="gone"
+            app:borderWidth="0dp"
+            app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior"
+            app:srcCompat="@drawable/ic_add_24dp" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_catalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="0dp"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior"
+        app:srcCompat="@drawable/ic_add_24dp" />
+
+    <include
+        layout="@layout/include_sort_bar"
+        app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior" />
+
+    <include
+        layout="@layout/include_multiple_selection_bar"
+        app:layout_behavior="com.wishbook.catalog.Utils.ScrollAwareFABBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

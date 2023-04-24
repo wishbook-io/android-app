@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp"
+    >
+
+    <TextView
+        android:id="@+id/toolbar_badge_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:text="@string/selected_products"
+        />
+
+    <TextView
+        android:layout_marginLeft="2dp"
+        android:id="@+id/toolbar_badge_count"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/bg_circle_green"
+        style="@style/MenuDrawer.Widget.MenuBadgeCount.Green"
+        />
+
+</LinearLayout>

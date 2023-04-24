@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/product">
+        <item
+            android:id="@+id/ab_categories"
+            android:title="Categories"
+            android:icon="@drawable/ic_category"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_share_app"
+            android:title="Share App"
+            android:icon="@drawable/ic_share_24dp_bl"
+            android:visible="false"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_join_wa_group"
+            android:title="Join our Whatsapp Groups"
+            android:icon="@drawable/ic_share_whatsapp"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_refer_earn"
+            android:title="Refer &amp; Earn"
+            android:icon="@drawable/ic_share_24dp_bl"
+            android:visible="true"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_resell_earn"
+            android:title="Resell &amp; Earn"
+            android:icon="@drawable/ic_how_to_sell"
+            android:visible="false"
+            app:showAsAction="never" />
+    </group>
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/ab_change_language"
+                android:title="Change Language"
+                android:visible="true"
+                android:icon="@drawable/ic_language"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_changepass"
+                android:title="Change Password"
+                android:visible="true"
+                android:icon="@drawable/ic_lock"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ab_profile"
+                android:title="Profile"
+                android:visible="true"
+                android:icon="@drawable/ic_profile"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/ab_return"
+                android:title="Return Request"
+                android:visible="true"
+                android:icon="@drawable/ic_retrun_request"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/ab_replacement"
+                android:title="Replacement Request"
+                android:visible="true"
+                android:icon="@drawable/ic_replacement_request_24dp"
+                app:showAsAction="never" />
+
+
+
+
+            <item
+                android:id="@+id/ab_logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_log_out"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+    <group android:id="@+id/others">
+
+        <item
+            android:id="@+id/ab_wishbook_bank_detail"
+            android:title="Wishbook Bank Details"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_contactUs"
+            android:title="Contact Us"
+            android:visible="true"
+            android:icon="@drawable/ic_menu_contact_us_24dp"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_support_chat"
+            android:title="Support Chat"
+            android:icon="@drawable/ic_support_chat"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/ab_faq"
+            android:title="FAQ"
+            android:visible="true"
+            android:icon="@drawable/ic_faq"
+            app:showAsAction="never" />
+
+
+        <item
+            android:id="@+id/ab_AboutUs"
+            android:title="About Us"
+            android:visible="true"
+            android:icon="@drawable/ic_profile_wishbook"
+            app:showAsAction="never" />
+
+    </group>
+
+
+</menu>

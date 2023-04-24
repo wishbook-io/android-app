@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar_app" />
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="130dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/defaultccimage"
+            android:id="@+id/imageView2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_upload"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="Choose logo"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:id="@+id/input_companyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company Name"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:id="@+id/input_streetaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street Address"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_state"
+                    style="@style/Spinner_Label"
+                   />
+                <Spinner
+                    android:id="@+id/spinner_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_city"
+                    style="@style/Spinner_Label"
+                   />
+                <Spinner
+                    android:id="@+id/spinner_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <Spinner
+                    android:id="@+id/companytype"
+                    android:prompt="@string/typeprompt"
+                    android:entries="@array/usertype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="44dp"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:text="Continue"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

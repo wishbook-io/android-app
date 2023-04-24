@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:elevation="0dp"
+            android:visibility="gone"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/card_detailing" />
+
+        <LinearLayout
+            android:id="@+id/linear_contact_filter_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/subtabs"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/color_primarysel"
+                app:tabMaxWidth="0dp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/card_detailing" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:background="@color/color_primarysel"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <ImageView
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
+                android:layout_weight="1"
+                android:id="@+id/search_icon"
+                android:layout_width="0dp"
+               android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_search_white_24dp"/>
+
+            <ImageView
+                android:id="@+id/ic_filter"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_filter_white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:iconifiedByDefault="false"
+             android:visibility="visible"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/containercontacts"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_invite"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/ic_add_24dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_invite"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:padding="4dp"
+        android:text="@string/sent_invite"
+        android:textColor="#ffffff" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

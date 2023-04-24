@@ -1,0 +1,298 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:contentScrim="@color/transparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="60dp"
+            app:expandedTitleMarginStart="18dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="-20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Orders"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Sales"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_heading" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Orders"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Sales"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_heading" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Orders"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Sales"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_heading" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Orders"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Sales"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_heading" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending Orders"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Sales"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_heading" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

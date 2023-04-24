@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_alpha_60">
+
+        <!-- <com.daimajia.slider.library.SliderLayout
+             android:id="@+id/slider"
+             custom:auto_cycle="true"
+             custom:indicator_visibility="visible"
+             custom:pager_animation="Accordion"
+             custom:pager_animation_span="1100"
+             android:layout_width="match_parent"
+             android:layout_height="200dp" />-->
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" />
+
+
+        <include layout="@layout/activity_common_progress" />
+
+
+        <com.wishbook.catalog.stories.StoryStatusView
+            android:id="@+id/storiesStatus"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp" />
+    </FrameLayout>
+
+</RelativeLayout>

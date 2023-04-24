@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_button"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="@dimen/toolbar_elevation"
+            android:transitionName="actionBar"
+            app:contentInsetStart="@dimen/toolbar_contentInset"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/SearchBarTheme"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/purchase_dark_gray"
+                android:textColorHint="@color/purchase_medium_gray" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:visibility="gone"
+            android:background="@color/appbg"
+            android:id="@+id/linear_filter_city"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/select_state" />
+
+                <Spinner
+                    android:id="@+id/spinner_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_city" />
+
+                <Spinner
+                    android:id="@+id/spinner_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/buyer_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_button"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="PrivateResource">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_elevation"
+            android:layout_marginBottom="-3dp"
+            android:background="@drawable/bottom_above_shadow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_primary"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_normal"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <include layout="@layout/activity_common_progress" />
+</RelativeLayout>

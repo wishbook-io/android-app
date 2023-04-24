@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/btn_edge_grey"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txt_rrc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@string/font_medium"
+        android:text="Cancellation invoice #122"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="16sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_refund"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Refund:"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_refund_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text=""
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_breakup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Breakup:"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_breakup_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text=""
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_rejected_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejected Reason: "
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_rejected_reason_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
+        android:text="Item details:"
+        android:textSize="@dimen/font_size_normal" />
+
+    <LinearLayout
+        android:id="@+id/linear_rrc_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

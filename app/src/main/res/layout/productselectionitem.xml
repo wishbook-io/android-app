@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="130dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="horizontal" android:background="@drawable/layer_card_background">
+    <LinearLayout
+        android:layout_width="110dp"
+
+        android:layout_height="match_parent" android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prod_img"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/uploadempty"
+            android:src="@drawable/noprev" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:gravity="center|left"
+    android:orientation="vertical"
+    android:layout_weight="0.5"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/prod_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="price"
+        android:id="@+id/prod_price" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:id="@+id/prod_del"
+                android:src="@mipmap/ic_delete" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_bg"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_10dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/color_primary"
+                    android:text="Last 30 days"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="18sp"
+                    app:drawableLeftCompat="@drawable/ic_pie_chart" />
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_sales_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:text="Sales- Rs.XXX"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Cancellation"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_cancellation_rate_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="0 %"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Average handling time"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_avg_order_delay_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="0 days"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Live products"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/liner_live_catalog"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Catalog"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_live_catalog_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_live_noncatalog"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Non-Catalogs"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_live_noncatalog_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_live_set"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Sets"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_live_set_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Sales"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_sales_order"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Sales Orders"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_sales_order_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Payouts"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_leads"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_edge_grey_rectengle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Leads"
+                            android:textColor="@color/purchase_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/txt_leads_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_medium"
+                            android:text="00"
+                            android:textColor="@color/color_primary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_10dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/color_primary"
+                    android:text="Sales"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="18sp"
+                    app:drawableLeftCompat="@drawable/ic_rupee" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_pending_order_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Pending Order Items"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_sales_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Sales Orders"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_leads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Leads"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_payouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Payout"
+                    android:visibility="gone"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_10dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/color_primary"
+                    android:text="Products"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="18sp"
+                    app:drawableLeftCompat="@drawable/ic_view_grid_blue_24dp" />
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_myproducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="My Products"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_addproduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Add Product"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_mybrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="My Brands"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_10dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/color_primary"
+                    android:text="Preferences"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="18sp"
+                    app:drawableLeftCompat="@drawable/ic_settings_black_24dp" />
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_discount_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Discount Settings"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                    android:id="@+id/txt_return_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTint="@color/color_primary"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Return Policy"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableRightCompat="@drawable/ic_keyboard_arrow_right_blue" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

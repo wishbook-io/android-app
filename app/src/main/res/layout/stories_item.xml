@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <FrameLayout
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_vertical">
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/outer_story_progress"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            circleProgressView:cpv_autoTextSize="true"
+            circleProgressView:cpv_barColor="@color/color_primary"
+            circleProgressView:cpv_barWidth="3dp"
+            circleProgressView:cpv_fillColor="@color/transparent"
+            circleProgressView:cpv_innerContourSize="0dp"
+            circleProgressView:cpv_maxValue="5"
+            circleProgressView:cpv_outerContourSize="0dp"
+            circleProgressView:cpv_rimColor="@color/purchase_light_gray"
+            circleProgressView:cpv_rimWidth="3dp"
+            circleProgressView:cpv_blockCount="5"
+            circleProgressView:cpv_blockScale="0.95"
+            circleProgressView:cpv_showUnit="false"
+            circleProgressView:cpv_spinColor="@color/color_primary"
+            circleProgressView:cpv_textColor="@color/transparent"
+            circleProgressView:cpv_value="3" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_story"
+            style="@style/DraweeRoundedCorners.Drawee"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:actualImageUri="https://www.fionasolitaires.in/img/timeline/21.jpg"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="1.5dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_story_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Story title"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

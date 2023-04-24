@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+    <!--   android:background="#B30d80c1"-->
+
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="UPDATE PROFILE"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_heading"
+                android:layout_marginBottom="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/company_name_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    android:id="@+id/company_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_person_24dp"
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:hint="Company name"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/Spinner_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_state" />
+
+                    <Spinner
+                        android:id="@+id/company_profile_spinner_state"
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/Spinner_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_city" />
+
+                    <Spinner
+                        android:id="@+id/company_profile_spinner_city"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_container"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPANY TYPE"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="(select one or more)"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_normal" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Manufacturer"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/manufacturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Wholesaler/Distributor"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/wholesaler_distributor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Retailer"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/retailer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Online Retailer/Reseller"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/onlineretailer_reseller"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Broker"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/broker"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/color_primary"
+                android:text="Save"
+                android:textSize="@dimen/font_size_subheading" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

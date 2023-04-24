@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Cover photo"
+        android:textColor="@color/purchase_dark_gray"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_weight="1"
+            android:background="@color/light_gray" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+            <TextView
+                android:id="@+id/btn_upload_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="+ Add/Edit cover photo"
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

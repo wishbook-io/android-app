@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_continue">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="16dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No Data Found"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_dashboard_numbers" />
+
+                </LinearLayout>
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_step_two_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Note: Please add atleast one image per item"
+                            android:textColor="@color/purchase_dark_gray" />
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/flexbox_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="8dp"
+                            app:alignContent="space_around"
+                            app:alignItems="flex_start"
+                            app:flexWrap="wrap"
+                            app:showDivider="middle">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/attach_button"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/button_edge_less_padding_blue"
+                                android:padding="2dp"
+                                android:text="+ Add\n Images"
+                                android:textAllCaps="false"
+                                android:textColor="@color/color_primary"
+                                android:textSize="15sp" />
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+            </LinearLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

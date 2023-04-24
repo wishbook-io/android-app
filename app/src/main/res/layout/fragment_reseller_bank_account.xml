@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/kyc_submit">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_default_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/edit_default_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Default margin(%)"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:digits="@string/digits"
+                        android:maxLength="5"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/kyc_bank_name"
+                        style="@style/input_edit_text_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Bank name"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/kyc_bank_accno"
+                        style="@style/input_edit_text_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:digits="@string/digits"
+                        android:hint="Account number"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/kyc_bank_ifsc"
+                        style="@style/input_edit_text_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:digits="@string/digits_without_special"
+                        android:hint="IFSC code"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/kyc_bank_acctype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/account_type"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/purchase_light_gray" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/kyc_bank_accname"
+                        style="@style/input_edit_text_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:digits="@string/digits_without_special_exclude_space"
+                        android:hint="Account holder name"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/kyc_submit"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@string/font_medium"
+            android:gravity="center"
+            android:text="SAVE"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_submit"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/toolbar_app" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/intro_text_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_header_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/register_subtext_1"
+                    android:textColor="@color/purchase_medium_gray"
+                    android:textSize="@dimen/font_size_normal"
+                    android:textStyle="italic" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_facebookLoginButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="22dp"
+                        android:paddingTop="12dp"
+                        android:textSize="@dimen/font_size_normal"
+                        facebook:com_facebook_login_text="Register with facebook" />
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="8dp"
+                    android:clipToPadding="false"
+                    android:elevation="0dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Company Details"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_default" />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_state_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linear_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Select State"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <TextView
+                                style="@style/Spinner_Label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_state" />
+
+                            <Spinner
+                                android:id="@+id/spinner_state"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dialog" />
+
+                            <View
+                                android:layout_width="120dp"
+                                android:layout_height="0.5dp"
+                                android:background="@color/purchase_light_gray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Select State"
+                            android:textColorHint="@color/purchase_medium_gray">
+
+                            <TextView
+                                style="@style/Spinner_Label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_city" />
+
+                            <Spinner
+                                android:id="@+id/spinner_city"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dialog" />
+
+                            <View
+                                android:layout_width="120dp"
+                                android:layout_height="0.5dp"
+                                android:background="@color/purchase_light_gray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        style="@style/Spinner_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter Company/ Shop name" />
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                            android:id="@+id/companyautocomp"
+                            style="@style/input_edit_text_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            android:inputType="textCapSentences"
+                            android:textColorHint="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_input_companytype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:theme="@style/AppTheme"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/input_company_type"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Select Company Type"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="User Details"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_default" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:theme="@style/AppTheme"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/input_name"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Name"
+                        android:theme="@style/AppTheme"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:theme="@style/AppTheme"
+                    android:textColorHint="@color/purchase_medium_gray">
+
+                    <EditText
+                        android:id="@+id/input_email"
+                        style="@style/common_input_edittext_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Enter mail ID (optional)"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:theme="@style/AppTheme"
+                        android:textColorHint="@color/purchase_light_gray"
+                        android:textSize="@dimen/font_size_normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_scan_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/register_scan_label" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/check_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:theme="@style/AppTheme"
+                        android:text="I agree to the "
+                        android:textColor="@color/intro_text_color" />
+
+                    <TextView
+                        android:id="@+id/tnc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Terms &amp; Conditions"
+                        android:textColor="@color/color_primary" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:text="DONE"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_default"
+        android:textStyle="normal"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context="com.wishbook.catalog.home.more.Fragment_Home">
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center|top"
+         android:orientation="vertical">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="15dp"
+             android:layout_marginTop="15dp"
+             android:text="@string/help_heading_label"
+             android:textColor="@color/white"
+             android:textSize="22sp"
+             android:textStyle="bold" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="15dp"
+             android:layout_marginTop="15dp"
+             android:gravity="center"
+             android:lineSpacingExtra="8dp"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:text="@string/help_text"
+             android:textColor="@color/white"
+             android:textSize="14sp"
+             android:textStyle="normal" />
+
+         <android.support.v7.widget.AppCompatButton
+             android:id="@+id/btn_browse_catalogs"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             android:padding="12dp"
+             android:text="@string/help_btn_1" />
+
+         <android.support.v7.widget.AppCompatButton
+             android:id="@+id/btn_manage_selections"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             android:padding="12dp"
+             android:text="@string/help_btn_2" />
+
+         <android.support.v7.widget.AppCompatButton
+             android:id="@+id/btn_add_visits"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             android:padding="12dp"
+             android:text="@string/help_btn_3" />
+
+         <android.support.v7.widget.AppCompatButton
+             android:id="@+id/btn_place_orders"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             android:padding="12dp"
+             android:text="@string/help_btn_4" />
+
+
+     </LinearLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

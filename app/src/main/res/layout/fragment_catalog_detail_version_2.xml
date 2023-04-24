@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_bg"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--  <include layout="@layout/toolbar"></include>-->
+
+            <RelativeLayout
+                android:id="@+id/liner_follow_brand"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:color/white"
+                android:elevation="@dimen/toolbar_elevation"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_brand_logo"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    fab:actualImageScaleType="fitCenter"
+                    fab:placeholderImage="@drawable/uploadempty" />
+
+                <TextView
+                    android:id="@+id/txt_brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_brand_logo"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_brand_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_edge_less"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/btn_follow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primary"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linear_flow_button"
+                android:layout_below="@+id/liner_follow_brand"
+                android:fillViewport="true">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants">
+
+                        <!-- <include layout="@layout/include_catalog_detail" />-->
+                        <include layout="@layout/include_catalog_detail_2" />
+
+
+                        <TextView
+                            android:id="@+id/list_empty1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="No items to display"
+                            android:layout_below="@+id/linear_card_catalog_summary"
+                            android:textSize="@dimen/font_size_heading" />
+
+                        <view
+                            android:id="@+id/recycler_view"
+                            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/linear_card_catalog_summary" />
+
+
+                        <view
+                            android:id="@+id/recycler_view_similar"
+                            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/recycler_view" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/linear_flow_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/toolbar_elevation"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:ignore="PrivateResource">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginBottom="-2dp"
+                    android:background="@drawable/bottom_above_shadow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_send_enquiry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/send_enquiry"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_chat_supplier"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/chat_with_supplier"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_enquiry_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Chat/Enquiry"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_purchase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/orange"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="ADD TO CART"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_broker"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/buy_as_broker"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!-- <android.support.v7.widget.AppCompatButton
+                         android:id="@+id/btn_sales_order"
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center"
+                         android:layout_weight="1"
+                         android:background="@color/orange"
+                         android:gravity="center"
+                         android:padding="5dp"
+                         android:text="Create Sales Order"
+                         android:textAllCaps="true"
+                         android:textAppearance="?android:attr/textAppearanceLarge"
+                         android:textColor="@android:color/white"
+                         android:textSize="14sp"
+                         android:textStyle="bold"
+                         android:visibility="gone" />-->
+
+
+                    <!--  <android.support.v7.widget.AppCompatButton
+                          android:id="@+id/btn_enable_catalog"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_gravity="center"
+                          android:layout_weight="1"
+                          android:background="@color/white"
+                          android:gravity="center"
+                          android:text="Enable Catalog"
+                          android:textAllCaps="true"
+                          android:textAppearance="?android:attr/textAppearanceLarge"
+                          android:textColor="@color/color_primary"
+                          android:textSize="@dimen/font_size_default"
+                          android:textStyle="normal"
+                          android:visibility="gone" />-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

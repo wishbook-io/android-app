@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+
+            <!-- Password Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Share"
+                android:textColor="@color/purchase_dark_gray"
+                android:textSize="@dimen/font_size_heading" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/share_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Group share"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_subheading" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="true" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/group_share_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/spinner_label"
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/select_buyersgroup" />
+                <!--<ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_group_24dp" />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinner_buyergroups"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/single_share_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_person_24dp" />
+
+                <!--<android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp">
+
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.wishbook.catalog.Utils.autocomplete.CustomAutoCompleteTextView
+                            android:id="@+id/buyerautocomp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            android:inputType="textCapSentences" />
+
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                </android.support.design.widget.TextInputLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/buyer_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_buyername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:textColorHint="@color/purchase_medium_gray">
+
+                        <TextView
+                            style="@style/Spinner_Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter buyer name"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/edit_buyername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/purchase_light_gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    android:id="@+id/input_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftEditTextCompat="@drawable/ic_textsms_24dp"
+                    android:hint="@string/write_message"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter Dispatch Date"
+                    android:textColorHint="@color/color_primary">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textColorHint="@color/color_primary"
+                        android:textSize="@dimen/font_size_subheading" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/fullcatalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="@string/sell_full_catalog" />
+
+            <!-- <CheckBox
+                 android:id="@+id/changeprice"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp"
+                 android:layout_marginTop="10dp"
+                 android:checked="false"
+                 android:text="Change price" />-->
+
+            <RelativeLayout
+                android:id="@+id/pricecontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add Margin"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_subheading"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/old_price_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_margin"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_old_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Existing Price: "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_default" />
+
+
+                    <TextView
+                        android:id="@+id/old_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_share_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/old_price_container"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_share_different_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:checked="false"
+                        android:text="Share at a different price"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_new_price_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="Enter New Price"
+                            android:textColor="@color/purchase_dark_gray" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/color_primary">
+
+                            <EditText
+                                android:id="@+id/input_new_price"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="10dp"
+                                android:backgroundTint="@color/purchase_light_gray"
+                                android:digits="@string/digits"
+                                android:ems="10"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberSigned"
+                                android:text="0"
+                                android:textAlignment="viewEnd" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/radio_share_add_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/share_after_adding_margin"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_fixed_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/radio_share_add_margin"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioGroup
+                            android:id="@+id/radiogroupprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:paddingTop="10dp">
+
+                            <RadioButton
+                                android:id="@+id/check_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:checked="false"
+                                android:text="Add %"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+
+                            <RadioButton
+                                android:id="@+id/fixed_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="Add fixed amount"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_default" />
+
+                        </RadioGroup>
+
+                        <RelativeLayout
+                            android:id="@+id/edit_price_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/old_price_container"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/radiogroupprice">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/txt_input_percentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/color_primary">
+
+                                <EditText
+                                    android:id="@+id/input_percentage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="5dp"
+                                    android:backgroundTint="@color/purchase_light_gray"
+                                    android:digits="@string/digits_with_minus"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="numberSigned"
+                                    android:text="0"
+                                    android:textAlignment="viewEnd" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txt_input_percentage"
+                                android:textColorHint="@color/color_primary">
+
+                                <EditText
+                                    android:id="@+id/input_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:backgroundTint="@color/purchase_light_gray"
+                                    android:digits="@string/digits_with_minus"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="numberSigned"
+                                    android:padding="5dp"
+                                    android:text="0"
+                                    android:textAlignment="viewEnd" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RadioGroup>
+
+
+                <RelativeLayout
+                    android:id="@+id/price_change_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radiogroup_share_type"
+                    android:layout_marginTop="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_new_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Price: "
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                    <TextView
+                        android:id="@+id/new_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_default" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_textsms_24dp"
+                android:text="Message"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/share_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_primary"
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/share_go"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_primary"
+                    android:text="Go"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

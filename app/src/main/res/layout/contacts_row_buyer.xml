@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    android:id="@+id/itemcontainer"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="14dp">
+    <RelativeLayout
+        android:id="@+id/upper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/container_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buyer Name"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_subheading"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_grouptype"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/invite_contact"
+                >
+            </androidx.appcompat.widget.AppCompatSpinner>
+
+        </LinearLayout>
+            <com.wishbook.catalog.Utils.widget.CustomDrawableTextView
+                android:layout_below="@+id/container_name"
+                android:id="@+id/contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Buyer Mobile"
+                android:digits="@string/digits"
+                app:drawableLeftCompat="@drawable/ic_call_24dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_normal"
+
+                android:layout_marginBottom="2dp"
+                />
+
+
+                  <TextView
+                    android:id="@+id/invite_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/add"
+                    android:visibility="visible"
+                    android:textColor="@color/md_material_blue_600"
+                    android:textSize="@dimen/font_size_normal"
+                    android:layout_alignTop="@+id/contact_number"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent"></LinearLayout>
+
+       &lt;!&ndash; <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|right"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:text="Resend"
+                android:id="@+id/resendbut"
+                android:layout_gravity="right" />
+        </LinearLayout>&ndash;&gt;
+
+    </LinearLayout>-->
+
+
+</RelativeLayout>

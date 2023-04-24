@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+
+    <FrameLayout
+        android:id="@+id/itemcontainer"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:clipToPadding="false"
+        android:padding="2dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="4dp">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/item_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/uploadempty" />
+
+            <RelativeLayout
+                android:id="@+id/relative_disable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/disable_product">
+
+                <TextView
+                    android:id="@+id/disable_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="DISABLED"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_clearance_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_single_piece_clearance_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@string/font_medium"
+            android:gravity="left"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="- off"
+            android:textColor="@color/green"
+            android:visibility="visible"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/txt_single_piece_mwp_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@string/font_medium"
+            android:gravity="left"
+            android:text="-"
+            android:textColor="@color/purchase_medium_gray"
+            android:visibility="visible"
+            android:textSize="@dimen/font_size_normal" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_single_pc_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/purchase_dark_gray"
+        android:text="Single Pc:"/>
+
+    <TextView
+        android:id="@+id/txt_available_sizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/purchase_dark_gray"
+        android:text="Sizes: "/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:background="@drawable/button_edge_less_padding_blue"
+        android:elevation="0dp"
+        android:fontFamily="@string/font_medium"
+        android:text="ADD TO CART "
+        android:textAllCaps="true"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_medium"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txt_not_availabel_single_pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="@color/purchase_dark_gray"
+        android:visibility="gone"
+        android:text="@string/product_not_available_single_pc"/>
+
+    <TextView
+        android:id="@+id/txt_additional_image_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:text="2 Images"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_images"
+        android:layout_width="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:background="@drawable/button_edge_less_padding_blue"
+        android:elevation="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@string/font_medium"
+        android:text="Add Images "
+        android:textAllCaps="true"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/font_size_medium"
+        android:visibility="visible" />
+
+</LinearLayout>

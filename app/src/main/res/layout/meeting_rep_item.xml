@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_margin="1dp"
+    android:gravity="left"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/day_tex"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="left"
+            android:layout_marginBottom="10dp"
+            android:text="Today" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@+id/day_tex"-->
+            <!--android:layout_toStartOf="@+id/day_tex"-->
+            <!--android:background="@drawable/split_black" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toEndOf="@+id/day_tex"-->
+            <!--android:layout_toRightOf="@+id/day_tex"-->
+            <!--android:background="@drawable/split_black_opp" />-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_normal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No.of totalProducts sold"
+        android:id="@+id/total_items_tex" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No.of Meetings"
+        android:id="@+id/total_meeting_tex" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Meeting Durations"
+        android:id="@+id/total_duration_tex" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

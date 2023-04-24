@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content">
+
+
+    </View>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="1dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/item_img"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_linkedin"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/uploadempty"
+                    app:roundedCornerRadius="3dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Brand : "
+                            android:visibility="gone"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:id="@+id/txt_brand_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Test"
+                            android:textColor="@color/purchase_medium_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txt_catalog_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Test"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_default" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_number_design"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 designs"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/seller"
+                            android:visibility="gone"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <TextView
+                            android:id="@+id/txt_seller_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Test"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/txt_only_full_catalog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:text="Only full catalog available for sales"
+                        android:textSize="@dimen/font_size_normal" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Rs. 1000"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_purchase"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_purchase_orange"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ADD TO CART"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+
+

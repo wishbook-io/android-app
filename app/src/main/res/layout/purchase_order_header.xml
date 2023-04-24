@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/header_card"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="0dp"
+    card_view:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/list_item_parent_horizontal_arrow_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/txt_catalog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt_total_products"
+                android:layout_alignParentLeft="true"
+                android:text=""
+                android:textColor="@color/color_primary"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/txt_total_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/arrow_img"
+                android:drawablePadding="5dp"
+                android:text="19 totalProducts"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/font_size_normal" />
+
+            <ImageView
+                android:id="@+id/arrow_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                card_view:srcCompat="@drawable/ic_expand_arrow_24dp"
+                android:tint="@color/color_primary" />
+
+            <TextView
+                android:id="@+id/txt_catalog_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/red"
+                android:layout_below="@+id/txt_catalog_name"
+                android:visibility="gone"
+                android:text="Size : XL"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/txt_seller_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/red"
+                android:layout_below="@+id/txt_catalog_note"
+                android:visibility="gone"
+                android:text="@string/seller_note_for_set" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_rate_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/whatsapp_color_code"
+            android:text="RATE &amp; REVIEW"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relative_cancellation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp">
+
+
+            <TextView
+                android:id="@+id/txt_expected_date_order_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:padding="4dp"
+                android:layout_toLeftOf="@+id/txt_cancel_order_item"
+                android:textColor="@color/purchase_dark_gray"
+                android:text="Exp.date - XXX "/>
+
+
+            <TextView
+                android:id="@+id/txt_cancel_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/txt_wait_order_item"
+                android:textColor="@color/color_primary"
+                android:text="Cancel"/>
+
+            <TextView
+                android:id="@+id/txt_wait_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="right"
+                android:padding="4dp"
+                android:textColor="@color/color_primary"
+                android:text="Wait"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

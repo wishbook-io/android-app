@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_dailog_ask_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/otp_signin_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="WARNING!"
+            android:textColor="@color/red"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_companyname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/ask_admin_dialog_text_1"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default" />
+
+
+        <TextView
+            android:id="@+id/txt_positive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_edge_less_padding_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/ask_admin_dialog_positive"
+            android:textColor="@color/color_primary"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/txt_negative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_edge_less_padding_blue_fill"
+
+            android:gravity="center"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="@string/ask_admin_dialog_negative"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

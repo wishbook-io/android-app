@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#fff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_seller_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardElevation="0dp"
+        card_view:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerInside"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/uploadempty"
+                app:roundedCornerRadius="3dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@string/font_medium"
+                    android:text="Catalog Name, Category"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="@dimen/font_size_default" />
+
+                <TextView
+                    android:id="@+id/total_products_price_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_category"
+                    android:text="12 designs, Rs.525 - Rs.625/Pc."
+                    android:textColor="@color/purchase_medium_gray" />
+
+                <Button
+                    android:id="@+id/btn_buy_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_purchase_orange"
+                    android:fontFamily="@string/font_medium"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="ADD TO CART"
+                    android:textSize="@dimen/font_size_default" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@color/purchase_light_gray" />
+</LinearLayout>

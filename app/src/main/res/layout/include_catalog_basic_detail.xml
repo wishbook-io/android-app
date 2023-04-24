@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/material_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_cover"
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:elevation="6dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_linkedin"
+                        app:actualImageScaleType="fitCenter"
+                        app:placeholderImage="@drawable/uploadempty"
+                        app:roundedCornerRadius="5dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/img_cover_disable"
+                        android:layout_width="130dp"
+                        android:layout_height="190dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/disable_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="DISABLED"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_catalog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:maxLines="2"
+                    android:text="Catalog Name"
+                    android:textColor="@color/purchase_dark_gray"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_my_catalog_seller_note1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Billing Price to Wishbook."
+                        android:textColor="@color/green"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:alignContent="flex_start"
+                            app:alignItems="flex_start"
+                            app:flexWrap="wrap">
+
+
+                            <TextView
+                                android:id="@+id/txt_category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:text="-"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/txt_number_design"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:text="-"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="@dimen/font_size_normal"
+                                android:textStyle="normal" />
+                        </com.google.android.flexbox.FlexboxLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_design"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_label_design"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="left"
+                                android:text="Designs :"
+                                android:textColor="@color/purchase_medium_gray"
+                                android:textSize="@dimen/font_size_normal" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_mwp_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@string/font_medium"
+                        android:gravity="left"
+                        android:text="-"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="14sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_full_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/flex_full_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:alignContent="flex_start"
+                            app:alignItems="flex_start"
+                            app:flexWrap="wrap">
+
+
+                            <TextView
+                                android:id="@+id/full_catalog_label"
+                                android:layout_width="55dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/full_colon"
+                                android:textColor="@color/purchase_medium_gray"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txt_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:text="-"
+                                android:textColor="@color/purchase_dark_gray"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txt_full_clearance_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="-"
+                                android:textColor="@color/green"
+                                android:visibility="visible" />
+
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_single_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/flex_single_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:alignContent="flex_end"
+                            app:alignItems="flex_start"
+                            app:flexWrap="wrap"
+                            app:showDivider="middle">
+
+
+                            <TextView
+                                android:layout_width="55dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/single_colon"
+                                android:textColor="@color/purchase_medium_gray"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txt_single_piece_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="4"
+                                android:fontFamily="@string/font_medium"
+                                android:gravity="left"
+                                android:text="Not Available"
+                                android:textColor="@color/purchase_medium_gray"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:id="@+id/txt_single_clearance_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="10% off"
+                                android:textColor="@color/green"
+                                android:visibility="gone" />
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_view_tax_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Tax &amp; Shipping Charges"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_medium"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_upper_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/linear_brand_follow_container"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:alignContent="flex_start"
+                app:alignItems="flex_start"
+                app:flexWrap="wrap">
+
+
+                <LinearLayout
+                    android:id="@+id/liner_follow_brand"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:visibility="gone"
+                    android:paddingRight="10dp">
+
+
+                </LinearLayout>
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_brand_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    app:actualImageScaleType="fitCenter"
+                    fab:placeholderImage="@drawable/uploadempty" />
+
+                <TextView
+                    android:id="@+id/txt_brand_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@string/font_medium"
+                    android:padding="8dp"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/btn_brand_follow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/btn_follow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primary"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="65dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
+
+                <LinearLayout
+                    android:id="@+id/txt_wishlist_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@null">
+
+                    <ImageView
+                        android:id="@+id/wishlogo"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/circle"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_bookmark_light_grey_24dp" />
+
+                    <TextView
+                        android:id="@+id/txt_wishlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Add to wishlist"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_add_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@null"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/img_disable"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/circle_filled"
+                        android:padding="8dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_edit_pencil" />
+
+                    <TextView
+                        android:id="@+id/txt_add_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Update Product"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@null">
+
+                    <ImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/circle_filled"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_share_white_fill_24" />
+
+                    <TextView
+                        android:id="@+id/txt_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Share"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_received_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:fontFamily="@string/font_medium"
+                        android:gravity="left"
+                        android:text="Price: "
+                        android:textColor="@color/purchase_medium_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_received_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@string/font_medium"
+                        android:gravity="left"
+                        android:text="Not Available"
+                        android:textColor="@color/purchase_medium_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

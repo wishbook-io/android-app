@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/font_size_default"
+        android:text="@string/update_app_text"
+        android:textColor="@color/purchase_dark_gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_dialog_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:id="@+id/txt_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="Later"
+            android:textColor="@color/purchase_medium_gray" />
+
+        <TextView
+            android:id="@+id/txt_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="Update Now"
+            android:textColor="@color/color_primary" />
+    </RelativeLayout>
+</LinearLayout>

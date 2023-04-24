@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="27dp"
+    android:layout_marginRight="27dp"
+    >
+
+
+    <TextView
+        android:layout_toRightOf="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buyer"
+        android:id="@+id/buyer_name"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/font_size_subheading"
+        android:layout_gravity="center_vertical" />
+
+</RelativeLayout>

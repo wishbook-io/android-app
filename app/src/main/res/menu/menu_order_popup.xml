@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item  android:id="@+id/create_brokerage"
+        android:title="@string/create_brokerage_order"/>
+
+    <item  android:id="@+id/create_purchase"
+        android:title="@string/create_purchase_order"
+        app:showAsAction="never"
+        />
+    <item  android:id="@+id/create_sales"
+        android:title="@string/create_sales_order"/>
+
+
+</menu>

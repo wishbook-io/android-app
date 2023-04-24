@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/profpic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_person_24dp"
+                            app:actualImageScaleType="fitCenter"
+                            app:placeholderImage="@drawable/uploadempty" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/det_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_heading" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="3dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_call_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/det_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_subheading" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="3dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_mail_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/det_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_subheading" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/editcont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center"
+                            android:orientation="vertical"></LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_createorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/createorder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Create order" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_pricerule"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/updatepricebut"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Update Price Rule" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pricecontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Add Margin"
+                            android:textColor="@color/color_primary"
+                            android:textSize="@dimen/font_size_subheading" />
+
+
+
+
+                        <RadioGroup
+                            android:id="@+id/radiogroupprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_margin"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <RadioButton
+                                android:id="@+id/check_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:checked="false"
+                                android:text="Add %" />
+
+
+                            <RadioButton
+                                android:id="@+id/fixed_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="Add fixed amount" />
+
+                        </RadioGroup>
+
+                        <RelativeLayout
+                            android:id="@+id/edit_price_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_margin"
+                            android:layout_margin="10dp"
+                            android:layout_toRightOf="@id/radiogroupprice">
+
+
+                            <EditText
+                                android:id="@+id/input_percentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/edit_round_broder"
+                                android:digits="@string/digits_with_minus"
+                                android:ems="10"
+                                android:inputType="numberSigned"
+                                android:padding="5dp"
+                                android:text="0"
+                                android:textAlignment="viewEnd" />
+
+
+                            <EditText
+                                android:id="@+id/input_price"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/input_percentage"
+                                android:layout_gravity="end"
+                                android:background="@drawable/edit_round_broder"
+                                android:digits="@string/digits_with_minus"
+                                android:ems="10"
+                                android:inputType="numberSigned"
+                                android:padding="5dp"
+                                android:text="0"
+                                android:textAlignment="viewEnd" />
+
+
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_below="@id/edit_price_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/but_save"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Save" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/but_cancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cancel" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/editcontain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Price Pushing Rule"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Fixed Amount"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edit_fix_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Percentage Amount"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edit_percentage_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:inputType="number" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/but_save"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Save" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/but_cancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cancel" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_approve"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="#00ff00"
+                            android:text="Approve" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_reject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#ff0000"
+                            android:text="Reject" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/tabscont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:elevation="6dp"
+                android:fillViewport="false"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/color_primary"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/color_primary"
+                app:tabTextColor="#616161" />
+
+
+            <com.wishbook.catalog.Utils.CustomViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

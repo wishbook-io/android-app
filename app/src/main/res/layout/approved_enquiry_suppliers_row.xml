@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+
+    <LinearLayout
+        android:id="@+id/chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/seller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/font_size_subheading" />
+
+        <TextView
+            android:id="@+id/seller_number"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buyer_name"
+            android:layout_alignStart="@+id/buyer_name"
+            android:layout_below="@+id/buyer_name"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="7dp"
+            android:digits="@string/digits"
+            android:gravity="center_vertical"
+            android:text="Enquiry Details"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/seller_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:text="Status: Active "
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/upper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/create_order"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/card_edge_rec_green_no_padding"
+                android:clickable="false"
+                android:text="Create Purchase Order"
+                android:textSize="10dp"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/respond_references"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/button_edge_less_padding_green"
+                android:clickable="false"
+                android:text="Respond References"
+                android:textSize="10dp"
+                android:textColor="@color/approved"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chat_user"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_edge_less_padding_blue"
+                android:text="Chat with Supplier"
+                android:textColor="@color/color_primary"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

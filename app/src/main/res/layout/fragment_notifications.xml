@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_bg"
+    tools:context="com.wishbook.catalog.home.catalog.Fragment_Catalogs">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <view
+            android:id="@+id/recycler_view"
+            class="com.wishbook.catalog.Utils.RecyclerViewEmptySupport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView android:id="@+id/list_empty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_heading"
+            android:text="No notification to display"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@color/transparent"
+        android:text="Clear all"
+        android:visibility="gone"
+        android:stateListAnimator="@null"
+        android:textColor="@color/color_primary"
+        android:id="@+id/but_delall"
+        android:layout_below="@+id/appbar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

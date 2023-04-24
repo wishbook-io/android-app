@@ -1,0 +1,121 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "5.8.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+
+        abortOnError false
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.androidXVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidXAppCompact"
+    implementation "androidx.cardview:cardview:$rootProject.androidXVersion"
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.google.firebase:firebase-messaging:17.3.3'
+    api 'com.google.android.gms:play-services-maps:16.0.0'
+    api 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    api "com.google.android.material:material:$rootProject.materialComponentVersion"
+    api project(':mobicomkit')//Note: use this for customization
+    //api 'com.applozic.communication.message:mobicomkit:5.8.4' //Note: use this in case customization is not required
+
+}
+
+/*ext {
+   // Where you will see your artifact in Bintray's web interface
+   // The "bintrayName" should match the name of the Bintray repro.
+   bintrayRepo = 'maven'
+   bintrayName = 'applozic-communication-uiwidget'
+
+   // Maven metadata
+   publishedGroupId = 'com.applozic.communication.uiwidget'
+   libraryName = 'mobicomkitui'
+   // Save yourself a head ache, and set this equal to the name of the Android Studio library
+   // module. The artifact name needs to match the name of the library.
+   artifact = 'mobicomkitui'
+
+   libraryDescription = 'Applozic Communication UI Widget'
+   libraryVersion = '5.8.4'
+
+   developerId = 'devashish'
+   developerName = 'Applozic'
+   developerEmail = 'devashish.mamgain@gmail.com'
+}
+
+
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+
+apply plugin: 'com.jfrog.bintray'
+
+version = libraryVersion
+
+task sourcesJar(type: Jar) {
+   from android.sourceSets.main.java.srcDirs
+   classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+   failOnError false // add this line
+
+   source = android.sourceSets.main.java.srcDirs
+   //source = android.sourceSets.main.allJava
+   classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+   classifier = 'javadoc'
+   from javadoc.destinationDir
+}
+
+artifacts {
+   archives javadocJar
+   archives sourcesJar
+}
+
+// Bintray
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+   user = properties.getProperty("bintray.user")
+   key = properties.getProperty("bintray.apikey")
+
+   configurations = ['archives']
+   pkg {
+       repo = bintrayRepo
+       name = bintrayName
+       desc = libraryDescription
+       publish = true
+       publicDownloadNumbers = true
+       version {
+           desc = libraryDescription
+           // Optional. The passphrase for GPG signing'
+           // gpg {
+           //    sign = true //Determines whether to GPG sign the files. The default is false
+           //    passphrase = properties.getProperty("bintray.gpg.password")
+           //}
+       }
+   }
+}*/
+

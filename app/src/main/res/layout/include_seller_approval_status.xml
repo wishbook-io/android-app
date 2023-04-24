@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_approval_status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/txt_approval_stage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/upload_seller_approval_stage1" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_chat_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_call_wb_support"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/button_edge_less_transparent_green"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/call_wb_support_label"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size_emphasized"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chat_wb_support"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/button_edge_less_transparent"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/chat_wb_support_btn_label"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/font_size_emphasized"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

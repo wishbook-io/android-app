@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+        </LinearLayout>
+
+        <include layout="@layout/toolbar_app" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/show_hint"
+                style="@style/Spinner_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show hint" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/hint_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/noprev" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_upload"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="12dp"
+                    android:text="Upload Image"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="36dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                    style="@style/common_input_edittext_catalog_name"
+                    android:id="@+id/input_catname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                    android:hint="Please name your catalog"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Password Label -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_brands" />
+
+                <TextView
+                    android:id="@+id/hint_select_brands"
+                    style="@style/hint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_select_brands" />
+
+                <Spinner
+                    android:id="@+id/spinner_brands"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/hint_brands"
+                    style="@style/hint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_brands" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_single_category" />
+
+                <Spinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Spinner_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/choose_catalog_type" />
+
+            <RadioGroup
+
+                android:id="@+id/type_catalog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/public_catalog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Public Catalog" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/hint_margin_left"
+                    android:id="@+id/hint_public_catalog_text"
+                    style="@style/hint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_public_catalog_text" />
+
+                <RadioButton
+                    android:id="@+id/private_catalog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Private Catalog" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/hint_margin_left"
+                    android:id="@+id/hint_private_catalog_text"
+                    style="@style/hint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_private_catalog_text" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/productsWP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:visibility="gone"
+                android:text="Products without Price" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/hint_margin_left"
+                android:id="@+id/hint_product_no_price_text"
+                style="@style/hint_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/public_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_catalog_public_price" />
+
+                <RadioGroup
+                    android:id="@+id/public_radprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <RadioButton
+                        android:id="@+id/public_single_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Single Price" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/hint_margin_left"
+                        android:id="@+id/hint_public_single_price"
+                        style="@style/hint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_single_price" />
+
+                    <RadioButton
+                        android:id="@+id/public_individual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Individual Price" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/hint_margin_left"
+                        android:id="@+id/hint_public_individual_price"
+                        style="@style/hint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_individual_price" />
+
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                        android:id="@+id/public_input_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                        android:hint="Enter public price for this catalog"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:visibility="gone" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/private_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Spinner_Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_catalog_price" />
+
+                <RadioGroup
+                    android:id="@+id/radprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/private_single_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Single Price" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/hint_margin_left"
+                        android:id="@+id/hint_single_price"
+                        style="@style/hint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_single_price" />
+
+                    <RadioButton
+                        android:id="@+id/individual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Individual Price" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/hint_margin_left"
+                        android:id="@+id/hint_individual_price"
+                        style="@style/hint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_individual_price" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.wishbook.catalog.Utils.widget.CustomDrawableEditText
+                        android:id="@+id/input_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:drawableRightEditTextCompat="@drawable/ic_star_rate_24dp"
+                        android:hint="Enter price for this catalog"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/fabric_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:text="Add Fabric &amp; Work" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/hint_margin_left"
+                android:id="@+id/hint_fabric_work"
+                style="@style/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_fabric_work" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_fabric_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    style="@style/common_input_edittext_fabric"
+                    android:id="@+id/input_fabric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_fabric"
+                    android:singleLine="true"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_work_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    style="@style/common_input_edittext_work"
+                    android:id="@+id/input_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_work"
+                    android:singleLine="true"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <CheckBox
+                android:id="@+id/fulcatalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/sell_full_catalog" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/hint_margin_left"
+                android:id="@+id/hint_sell_full_catalog"
+                style="@style/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_sell_full_catalog" />
+
+            <CheckBox
+                android:id="@+id/productsWS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Products without Design No." />
+
+            <TextView
+                android:layout_marginLeft="@dimen/hint_margin_left"
+                android:id="@+id/hint_product_no_sku"
+                style="@style/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:text="Save"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

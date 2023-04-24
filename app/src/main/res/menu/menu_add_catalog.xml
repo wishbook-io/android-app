@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:orderInCategory="2"
+        android:id="@+id/menu_add"
+        android:title="Add Product"
+        android:icon="@drawable/ic_add_circle_outline_white_24dp"
+        app:showAsAction="always"/>
+
+    <item
+        android:orderInCategory="1"
+        android:id="@+id/menu_scan_qr"
+        android:title="Add Scanner"
+        android:icon="@drawable/qr_scan_1"
+        app:showAsAction="always"/>
+
+</menu>

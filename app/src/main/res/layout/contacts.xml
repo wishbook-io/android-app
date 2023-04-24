@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical"
+    tools:context="com.wishbook.catalog.home.Fragment_HomeHolder">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/card_detailing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/subtabs"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primarysel"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/card_detailing" />
+        <ImageView
+            android:id="@+id/search_icon"
+             android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:background="@color/color_primarysel"
+            android:layout_height="match_parent"
+            android:src="@drawable/applozic_ic_action_search"/>
+        <ImageView
+            android:padding="5dp"
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:background="@color/color_primarysel"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_filter_white"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:iconifiedByDefault="false"
+        android:visibility="gone"
+        />
+    <!--<com.wishbook.catalog.Utils.CustomViewPager-->
+        <!--android:id="@+id/view_pager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1" />-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/containercontacts"
+    android:layout_height="match_parent"></LinearLayout>
+
+
+</LinearLayout>
+

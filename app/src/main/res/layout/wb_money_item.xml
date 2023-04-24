@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false"
+    app:contentPadding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@string/font_medium"
+                android:text="+50"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_size_heading" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_point_desc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="WB Money have been received for your first purchase order"
+                android:textColor="@color/purchase_medium_gray"
+                android:textSize="@dimen/font_size_normal" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/item_img"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_linkedin"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/uploadempty"
+                    app:roundedCornerRadius="3dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_catalog_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Test TestTestTestTest"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_default" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/seller"
+                            android:textSize="@dimen/font_size_normal"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txt_seller_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Test"
+                            android:textColor="@color/purchase_dark_gray"
+                            android:textSize="@dimen/font_size_normal" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_order_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@string/font_medium"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:text="Order Value: XXXX"
+                        android:textColor="@color/purchase_dark_gray"
+                        android:textSize="@dimen/font_size_default" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/purchase_light_gray" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

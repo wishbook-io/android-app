@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_attachment_viewc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#e7e7e7"
+    android:fitsSystemWindows="true"
+    tools:context="com.wishbook.catalog.home.catalog.details.Fragment_ProductsInCatalog">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.wishbook.catalog.Utils.touchImageView.ExtendedViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textNoProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Products To Display"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_size_heading"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/back_with_shadow" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/cart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_cart_black" />
+            </LinearLayout>
+
+            <com.wishbook.catalog.Utils.widget.MaterialBadgeTextView
+                android:id="@+id/badge_cart_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:background="@color/red"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

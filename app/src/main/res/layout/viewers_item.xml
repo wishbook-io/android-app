@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/textInt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="4dp"
+        android:background="@drawable/circle_filled"
+        android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/buyer_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:fontFamily="@string/font_medium"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_buyer_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buyer Company Name"
+            android:layout_marginLeft="3dp"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="@dimen/font_size_default" />
+
+        <TextView
+            android:id="@+id/txt_location"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:text="Location name"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_default" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="left|center"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_active"
+            android:layout_width="140dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_purchase_blue"
+            android:elevation="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:stateListAnimator="@null"
+            android:text="Add as buyer"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_inactive"
+            android:layout_width="140dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_edge_grey"
+            android:elevation="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:stateListAnimator="@null"
+            android:text="Added"
+            android:textColor="@color/purchase_medium_gray"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purchase_light_gray"
+        android:visibility="gone" />
+</LinearLayout>

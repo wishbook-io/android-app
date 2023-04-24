@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <com.wishbook.catalog.Utils.arclayout.ArcLayout
+        android:id="@+id/arc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="140dp"
+        app:arc_cropDirection="cropOutside"
+        app:arc_height="40dp"
+        app:arc_padding="10dp"
+        app:arc_position="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_header" />
+
+
+    </com.wishbook.catalog.Utils.arclayout.ArcLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="India's Most Trusted Wholesale App"
+            android:textColor="@color/color_primary"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title1"
+            android:gravity="center"
+            android:text="For Retailers and Home-based Resellers"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="110dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/splash_icon_background_round"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:outlineProvider="background">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/splashlogo" />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

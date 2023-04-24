@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="20dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+
+    <RelativeLayout
+        android:id="@+id/btn_share_whatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:clickable="true" android:background="?android:attr/selectableItemBackground">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/wpimg"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+
+            android:layout_marginLeft="12dp"
+            app:srcCompat="@drawable/ic_whatsapp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/wpimg"
+
+            android:text="Share on Whatsapp"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal" android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_share_whatsapp_business"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/wpbusinessimg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/whatsapp_business" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_toRightOf="@+id/wpbusinessimg"
+            android:fontFamily="@string/font_medium"
+            android:text="Share on Whatsapp Business"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/btn_share_facebook"
+        android:layout_width="match_parent"
+       android:clickable="true" android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/fbimg"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/facebook" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share on Facebook"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/fbimg"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_share_fbpage"
+        android:layout_width="match_parent"
+        android:clickable="true" android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/fbimg_1"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/facebook" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share on Facebook Page"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/fbimg_1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_save_gallery"
+        android:layout_width="match_parent"
+        android:clickable="true" android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/galleryimg"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            app:srcCompat="@drawable/ic_save_gallery_24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to Gallery"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/galleryimg"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_share_wishbook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:clickable="true" android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/wbimg"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/wbimg"
+            android:text="Share on Wishbook"
+            android:id="@+id/wbtext"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal" android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/btn_share_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/linkimg"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="12dp"
+            android:tint="@color/purchase_medium_gray"
+            app:srcCompat="@drawable/ic_share_link_24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/linkimg"
+            android:text="Share via Link"
+            android:id="@+id/linktext"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal" android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_share_other"
+        android:layout_width="match_parent"
+       android:clickable="true" android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/otherimg"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/share_icon"
+            android:tint="@color/purchase_medium_gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+           android:layout_toRightOf="@+id/otherimg"
+            android:fontFamily="@string/font_medium"
+            android:textSize="@dimen/font_size_normal" android:layout_centerVertical="true" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

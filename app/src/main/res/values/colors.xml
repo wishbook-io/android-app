@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#0d80c1</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="color_primarysel">#18628c</color>
+    <color name="color_primary_dark">#18628c</color>
+    <color name="multiple_image_select_primary">#2E7D32</color>
+    <color name="multiple_image_select_primaryDark">#1B5E20</color>
+    <color name="multiple_image_select_accent">#4CAF50</color>
+
+    <color name="multiple_image_select_primaryText">#212121</color>
+
+    <color name="multiple_image_select_toolbarPrimaryText">#FFFFFF</color>
+
+    <color name="multiple_image_select_albumTextBackground">#99FFFFFF</color>
+    <color name="multiple_image_select_imageSelectBackground">#000000</color>
+
+    <color name="multiple_image_select_buttonText">#FFFFFF</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_detailing">#eee</color>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+
+    <color name="aluminum">#999999</color>
+
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_light">#8CFFFFFF</color>
+    <color name="second_grey">#ff999999</color>
+    <color name="appbg">#f1f1f1</color>
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha_20">#40000000</color>
+    <color name="my_statusbar_color">#000000</color>
+    <color name="black_light">#F2000000</color>
+    <color name="material_500_red">#F44336</color>
+    <color name="light_gray">#ddd</color>
+
+    <color name="pending">#EC372E</color>
+    <color name="approved">#94C23C</color>
+    <color name="enquire">#FFC515</color>
+
+    <color name="intro_colour">#4c4cff</color>
+    <color name="orange">#f2780c</color>
+    <color name="orange_dark">#E93A1D</color>
+    <color name="green">#05721c</color>
+    <color name="red">#e02b2b</color>
+    <color name="purchase_light_gray">#c9c9c9</color>
+    <color name="purchase_medium_gray">#777777</color>
+    <color name="purchase_dark_gray">#3a3a3a</color>
+
+    <color name="intro_text_color">#003f5b</color>
+    <color name="my_catalog_pink">#ce2475</color>
+    <color name="contacts_home_grey">#fafafa</color>
+
+    <color name="ios_grey">#EEE</color>
+
+    <color name="black_alpha_60">#A6000000</color>
+
+    <color name="rating_fill">#FF9900</color>
+
+    <color name="divider_color">#CECECE</color>
+
+    <color name="material_bg">#F6F6F6</color>
+
+
+    <color name="ss_progress_startColor">#ffffd300</color>
+    <color name="ss_progress_endColor">#ffffcb00</color>
+    <color name="ss_progress_centerColor">#ffffb600</color>
+
+    <color name="ss_secondaryProgress_startColor">#80ffd300</color>
+    <color name="ss_secondaryProgress_endColor">#a0ffcb00</color>
+    <color name="ss_secondaryProgress_centerColor">#80ffb600</color>
+
+    <color name="ss_background_startColor">#ff9d9e9d</color>
+    <color name="ss_background_endColor">#ff747674</color>
+    <color name="ss_background_centerColor">#ff5a5d5a</color>
+
+
+    <color name="play_last_frame">#99000000</color>
+
+    <color name="white_alpha_40">#66ffffff</color>
+    <color name="whatsapp_color_code">#34af23</color>
+
+    <color name="color_primary_alpha">#c7eaf2</color>
+
+    <color name="colorPrimaryTransparent">#280f9d58</color>
+    <color name="hitam">#000</color>
+
+
+    <color name="stepview_line_done">@android:color/white</color>
+    <color name="stepview_line_next">#26ffffff</color>
+    <color name="stepview_text_next">#40ffffff</color>
+    <color name="stepview_text_done">#40ffffff</color>
+    <color name="stepview_text_selected">@android:color/white</color>
+    <color name="stepview_circle_done">@android:color/white</color>
+    <color name="stepview_circle_selected">@android:color/white</color>
+    <color name="stepview_selected_number">#25448a</color>
+    <color name="stepview_mark">@color/stepview_selected_number</color>
+
+    <color name="disable_product">#99c9c9c9</color>
+    <color name="disable_product_pager">#CCf5f5f5</color>
+    <color name="whatsapp_color">#128c7e</color>
+    <color name="truecaller_color">#2589FF</color>
+
+    <color name="warning_msg_color">#fff2ce</color>
+    <color name="red_msg_color">#FFDCDD</color>
+
+</resources>

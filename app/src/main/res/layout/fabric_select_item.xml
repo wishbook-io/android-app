@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:layout_gravity="right"
+        android:gravity="left|center_vertical"
+        android:textAlignment="gravity"
+        android:textColor="@color/purchase_dark_gray"
+        android:text="AAAAAA" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_other_input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp">
+
+        <EditText
+            android:id="@+id/input_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:inputType="text"
+            android:maxLength="100"
+            android:singleLine="true"
+            android:textColorHint="@color/purchase_light_gray"
+            android:textSize="@dimen/font_size_normal"
+            android:visibility="visible" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

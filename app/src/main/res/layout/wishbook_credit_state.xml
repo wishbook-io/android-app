@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_credit_subtxt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="40dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/credit_apply_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wishbook_credit_state1"
+            android:textColor="@color/purchase_dark_gray"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/txt_apply_credit"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Apply Now"
+            android:textColor="@color/color_primary" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/credit_processing_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_processing_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wishbook_credit_state2"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/credit_final_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_credit_line_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wishbook_credit_state3"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/txt_credit_line_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purchase_dark_gray"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
